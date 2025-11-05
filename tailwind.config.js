@@ -5,21 +5,39 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        // AviaraAI Brand Colors - Neutral Palette
-        'deep-navy': '#1a2332',
-        'charcoal': '#2d3748',
-        'slate-gray': '#64748b',
-        'light-slate': '#94a3b8',
-        'brand-teal': '#0d9488',
-        'muted-blue': '#3b82f6',
-        'soft-gray': '#f8fafc',
-        'light-gray': '#f1f5f9',
-        'primary-text': '#1e293b',
-        'secondary-text': '#475569',
-        'muted-text': '#94a3b8',
+        // Light Mode Colors
+        light: {
+          bg: '#F7F7F9',
+          surface: '#FFFFFF',
+          primary: '#0B1220',
+          secondary: '#334155',
+          muted: '#6B7280',
+          border: '#E5E7EB',
+          accent: '#0F4C75',
+          'accent-hover': '#145A8D',
+          success: '#16A34A',
+          warning: '#F59E0B',
+          error: '#EF4444',
+        },
+        
+        // Dark Mode Colors
+        dark: {
+          bg: '#0F1724',
+          surface: '#0B1220',
+          primary: '#F8FAFC',
+          secondary: '#CBD5E1',
+          muted: '#94A3B8',
+          border: '#1E293B',
+          accent: '#0F4C75',
+          'accent-hover': '#1872A4',
+          success: '#22C55E',
+          warning: '#FBBF24',
+          error: '#F87171',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
