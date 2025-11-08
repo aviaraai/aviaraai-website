@@ -1,161 +1,291 @@
-// 'use client'2
+'use client'
 
 import Link from 'next/link'
 
-export default function Home() {
+export default function GodhaarPage() {
   return (
     <div>
+      {/* HERO SECTION */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 bg-light-bg dark:bg-dark-bg">
         <div className="absolute top-0 right-0 w-96 h-96 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-green-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 animate-fade-in">
+          <div className="text-8xl mb-8">🐄</div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-light-primary dark:text-dark-primary mb-6 leading-tight">
-            AI Solutions That <span className="text-gradient">Transform</span>
-            <br />
-            Real-World Challenges
+            Godhaar
           </h1>
+          <p className="text-2xl md:text-3xl text-light-accent dark:text-dark-accent font-semibold mb-6">
+            AI-Powered Cattle Management
+          </p>
           <p className="text-xl md:text-2xl text-light-secondary dark:text-dark-secondary mb-10 max-w-3xl mx-auto">
-            From cattle management to smart surveillance, we build AI that solves practical problems and creates lasting impact
+            Revolutionary muzzle recognition technology for precise cattle identification and comprehensive herd management
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="#projects" className="bg-light-accent dark:bg-dark-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-light-accent-hover dark:hover:bg-dark-accent-hover transform hover:-translate-y-1 hover:shadow-brand transition-all">
-              View Our Projects
-            </Link>
-            <Link href="#about" className="bg-transparent text-light-primary dark:text-dark-primary border-2 border-light-border dark:border-dark-border px-8 py-4 rounded-lg font-semibold text-lg hover:bg-light-surface dark:hover:bg-dark-surface transform hover:-translate-y-1 transition-all">
+            <a href="#about" className="bg-light-accent dark:bg-dark-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-light-accent-hover dark:hover:bg-dark-accent-hover">
               Learn More
-            </Link>
-          </div>
-        </div>
-
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce-slow">
-          <div className="w-6 h-10 border-2 border-light-muted dark:border-dark-muted rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-2 bg-light-muted dark:bg-dark-muted rounded-full animate-pulse"></div>
+            </a>
+            <a href="mailto:contact@aviaraai.com" className="bg-transparent text-light-primary dark:text-dark-primary border-2 border-light-border dark:border-dark-border px-8 py-4 rounded-lg font-semibold text-lg hover:bg-light-surface dark:hover:bg-dark-surface">
+              Request Demo
+            </a>
           </div>
         </div>
       </section>
 
-      <section id="about" className="py-20 bg-light-surface dark:bg-dark-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary text-center mb-4">
-            Who We Are
-          </h2>
-          <p className="text-xl text-light-secondary dark:text-dark-secondary text-center mb-12 max-w-3xl mx-auto">
-            Innovating at the intersection of artificial intelligence and real-world impact
-          </p>
+     {/* ABOUT SECTION - TEXT LEFT, IMAGE RIGHT */}
+<section id="about" className="py-20 bg-light-surface dark:bg-dark-surface">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      {/* TEXT - LEFT */}
+      <div className="order-2 md:order-1">
+        <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary mb-6">
+          What is Godhaar?
+        </h2>
+        <p className="text-lg text-light-secondary dark:text-dark-secondary mb-6 leading-relaxed">
+          Godhaar is an advanced AI-powered cattle management system that uses cutting-edge muzzle recognition technology to identify and track individual cattle.
+        </p>
+        <p className="text-lg text-light-secondary dark:text-dark-secondary mb-6 leading-relaxed">
+          Just like human fingerprints, each cow has a unique muzzle pattern that our system can recognize with 95% accuracy in just 2 seconds.
+        </p>
+        <div className="flex gap-4">
+          <div className="text-center">
+            <div className="text-4xl font-bold text-gradient mb-2">95%</div>
+            <p className="text-sm text-light-muted dark:text-dark-muted">Accuracy</p>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-gradient mb-2">2s</div>
+            <p className="text-sm text-light-muted dark:text-dark-muted">ID Time</p>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-gradient mb-2">1000+</div>
+            <p className="text-sm text-light-muted dark:text-dark-muted">Cattle</p>
+          </div>
+        </div>
+      </div>
 
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <p className="text-lg text-light-secondary dark:text-dark-secondary leading-relaxed">
-              AviaraAI is an AI innovation startup focused on creating practical, scalable solutions across multiple industries. We combine cutting-edge computer vision, machine learning, and deep learning to solve real-world problems that matter.
+      {/* IMAGE - RIGHT (SMALLER SIZE) */}
+      <div className="order-1 md:order-2 flex justify-center">
+        <div className="bg-gradient-brand rounded-3xl p-12 flex items-center justify-center w-80 h-80">
+          <div className="text-8xl">🐄</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      {/* PROBLEM SECTION - IMAGE LEFT, TEXT RIGHT */}
+<section className="py-20 bg-light-bg dark:bg-dark-bg">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      {/* IMAGE - LEFT (SMALLER SIZE) */}
+      <div className="flex justify-center">
+        <div className="bg-light-error/10 dark:bg-dark-error/10 rounded-3xl p-8 flex items-center justify-center w-80 h-80 border-4 border-light-error/20 dark:border-dark-error/20">
+          <div className="text-center">
+            <div className="text-8xl mb-4">❌</div>
+            <h3 className="text-xl font-bold text-light-error dark:text-dark-error">Old Methods</h3>
+          </div>
+        </div>
+      </div>
+
+      {/* TEXT - RIGHT */}
+      <div>
+        <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary mb-6">
+          The Problems with Traditional Methods
+        </h2>
+        <div className="space-y-6">
+          <div className="flex items-start gap-4">
+            <div className="text-3xl flex-shrink-0">⏰</div>
+            <div>
+              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Time-Consuming</h4>
+              <p className="text-light-secondary dark:text-dark-secondary">
+                Manual identification takes minutes per animal, wasting valuable farm time
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <div className="text-3xl flex-shrink-0">📋</div>
+            <div>
+              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Lost Records</h4>
+              <p className="text-light-secondary dark:text-dark-secondary">
+                Paper-based tracking leads to incomplete and lost data over time
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <div className="text-3xl flex-shrink-0">🤷</div>
+            <div>
+              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Human Error</h4>
+              <p className="text-light-secondary dark:text-dark-secondary">
+                Misidentification leads to wrong treatments and breeding mistakes
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <div className="text-3xl flex-shrink-0">💸</div>
+            <div>
+              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Costly Mistakes</h4>
+              <p className="text-light-secondary dark:text-dark-secondary">
+                Identification errors result in expensive veterinary emergencies
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      {/* SOLUTION SECTION - TEXT LEFT, IMAGE RIGHT */}
+<section id="features" className="py-20 bg-light-surface dark:bg-dark-surface">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid md:grid-cols-2 gap-12 items-center">
+      {/* TEXT - LEFT */}
+      <div>
+        <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary mb-6">
+          Our AI-Powered Solution
+        </h2>
+        <div className="space-y-6">
+          <div className="flex items-start gap-4">
+            <div className="text-3xl flex-shrink-0">⚡</div>
+            <div>
+              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Instant Recognition</h4>
+              <p className="text-light-secondary dark:text-dark-secondary">
+                AI identifies cattle in 2 seconds with 95% accuracy using unique muzzle patterns
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <div className="text-3xl flex-shrink-0">☁️</div>
+            <div>
+              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Cloud Storage</h4>
+              <p className="text-light-secondary dark:text-dark-secondary">
+                All records stored securely in the cloud, accessible from any device
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <div className="text-3xl flex-shrink-0">🎯</div>
+            <div>
+              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">100% Accurate</h4>
+              <p className="text-light-secondary dark:text-dark-secondary">
+                Eliminate identification errors with biometric muzzle recognition
+              </p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4">
+            <div className="text-3xl flex-shrink-0">💰</div>
+            <div>
+              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Save Money</h4>
+              <p className="text-light-secondary dark:text-dark-secondary">
+                Reduce costs with better health tracking and fewer mistakes
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* IMAGE - RIGHT (SMALLER SIZE) */}
+      <div className="flex justify-center">
+        <div className="bg-light-success/10 dark:bg-dark-success/10 rounded-3xl p-8 flex items-center justify-center w-80 h-80 border-4 border-light-success/20 dark:border-dark-success/20">
+          <div className="text-center">
+            <div className="text-8xl mb-4">✅</div>
+            <h3 className="text-xl font-bold text-light-success dark:text-dark-success">AI Solution</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      {/* HOW IT WORKS - IMAGE LEFT, TEXT RIGHT */}
+      <section id="how-it-works" className="py-20 bg-light-bg dark:bg-dark-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary mb-4">
+              How It Works
+            </h2>
+            <p className="text-xl text-light-secondary dark:text-dark-secondary max-w-3xl mx-auto">
+              Simple, fast, and accurate cattle identification in 4 easy steps
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-brand rounded-2xl flex items-center justify-center text-4xl transform group-hover:scale-110 transition-transform">
-                🎯
-              </div>
-              <h3 className="text-2xl font-bold text-light-primary dark:text-dark-primary mb-3">Clear Purpose</h3>
-              <p className="text-light-secondary dark:text-dark-secondary">
-                We identify genuine problems and build solutions that create measurable impact
-              </p>
-            </div>
-
-            <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-brand rounded-2xl flex items-center justify-center text-4xl transform group-hover:scale-110 transition-transform">
-                ⚡
-              </div>
-              <h3 className="text-2xl font-bold text-light-primary dark:text-dark-primary mb-3">Cutting-Edge Tech</h3>
-              <p className="text-light-secondary dark:text-dark-secondary">
-                Leveraging the latest in AI, computer vision, and machine learning technologies
-              </p>
-            </div>
-
-            <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-brand rounded-2xl flex items-center justify-center text-4xl transform group-hover:scale-110 transition-transform">
-                📈
-              </div>
-              <h3 className="text-2xl font-bold text-light-primary dark:text-dark-primary mb-3">Real Results</h3>
-              <p className="text-light-secondary dark:text-dark-secondary">
-                Delivering solutions that scale and generate tangible value for our users
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" className="py-20 bg-light-bg dark:bg-dark-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary text-center mb-4">
-            Our Innovation Portfolio
-          </h2>
-          <p className="text-xl text-light-secondary dark:text-dark-secondary text-center mb-12 max-w-3xl mx-auto">
-            Building AI solutions that make a difference across industries
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link href="/projects/godhaar" className="group">
-              <div className="bg-light-surface dark:bg-dark-surface rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-light-border dark:border-dark-border">
-                <div className="h-48 bg-gradient-brand flex items-center justify-center text-8xl">
-                  🐄
-                </div>
-                <div className="p-6">
-                  <span className="inline-block px-4 py-1 bg-light-success/10 dark:bg-dark-success/10 text-light-success dark:text-dark-success rounded-full text-sm font-semibold mb-3">
-                    Active
-                  </span>
-                  <h3 className="text-2xl font-bold text-light-primary dark:text-dark-primary mb-3 group-hover:text-light-accent dark:group-hover:text-dark-accent transition-colors">
-                    Godhaar
-                  </h3>
-                  <p className="text-light-secondary dark:text-dark-secondary mb-4">
-                    AI-powered cattle management system using muzzle recognition technology for identification and tracking
-                  </p>
-                  <span className="text-light-accent dark:text-dark-accent font-semibold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
-                    Learn More →
-                  </span>
+          <div className="space-y-24">
+            {/* STEP 1 - IMAGE LEFT, TEXT RIGHT */}
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="bg-gradient-brand rounded-3xl p-12 flex items-center justify-center aspect-square">
+                  <div className="text-9xl">📸</div>
                 </div>
               </div>
-            </Link>
-
-            <div className="group cursor-pointer">
-              <div className="bg-light-surface dark:bg-dark-surface rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-light-border dark:border-dark-border">
-                <div className="h-48 bg-gradient-to-br from-slate-600 to-slate-800 flex items-center justify-center text-8xl">
-                  📹
+              <div>
+                <div className="inline-block px-6 py-2 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full mb-4">
+                  <span className="text-light-accent dark:text-dark-accent font-bold">STEP 1</span>
                 </div>
-                <div className="p-6">
-                  <span className="inline-block px-4 py-1 bg-light-muted/10 dark:bg-dark-muted/10 text-light-muted dark:text-dark-muted rounded-full text-sm font-semibold mb-3">
-                    Coming Soon
-                  </span>
-                  <h3 className="text-2xl font-bold text-light-primary dark:text-dark-primary mb-3">
-                    Smart Surveillance
-                  </h3>
-                  <p className="text-light-secondary dark:text-dark-secondary mb-4">
-                    Next-generation CC camera system with intelligent monitoring and threat detection capabilities
-                  </p>
-                  <span className="text-light-muted dark:text-dark-muted font-semibold inline-flex items-center gap-2">
-                    Stay Updated →
-                  </span>
+                <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
+                  Capture the Muzzle
+                </h3>
+                <p className="text-lg text-light-secondary dark:text-dark-secondary leading-relaxed">
+                  Simply take a photo of the cattle's muzzle using your smartphone camera. Our app guides you to capture the perfect angle for best results.
+                </p>
+              </div>
+            </div>
+
+            {/* STEP 2 - TEXT LEFT, IMAGE RIGHT */}
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-2 md:order-1">
+                <div className="inline-block px-6 py-2 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full mb-4">
+                  <span className="text-light-accent dark:text-dark-accent font-bold">STEP 2</span>
+                </div>
+                <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
+                  AI Processing
+                </h3>
+                <p className="text-lg text-light-secondary dark:text-dark-secondary leading-relaxed">
+                  Our advanced AI analyzes the unique muzzle pattern in milliseconds. The deep learning model processes thousands of data points to create a unique signature.
+                </p>
+              </div>
+              <div className="order-1 md:order-2">
+                <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-3xl p-12 flex items-center justify-center aspect-square">
+                  <div className="text-9xl">🧠</div>
                 </div>
               </div>
             </div>
 
-            <div className="group cursor-pointer">
-              <div className="bg-light-surface dark:bg-dark-surface rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 border border-light-border dark:border-dark-border">
-                <div className="h-48 bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-8xl">
-                  🚀
+            {/* STEP 3 - IMAGE LEFT, TEXT RIGHT */}
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="bg-gradient-to-br from-green-500 to-teal-500 rounded-3xl p-12 flex items-center justify-center aspect-square">
+                  <div className="text-9xl">🎯</div>
                 </div>
-                <div className="p-6">
-                  <span className="inline-block px-4 py-1 bg-light-muted/10 dark:bg-dark-muted/10 text-light-muted dark:text-dark-muted rounded-full text-sm font-semibold mb-3">
-                    In Development
-                  </span>
-                  <h3 className="text-2xl font-bold text-light-primary dark:text-dark-primary mb-3">
-                    Future Projects
-                  </h3>
-                  <p className="text-light-secondary dark:text-dark-secondary mb-4">
-                    We are constantly innovating and exploring new applications of AI technology
-                  </p>
-                  <span className="text-light-accent dark:text-dark-accent font-semibold inline-flex items-center gap-2">
-                    Get in Touch →
-                  </span>
+              </div>
+              <div>
+                <div className="inline-block px-6 py-2 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full mb-4">
+                  <span className="text-light-accent dark:text-dark-accent font-bold">STEP 3</span>
+                </div>
+                <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
+                  Instant Match
+                </h3>
+                <p className="text-lg text-light-secondary dark:text-dark-secondary leading-relaxed">
+                  The system compares the pattern against your database and identifies the cattle within 2 seconds with 95% accuracy. If it's a new animal, you can register it instantly.
+                </p>
+              </div>
+            </div>
+
+            {/* STEP 4 - TEXT LEFT, IMAGE RIGHT */}
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-2 md:order-1">
+                <div className="inline-block px-6 py-2 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full mb-4">
+                  <span className="text-light-accent dark:text-dark-accent font-bold">STEP 4</span>
+                </div>
+                <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
+                  Access Full Profile
+                </h3>
+                <p className="text-lg text-light-secondary dark:text-dark-secondary leading-relaxed">
+                  View complete health records, breeding history, milk production data, and vaccination schedules. Update any information with just a few taps.
+                </p>
+              </div>
+              <div className="order-1 md:order-2">
+                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-12 flex items-center justify-center aspect-square">
+                  <div className="text-9xl">📊</div>
                 </div>
               </div>
             </div>
@@ -163,88 +293,135 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FEATURES GRID */}
       <section className="py-20 bg-light-surface dark:bg-dark-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary text-center mb-4">
-            Our Approach to AI Innovation
+            Comprehensive Features
           </h2>
           <p className="text-xl text-light-secondary dark:text-dark-secondary text-center mb-12 max-w-3xl mx-auto">
-            A systematic process that turns ideas into impactful solutions
+            Everything you need to manage your herd efficiently
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-brand rounded-full flex items-center justify-center text-white text-2xl font-bold transform group-hover:scale-110 transition-transform">
-                1
-              </div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Identify</h4>
-              <p className="text-light-secondary dark:text-dark-secondary">Discover real-world problems that need solving</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-light-bg dark:bg-dark-bg p-8 rounded-2xl border border-light-border dark:border-dark-border">
+              <div className="text-5xl mb-4">📱</div>
+              <h3 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Mobile App</h3>
+              <p className="text-light-secondary dark:text-dark-secondary">
+                Easy-to-use mobile app for iOS and Android devices
+              </p>
             </div>
 
-            <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-brand rounded-full flex items-center justify-center text-white text-2xl font-bold transform group-hover:scale-110 transition-transform">
-                2
-              </div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Research</h4>
-              <p className="text-light-secondary dark:text-dark-secondary">Deep technical research and feasibility analysis</p>
+            <div className="bg-light-bg dark:bg-dark-bg p-8 rounded-2xl border border-light-border dark:border-dark-border">
+              <div className="text-5xl mb-4">💉</div>
+              <h3 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Health Records</h3>
+              <p className="text-light-secondary dark:text-dark-secondary">
+                Track vaccinations, treatments, and medical history
+              </p>
             </div>
 
-            <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-brand rounded-full flex items-center justify-center text-white text-2xl font-bold transform group-hover:scale-110 transition-transform">
-                3
-              </div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Build</h4>
-              <p className="text-light-secondary dark:text-dark-secondary">Develop scalable, reliable AI solutions</p>
+            <div className="bg-light-bg dark:bg-dark-bg p-8 rounded-2xl border border-light-border dark:border-dark-border">
+              <div className="text-5xl mb-4">🔔</div>
+              <h3 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Smart Alerts</h3>
+              <p className="text-light-secondary dark:text-dark-secondary">
+                Reminders for vaccinations and breeding schedules
+              </p>
             </div>
 
-            <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-brand rounded-full flex items-center justify-center text-white text-2xl font-bold transform group-hover:scale-110 transition-transform">
-                4
-              </div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Deploy</h4>
-              <p className="text-light-secondary dark:text-dark-secondary">Launch and create measurable impact</p>
+            <div className="bg-light-bg dark:bg-dark-bg p-8 rounded-2xl border border-light-border dark:border-dark-border">
+              <div className="text-5xl mb-4">📈</div>
+              <h3 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Analytics</h3>
+              <p className="text-light-secondary dark:text-dark-secondary">
+                Insights and reports to optimize herd management
+              </p>
+            </div>
+
+            <div className="bg-light-bg dark:bg-dark-bg p-8 rounded-2xl border border-light-border dark:border-dark-border">
+              <div className="text-5xl mb-4">🥛</div>
+              <h3 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Milk Production</h3>
+              <p className="text-light-secondary dark:text-dark-secondary">
+                Track daily milk yield for each animal
+              </p>
+            </div>
+
+            <div className="bg-light-bg dark:bg-dark-bg p-8 rounded-2xl border border-light-border dark:border-dark-border">
+              <div className="text-5xl mb-4">👶</div>
+              <h3 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Breeding History</h3>
+              <p className="text-light-secondary dark:text-dark-secondary">
+                Complete breeding records and offspring tracking
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-light-bg dark:bg-dark-bg">
+      {/* BENEFITS - IMAGE LEFT, TEXT RIGHT */}
+      <section id="benefits" className="py-20 bg-light-bg dark:bg-dark-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary text-center mb-12">
-            Making a Difference
-          </h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* IMAGE - LEFT */}
+            <div>
+              <div className="bg-gradient-to-br from-light-accent to-blue-600 dark:from-dark-accent dark:to-blue-700 rounded-3xl p-12 flex items-center justify-center aspect-square">
+                <div className="text-center text-white">
+                  <div className="text-7xl mb-4">📈</div>
+                  <div className="text-5xl font-bold mb-2">50%</div>
+                  <p className="text-xl">Time Saved</p>
+                </div>
+              </div>
+            </div>
 
-          <div className="grid md:grid-cols-3 gap-12 text-center">
+            {/* TEXT - RIGHT */}
             <div>
-              <h3 className="text-6xl font-bold text-gradient mb-3">1000+</h3>
-              <p className="text-xl text-light-secondary dark:text-dark-secondary">Cattle Identified</p>
-            </div>
-            <div>
-              <h3 className="text-6xl font-bold text-gradient mb-3">95%</h3>
-              <p className="text-xl text-light-secondary dark:text-dark-secondary">Recognition Accuracy</p>
-            </div>
-            <div>
-              <h3 className="text-6xl font-bold text-gradient mb-3">3</h3>
-              <p className="text-xl text-light-secondary dark:text-dark-secondary">Active Projects</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary mb-6">
+                Transform Your Farm Operations
+              </h2>
+              <div className="space-y-6">
+                <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
+                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">⏱️ Save 50% Time</h4>
+                  <p className="text-light-secondary dark:text-dark-secondary">
+                    Reduce cattle identification from minutes to seconds
+                  </p>
+                </div>
+                <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
+                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">💰 Lower Costs</h4>
+                  <p className="text-light-secondary dark:text-dark-secondary">
+                    Eliminate costly identification errors and vet emergencies
+                  </p>
+                </div>
+                <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
+                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">📊 Better Decisions</h4>
+                  <p className="text-light-secondary dark:text-dark-secondary">
+                    Data-driven insights for breeding, feeding, and healthcare
+                  </p>
+                </div>
+                <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
+                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">🔒 Full Traceability</h4>
+                  <p className="text-light-secondary dark:text-dark-secondary">
+                    Complete digital records for compliance and quality
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" className="py-20 bg-gradient-to-br from-light-accent to-blue-600 dark:from-dark-accent dark:to-blue-700 text-white">
+      {/* CTA SECTION */}
+      <section className="py-20 bg-gradient-to-br from-light-accent to-blue-600 dark:from-dark-accent dark:to-blue-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="text-6xl mb-6">🚀</div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Transform Your Industry with AI?
+            Ready to Transform Your Cattle Management?
           </h2>
           <p className="text-xl text-white/90 mb-10">
-            Let us discuss how our AI solutions can help solve your challenges
+            Join 50+ farms already using Godhaar for smarter herd management
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:contact@aviaraai.com" className="bg-white text-light-accent dark:text-dark-accent px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transform hover:-translate-y-1 transition-all">
-              Get in Touch
+            <a href="mailto:contact@aviaraai.com" className="bg-white text-light-accent dark:text-dark-accent px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100">
+              Request Demo
             </a>
-            <Link href="#projects" className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transform hover:-translate-y-1 transition-all">
-              View Projects
+            <Link href="/" className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10">
+              Back to Home
             </Link>
           </div>
         </div>
