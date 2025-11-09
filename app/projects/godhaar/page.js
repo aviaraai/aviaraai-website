@@ -24,27 +24,27 @@ export default function GodhaarPage() {
       {/* <div className="text-7xl mb-6"></div> */}
       
       <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-        Godhaar
+        GODHAAR
       </h1>
       
-      <p className="text-2xl md:text-3xl text-blue-400 font-semibold mb-6">
-        The Future of Livestock Identification
+      <p className="text-2xl md:text-3xl text-blue-300 font-sora mb-6">
+        THE FUTURE OF LIVESTOCK IDENTIFICATION
       </p>
       
-      <p className="text-xl md:text-2xl text-gray-200 mb-10">
+      <p className="text-xl md:text-2xl font-sora text-gray-200 mb-10">
         Revolutionizing Livestock Management with AI-Powered Biometric muzzle print recognition technology.
       </p>
       
       <div className="flex flex-col sm:flex-row gap-4">
         <a 
           href="#about" 
-          className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all inline-block text-center"
+          className="bg-blue-600 text-white px-8 py-4 rounded-lg font-sora text-lg hover:bg-blue-700 transition-all inline-block text-center"
         >
           Learn More
         </a>
         <a 
           href="mailto:contact@aviaraai.com" 
-          className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all inline-block text-center"
+          className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-lg font-sora text-lg hover:bg-white/10 transition-all inline-block text-center"
         >
           Request Demo
         </a>
@@ -103,14 +103,19 @@ export default function GodhaarPage() {
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="grid md:grid-cols-2 gap-12 items-center">
       {/* IMAGE - LEFT (SMALLER SIZE) */}
-      <div className="flex justify-center">
-        <div className="bg-light-error/10 dark:bg-dark-error/10 rounded-3xl p-8 flex items-center justify-center w-80 h-80 border-4 border-light-error/20 dark:border-dark-error/20">
-          <div className="text-center">
-            <div className="text-8xl mb-4">❌</div>
-            <h3 className="text-xl font-bold text-light-error dark:text-dark-error">Old Methods</h3>
-          </div>
-        </div>
-      </div>
+     <div className="flex justify-center">
+  <div 
+    className="rounded-3xl overflow-hidden border border-light-border dark:border-dark-border shadow-xl"
+    style={{ width: "450px", height: "450px" }} // ⬅ Change values as needed
+  >
+    <img 
+      src="/problems.png" 
+      alt="Traditional Methods" 
+      className="w-full h-full object-cover rounded-2xl"
+    />
+  </div>
+</div>
+
 
       {/* TEXT - RIGHT */}
       <div>
@@ -210,14 +215,18 @@ export default function GodhaarPage() {
       </div>
 
       {/* IMAGE - RIGHT (SMALLER SIZE) */}
-      <div className="flex justify-center">
-        <div className="bg-light-success/10 dark:bg-dark-success/10 rounded-3xl p-8 flex items-center justify-center w-80 h-80 border-4 border-light-success/20 dark:border-dark-success/20">
-          <div className="text-center">
-            <div className="text-8xl mb-4">✅</div>
-            <h3 className="text-xl font-bold text-light-success dark:text-dark-success">AI Solution</h3>
-          </div>
-        </div>
-      </div>
+       <div className="flex justify-center">
+  <div 
+    className="rounded-3xl overflow-hidden border border-light-border dark:border-dark-border shadow-xl"
+    style={{ width: "450px", height: "450px" }} // ⬅ Change values as needed
+  >
+    <img 
+      src="/our_ai_solution.png" 
+      alt="Solution" 
+      className="w-full h-full object-cover rounded-2xl"
+    />
+  </div>
+</div>
     </div>
   </div>
 </section>
