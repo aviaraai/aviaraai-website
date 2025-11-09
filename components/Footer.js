@@ -6,14 +6,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold mb-4 text-light-primary dark:text-dark-primary">AviaraAI</h3>
+            <h3 className="text-xl font-sora mb-4 text-light-primary dark:text-dark-primary">AviaraAI</h3>
             <p className="text-light-secondary dark:text-dark-secondary leading-relaxed">
               Building AI solutions that transform real-world challenges into opportunities for innovation and growth.
             </p>
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-4 text-light-primary dark:text-dark-primary">Quick Links</h3>
+            <h3 className="text-xl font-sora mb-4 text-light-primary dark:text-dark-primary">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-4 text-light-primary dark:text-dark-primary">Projects</h3>
+            <h3 className="text-xl font-sora mb-4 text-light-primary dark:text-dark-primary">Projects</h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-4 text-light-primary dark:text-dark-primary">Connect</h3>
+            <h3 className="text-xl font-sora mb-4 text-light-primary dark:text-dark-primary">Connect</h3>
             <div className="flex gap-4 mb-4">
               <a
                 href="#"
