@@ -16,10 +16,10 @@ export default function GodhaarPage() {
             Godhaar
           </h1>
           <p className="text-2xl md:text-3xl text-light-accent dark:text-dark-accent font-semibold mb-6">
-            AI-Powered Cattle Management
+            The Future of Livestock Identification
           </p>
           <p className="text-xl md:text-2xl text-light-secondary dark:text-dark-secondary mb-10 max-w-3xl mx-auto">
-            Revolutionary muzzle recognition technology for precise cattle identification and comprehensive herd management
+            Revolutionizing Livestock Management with  AI-Powered Biometric muzzle print recognition technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#about" className="bg-light-accent dark:bg-dark-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-light-accent-hover dark:hover:bg-dark-accent-hover">
@@ -94,7 +94,7 @@ export default function GodhaarPage() {
         </h2>
         <div className="space-y-6">
           <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0">⏰</div>
+            <div className="text-3xl flex-shrink-0"></div>
             <div>
               <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Time-Consuming</h4>
               <p className="text-light-secondary dark:text-dark-secondary">
@@ -103,16 +103,16 @@ export default function GodhaarPage() {
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0">📋</div>
+            <div className="text-3xl flex-shrink-0"></div>
             <div>
               <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Lost Records</h4>
               <p className="text-light-secondary dark:text-dark-secondary">
-                Paper-based tracking leads to incomplete and lost data over time
+                Paper-based tracking leads to incomplete and lost data over time. No health traceability as well.
               </p>
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0">🤷</div>
+            <div className="text-3xl flex-shrink-0"></div>
             <div>
               <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Human Error</h4>
               <p className="text-light-secondary dark:text-dark-secondary">
@@ -121,7 +121,7 @@ export default function GodhaarPage() {
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0">💸</div>
+            <div className="text-3xl flex-shrink-0"></div>
             <div>
               <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Costly Mistakes</h4>
               <p className="text-light-secondary dark:text-dark-secondary">
@@ -146,38 +146,38 @@ export default function GodhaarPage() {
         </h2>
         <div className="space-y-6">
           <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0">⚡</div>
+            <div className="text-3xl flex-shrink-0"></div>
             <div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Instant Recognition</h4>
+              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Biometric Accuracy</h4>
               <p className="text-light-secondary dark:text-dark-secondary">
                 AI identifies cattle in 2 seconds with 95% accuracy using unique muzzle patterns
               </p>
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0">☁️</div>
+            <div className="text-3xl flex-shrink-0"></div>
             <div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Cloud Storage</h4>
+              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">No More Tags</h4>
               <p className="text-light-secondary dark:text-dark-secondary">
-                All records stored securely in the cloud, accessible from any device
+                Contactless, humane, tamper-proof identification without physical tags or collars
               </p>
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0">🎯</div>
+            <div className="text-3xl flex-shrink-0"></div>
             <div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">100% Accurate</h4>
+              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Offline Ready</h4>
               <p className="text-light-secondary dark:text-dark-secondary">
-                Eliminate identification errors with biometric muzzle recognition
+                Works in remote areas without internet
               </p>
             </div>
           </div>
           <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0">💰</div>
+            <div className="text-3xl flex-shrink-0"></div>
             <div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Save Money</h4>
+              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Farmer Friendly</h4>
               <p className="text-light-secondary dark:text-dark-secondary">
-                Reduce costs with better health tracking and fewer mistakes
+                Simple. Secure. Local language support for easy adoption
               </p>
             </div>
           </div>
@@ -205,7 +205,7 @@ export default function GodhaarPage() {
               How It Works
             </h2>
             <p className="text-xl text-light-secondary dark:text-dark-secondary max-w-3xl mx-auto">
-              Simple, fast, and accurate cattle identification in 4 easy steps
+              From capture to certification in seconds. Experience the seamless journey of our Godhaar Process in 5 easy steps
             </p>
           </div>
 
@@ -222,7 +222,7 @@ export default function GodhaarPage() {
                   <span className="text-light-accent dark:text-dark-accent font-bold">STEP 1</span>
                 </div>
                 <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
-                  Capture the Muzzle
+                  Capture Muzzle Image
                 </h3>
                 <p className="text-lg text-light-secondary dark:text-dark-secondary leading-relaxed">
                   Simply take a photo of the cattle's muzzle using your smartphone camera. Our app guides you to capture the perfect angle for best results.
@@ -262,10 +262,10 @@ export default function GodhaarPage() {
                   <span className="text-light-accent dark:text-dark-accent font-bold">STEP 3</span>
                 </div>
                 <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
-                  Instant Match
+                  Pattern Matching
                 </h3>
                 <p className="text-lg text-light-secondary dark:text-dark-secondary leading-relaxed">
-                  The system compares the pattern against your database and identifies the cattle within 2 seconds with 95% accuracy. If it's a new animal, you can register it instantly.
+                  The system compares the pattern against our database and identifies the cattle within 2 seconds with 95% accuracy. If it's a new animal, you can register it instantly.
                 </p>
               </div>
             </div>
@@ -289,6 +289,27 @@ export default function GodhaarPage() {
                 </div>
               </div>
             </div>
+
+            {/* STEP 5 - IMAGE LEFT, TEXT RIGHT */}
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="bg-gradient-to-br from-green-500 to-teal-500 rounded-3xl p-12 flex items-center justify-center aspect-square">
+                  <div className="text-9xl">🎯</div>
+                </div>
+              </div>
+              <div>
+                <div className="inline-block px-6 py-2 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full mb-4">
+                  <span className="text-light-accent dark:text-dark-accent font-bold">STEP 5</span>
+                </div>
+                <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
+                  Digital Certification
+                </h3>
+                <p className="text-lg text-light-secondary dark:text-dark-secondary leading-relaxed">
+                  Now you can download digital certificates for your cattle.Each certificate includes animal details, owner info, and a unique QR code for quick verification.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -297,7 +318,7 @@ export default function GodhaarPage() {
       <section className="py-20 bg-light-surface dark:bg-dark-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary text-center mb-4">
-            Comprehensive Features
+            Why Choose Godhaar?
           </h2>
           <p className="text-xl text-light-secondary dark:text-dark-secondary text-center mb-12 max-w-3xl mx-auto">
             Everything you need to manage your herd efficiently
@@ -306,7 +327,7 @@ export default function GodhaarPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-light-bg dark:bg-dark-bg p-8 rounded-2xl border border-light-border dark:border-dark-border">
               <div className="text-5xl mb-4">📱</div>
-              <h3 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Mobile App</h3>
+              <h3 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Mobile-First Design</h3>
               <p className="text-light-secondary dark:text-dark-secondary">
                 Easy-to-use mobile app for iOS and Android devices
               </p>
@@ -377,25 +398,25 @@ export default function GodhaarPage() {
               </h2>
               <div className="space-y-6">
                 <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
-                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">⏱️ Save 50% Time</h4>
+                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2"> Save 50% Time</h4>
                   <p className="text-light-secondary dark:text-dark-secondary">
                     Reduce cattle identification from minutes to seconds
                   </p>
                 </div>
                 <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
-                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">💰 Lower Costs</h4>
+                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2"> Lower Costs</h4>
                   <p className="text-light-secondary dark:text-dark-secondary">
                     Eliminate costly identification errors and vet emergencies
                   </p>
                 </div>
                 <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
-                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">📊 Better Decisions</h4>
+                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2"> Better Decisions</h4>
                   <p className="text-light-secondary dark:text-dark-secondary">
                     Data-driven insights for breeding, feeding, and healthcare
                   </p>
                 </div>
                 <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
-                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">🔒 Full Traceability</h4>
+                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2"> Full Traceability</h4>
                   <p className="text-light-secondary dark:text-dark-secondary">
                     Complete digital records for compliance and quality
                   </p>
