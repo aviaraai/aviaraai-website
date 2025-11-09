@@ -293,7 +293,7 @@ export default function GodhaarPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-3xl overflow-hidden aspect-square">
                 <img
-                  src="/cattleid.jpeg"
+                  src="/capture_muzzle.jpeg"
                   alt="Godhaar Digital Certification"
                   className="w-full h-full object-cover"
                 />
@@ -402,7 +402,7 @@ export default function GodhaarPage() {
               <div>
                 <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-3xl overflow-hidden aspect-square">
                   <img
-                    src="/cattleid.jpeg"
+                    src="/godhaar_card.jpeg"
                     alt="Godhaar Digital Certification"
                     className="w-full h-full object-cover"
                   />
@@ -555,26 +555,26 @@ export default function GodhaarPage() {
 
             {/* TEXT - RIGHT */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary mb-6">
-                Transform Your Farm Operations
+              <h2 className="text-4xl md:text-5xl font-sora text-light-primary dark:text-dark-primary mb-6">
+                Technology
               </h2>
               <div className="space-y-6">
                 <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
-                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">
+                  <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
                     {" "}
-                    Save 50% Time
+                    Deep Neural Networks
                   </h4>
                   <p className="text-light-secondary dark:text-dark-secondary">
-                    Reduce cattle identification from minutes to seconds
+                    Advanced convolutional neural networks trained on millions of muzzle patterns achieve superhuman pattern recognition accuracy.
                   </p>
                 </div>
                 <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
-                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">
+                  <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
                     {" "}
-                    Lower Costs
+                    Cloud-Native Architecture
                   </h4>
                   <p className="text-light-secondary dark:text-dark-secondary">
-                    Eliminate costly identification errors and vet emergencies
+                    Scalable cloud infrastructure ensures instant processing and 99.99% uptime for mission-critical livestock operations.
                   </p>
                 </div>
                 <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
@@ -587,12 +587,12 @@ export default function GodhaarPage() {
                   </p>
                 </div>
                 <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
-                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">
+                  <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
                     {" "}
-                    Full Traceability
+                    Continuous Learning
                   </h4>
                   <p className="text-light-secondary dark:text-dark-secondary">
-                    Complete digital records for compliance and quality
+                    Self-improving AI models that get smarter with every identification, adapting to new breeds and environmental conditions.
                   </p>
                 </div>
               </div>

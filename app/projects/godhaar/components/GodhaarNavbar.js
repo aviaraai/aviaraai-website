@@ -36,7 +36,7 @@ export default function GodhaarNavbar() {
     { href: '/projects/godhaar#about', label: 'About' },
     { href: '/projects/godhaar#features', label: 'Features' },
     { href: '/projects/godhaar#how-it-works', label: 'Process' },
-    { href: '/projects/godhaar#benefits', label: 'Benefits' },
+    { href: '/projects/godhaar#benefits', label: 'Technology' },
   ]
 
   return (
