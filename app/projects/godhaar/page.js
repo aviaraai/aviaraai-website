@@ -145,7 +145,7 @@ export default function GodhaarPage() {
                 <div className="flex items-start gap-4">
                   <div className="text-3xl flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">
+                    <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
                       Time-Consuming
                     </h4>
                     <p className="text-light-secondary font-sora dark:text-dark-secondary">
@@ -157,7 +157,7 @@ export default function GodhaarPage() {
                 <div className="flex items-start gap-4">
                   <div className="text-3xl flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">
+                    <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
                       Lost Records
                     </h4>
                     <p className="text-light-secondary font-sora dark:text-dark-secondary">
@@ -169,7 +169,7 @@ export default function GodhaarPage() {
                 <div className="flex items-start gap-4">
                   <div className="text-3xl flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">
+                    <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
                       Human Error
                     </h4>
                     <p className="text-light-secondary font-sora dark:text-dark-secondary">
@@ -181,7 +181,7 @@ export default function GodhaarPage() {
                 <div className="flex items-start gap-4">
                   <div className="text-3xl flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">
+                    <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
                       Costly Mistakes
                     </h4>
                     <p className="text-light-secondary font-sora dark:text-dark-secondary">
@@ -212,7 +212,7 @@ export default function GodhaarPage() {
                 <div className="flex items-start gap-4">
                   <div className="text-3xl flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">
+                    <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
                       Biometric Accuracy
                     </h4>
                     <p className="text-light-secondary font-sora dark:text-dark-secondary">
@@ -224,7 +224,7 @@ export default function GodhaarPage() {
                 <div className="flex items-start gap-4">
                   <div className="text-3xl flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">
+                    <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
                       No More Tags
                     </h4>
                     <p className="text-light-secondary font-sora dark:text-dark-secondary">
@@ -236,7 +236,7 @@ export default function GodhaarPage() {
                 <div className="flex items-start gap-4">
                   <div className="text-3xl flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">
+                    <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
                       Offline Ready
                     </h4>
                     <p className="text-light-secondary font-sora dark:text-dark-secondary">
