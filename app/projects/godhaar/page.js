@@ -246,14 +246,16 @@ export default function GodhaarPage() {
           <div className="space-y-24">
             {/* STEP 1 - IMAGE LEFT, TEXT RIGHT */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="bg-gradient-brand rounded-3xl p-12 flex items-center justify-center aspect-square">
-                  <div className="text-9xl">📸</div>
+              <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-3xl overflow-hidden aspect-square">
+                   <img
+      src="/cattleid.jpeg"
+      alt="Godhaar Digital Certification"
+      className="w-full h-full object-cover"
+    />
                 </div>
-              </div>
               <div>
                 <div className="inline-block px-6 py-2 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full mb-4">
-                  <span className="text-light-accent dark:text-dark-accent font-bold">STEP 1</span>
+                  <span className="dark:text-dark-primary font-bold">STEP 1</span>
                 </div>
                 <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
                   Capture Muzzle Image
@@ -268,7 +270,7 @@ export default function GodhaarPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
                 <div className="inline-block px-6 py-2 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full mb-4">
-                  <span className="text-light-accent dark:text-dark-accent font-bold">STEP 2</span>
+                  <span className="dark:text-dark-primary font-bold">STEP 2</span>
                 </div>
                 <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
                   AI Processing
@@ -277,23 +279,29 @@ export default function GodhaarPage() {
                   Our advanced AI analyzes the unique muzzle pattern in milliseconds. The deep learning model processes thousands of data points to create a unique signature.
                 </p>
               </div>
-              <div className="order-1 md:order-2">
-                <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-3xl p-12 flex items-center justify-center aspect-square">
-                  <div className="text-9xl">🧠</div>
-                </div>
-              </div>
+        <div className="order-1 md:order-2">
+  <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-3xl overflow-hidden aspect-square">
+    <img
+      src="/aipowered.jpeg"
+      alt="AI Processing"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
             </div>
 
             {/* STEP 3 - IMAGE LEFT, TEXT RIGHT */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="bg-gradient-to-br from-green-500 to-teal-500 rounded-3xl p-12 flex items-center justify-center aspect-square">
-                  <div className="text-9xl">🎯</div>
+              <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-3xl overflow-hidden aspect-square">
+                   <img
+      src="/cattleid.jpeg"
+      alt="Godhaar Digital Certification"
+      className="w-full h-full object-cover"
+    />
                 </div>
-              </div>
               <div>
                 <div className="inline-block px-6 py-2 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full mb-4">
-                  <span className="text-light-accent dark:text-dark-accent font-bold">STEP 3</span>
+                  <span className="dark:text-dark-primary font-bold">STEP 3</span>
                 </div>
                 <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
                   Pattern Matching
@@ -308,7 +316,7 @@ export default function GodhaarPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
                 <div className="inline-block px-6 py-2 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full mb-4">
-                  <span className="text-light-accent dark:text-dark-accent font-bold">STEP 4</span>
+                  <span className="dark:text-dark-primary font-bold">STEP 4</span>
                 </div>
                 <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
                   Access Full Profile
@@ -318,22 +326,30 @@ export default function GodhaarPage() {
                 </p>
               </div>
               <div className="order-1 md:order-2">
-                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-12 flex items-center justify-center aspect-square">
-                  <div className="text-9xl">📊</div>
-                </div>
+                <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-3xl overflow-hidden aspect-square">
+    <img
+      src="/view_profile.png"
+      alt="View Profile"
+      className="w-full h-full object-cover"
+    />
+  </div>
               </div>
             </div>
 
             {/* STEP 5 - IMAGE LEFT, TEXT RIGHT */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="bg-gradient-to-br from-green-500 to-teal-500 rounded-3xl p-12 flex items-center justify-center aspect-square">
-                  <div className="text-9xl">🎯</div>
+                <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-3xl overflow-hidden aspect-square">
+                   <img
+      src="/cattleid.jpeg"
+      alt="Godhaar Digital Certification"
+      className="w-full h-full object-cover"
+    />
                 </div>
               </div>
               <div>
                 <div className="inline-block px-6 py-2 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full mb-4">
-                  <span className="text-light-accent dark:text-dark-accent font-bold">STEP 5</span>
+                  <span className="dark:text-dark-primary font-bold">STEP 5</span>
                 </div>
                 <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
                   Digital Certification
