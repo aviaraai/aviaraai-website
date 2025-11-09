@@ -5,32 +5,53 @@ import Link from 'next/link'
 export default function GodhaarPage() {
   return (
     <div>
-      {/* HERO SECTION */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 bg-light-bg dark:bg-dark-bg">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-green-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+     {/* HERO SECTION */}
+<section className="min-h-screen flex items-center relative overflow-hidden pt-20">
+  {/* Background Image */}
+  <div className="absolute inset-0 z-0">
+    <img 
+      src="/cow_background.jpeg" 
+      alt="Cattle Farm Background" 
+      className="w-full h-full object-cover"
+    />
+    {/* Dark Overlay for better text readability */}
+    <div className="absolute inset-0 bg-black/30"></div>
+  </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 animate-fade-in">
-          <div className="text-8xl mb-8">🐄</div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-light-primary dark:text-dark-primary mb-6 leading-tight">
-            Godhaar
-          </h1>
-          <p className="text-2xl md:text-3xl text-light-accent dark:text-dark-accent font-semibold mb-6">
-            The Future of Livestock Identification
-          </p>
-          <p className="text-xl md:text-2xl text-light-secondary dark:text-dark-secondary mb-10 max-w-3xl mx-auto">
-            Revolutionizing Livestock Management with  AI-Powered Biometric muzzle print recognition technology.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#about" className="bg-light-accent dark:bg-dark-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-light-accent-hover dark:hover:bg-dark-accent-hover">
-              Learn More
-            </a>
-            <a href="mailto:contact@aviaraai.com" className="bg-transparent text-light-primary dark:text-dark-primary border-2 border-light-border dark:border-dark-border px-8 py-4 rounded-lg font-semibold text-lg hover:bg-light-surface dark:hover:bg-dark-surface">
-              Request Demo
-            </a>
-          </div>
-        </div>
-      </section>
+  {/* Content - Left Aligned */}
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+    <div className="max-w-2xl animate-fade-in">
+      {/* <div className="text-7xl mb-6"></div> */}
+      
+      <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+        Godhaar
+      </h1>
+      
+      <p className="text-2xl md:text-3xl text-blue-400 font-semibold mb-6">
+        The Future of Livestock Identification
+      </p>
+      
+      <p className="text-xl md:text-2xl text-gray-200 mb-10">
+        Revolutionizing Livestock Management with AI-Powered Biometric muzzle print recognition technology.
+      </p>
+      
+      <div className="flex flex-col sm:flex-row gap-4">
+        <a 
+          href="#about" 
+          className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all inline-block text-center"
+        >
+          Learn More
+        </a>
+        <a 
+          href="mailto:contact@aviaraai.com" 
+          className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all inline-block text-center"
+        >
+          Request Demo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
      {/* ABOUT SECTION - TEXT LEFT, IMAGE RIGHT */}
 <section id="about" className="py-20 bg-light-surface dark:bg-dark-surface">
@@ -69,7 +90,7 @@ export default function GodhaarPage() {
           <img 
             src="/Godhaar_logo_small.png" 
             alt="Godhaar Cattle Recognition" 
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full h-full object-cover rounded-2xl  bg-white/100"
           />
         </div>
       </div>

@@ -9,10 +9,9 @@ export const metadata = {
 
 export default function GodhaarLayout({ children }) {
   return (
-    <>
+    <div className="dark">
       <GodhaarNavbar />
       <main>{children}</main>
-      {/* <Footer /> */}
-    </>
+    </div>
   )
 }
