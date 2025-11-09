@@ -63,10 +63,14 @@ export default function GodhaarPage() {
         </div>
       </div>
 
-      {/* IMAGE - RIGHT (SMALLER SIZE) */}
+      {/* IMAGE - RIGHT (WHITE CONTAINER) */}
       <div className="order-1 md:order-2 flex justify-center">
-        <div className="bg-gradient-brand rounded-3xl p-12 flex items-center justify-center w-80 h-80">
-          <div className="text-8xl">🐄</div>
+        <div className="bg-white dark:bg-white rounded-3xl p-8 shadow-xl w-full max-w-md aspect-square flex items-center justify-center overflow-hidden border border-light-border dark:border-dark-border">
+          <img 
+            src="/Godhaar_logo_small.png" 
+            alt="Godhaar Cattle Recognition" 
+            className="w-full h-full object-cover rounded-2xl"
+          />
         </div>
       </div>
     </div>
