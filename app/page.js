@@ -9,24 +9,34 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-light-primary dark:text-dark-primary mb-6 leading-tight">
-            AI Solutions That <span className="text-gradient">Transform</span>
-            <br />
-            Real-World Challenges
-          </h1>
-          <p className="text-xl md:text-2xl text-light-secondary dark:text-dark-secondary mb-10 max-w-3xl mx-auto">
-            From cattle management to smart surveillance, we build AI that solves practical problems and creates lasting impact
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="#projects" className="bg-light-accent dark:bg-dark-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-light-accent-hover dark:hover:bg-dark-accent-hover">
-              View Our Projects
-            </Link>
-            <Link href="#about" className="bg-transparent text-light-primary dark:text-dark-primary border-2 border-light-border dark:border-dark-border px-8 py-4 rounded-lg font-semibold text-lg hover:bg-light-surface dark:hover:bg-dark-surface">
-              Learn More
-            </Link>
-          </div>
-        </div>
+        <section className="relative h-screen w-full overflow-hidden">
+  {/* Video Background - Full Screen */}
+  <div className="absolute inset-0 w-full h-full">
+    <video 
+      autoPlay 
+      loop 
+      muted 
+      playsInline
+      className="absolute top-0 left-0 w-full h-full object-cover"
+    >
+      <source src="/main_hero.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    
+    {/* Dark Overlay */}
+    <div className="absolute inset-0 bg-black/50"></div>
+  </div>
+
+  {/* Text Content */}
+  <div className="relative z-10 h-full flex items-center justify-center">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+        AviaraAI <span className="text-gradient">Where Vision Meets Intelligence</span>
+        <br />
+      </h1>
+    </div>
+  </div>
+</section>
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce-slow">
           <div className="w-6 h-10 border-2 border-light-muted dark:border-dark-muted rounded-full flex items-start justify-center p-2">
@@ -36,57 +46,12 @@ export default function Home() {
       </section>
 
       <section id="about" className="py-20 bg-light-surface dark:bg-dark-surface">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary text-center mb-4">
-            Who We Are
-          </h2>
-          <p className="text-xl text-light-secondary dark:text-dark-secondary text-center mb-12 max-w-3xl mx-auto">
-            Innovating at the intersection of artificial intelligence and real-world impact
-          </p>
-
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <p className="text-lg text-light-secondary dark:text-dark-secondary leading-relaxed">
-              AviaraAI is an AI innovation startup focused on creating practical, scalable solutions across multiple industries. We combine cutting-edge computer vision, machine learning, and deep learning to solve real-world problems that matter.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-brand rounded-2xl flex items-center justify-center text-4xl">
-                🎯
-              </div>
-              <h3 className="text-2xl font-bold text-light-primary dark:text-dark-primary mb-3">Clear Purpose</h3>
-              <p className="text-light-secondary dark:text-dark-secondary">
-                We identify genuine problems and build solutions that create measurable impact
-              </p>
-            </div>
-
-            <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-brand rounded-2xl flex items-center justify-center text-4xl">
-                ⚡
-              </div>
-              <h3 className="text-2xl font-bold text-light-primary dark:text-dark-primary mb-3">Cutting-Edge Tech</h3>
-              <p className="text-light-secondary dark:text-dark-secondary">
-                Leveraging the latest in AI, computer vision, and machine learning technologies
-              </p>
-            </div>
-
-            <div className="text-center group">
-              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-brand rounded-2xl flex items-center justify-center text-4xl">
-                📈
-              </div>
-              <h3 className="text-2xl font-bold text-light-primary dark:text-dark-primary mb-3">Real Results</h3>
-              <p className="text-light-secondary dark:text-dark-secondary">
-                Delivering solutions that scale and generate tangible value for our users
-              </p>
-            </div>
-          </div>
-        </div>
+      Need to add something here !!
       </section>
 
       <section id="projects" className="py-20 bg-light-bg dark:bg-dark-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary text-center mb-4">
+          <h2 className="text-4xl md:text-5xl font-sora text-light-primary dark:text-dark-primary text-center mb-4">
             Our Innovation Portfolio
           </h2>
           <p className="text-xl text-light-secondary dark:text-dark-secondary text-center mb-12 max-w-3xl mx-auto">
@@ -244,7 +209,7 @@ export default function Home() {
               Get in Touch
             </a>
             <Link href="#projects" className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10">
-              View Projects
+              View Our Products
             </Link>
           </div>
         </div>

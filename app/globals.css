@@ -2,20 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --bg-main: #F7F7F9;
-  --bg-surface: #FFFFFF;
-  --text-primary: #0B1220;
-  --text-secondary: #334155;
-  --text-muted: #6B7280;
-  --border: #E5E7EB;
-  --accent: #0F4C75;
-  --accent-hover: #145A8D;
-  --success: #16A34A;
-  --warning: #F59E0B;
-  --error: #EF4444;
-}
-
 .dark {
   --bg-main: #0F1724;
   --bg-surface: #0B1220;
@@ -55,11 +41,14 @@ html {
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, var(--accent), #3B82F6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+  background: linear-gradient(135deg, #17c9da); /* Blue → Violet */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+
 
   .bg-gradient-brand {
     background: linear-gradient(135deg, var(--accent), #3B82F6);

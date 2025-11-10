@@ -1,235 +1,316 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function GodhaarPage() {
   return (
     <div>
       {/* HERO SECTION */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 bg-light-bg dark:bg-dark-bg">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-green-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+      <section className="min-h-screen flex items-center relative overflow-hidden pt-20">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/cow_background.jpeg"
+            alt="Cattle Farm Background"
+            className="w-full h-full object-cover"
+          />
+          {/* Dark Overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/30"></div>
+        </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 animate-fade-in">
-          <div className="text-8xl mb-8">🐄</div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-light-primary dark:text-dark-primary mb-6 leading-tight">
-            Godhaar
-          </h1>
-          <p className="text-2xl md:text-3xl text-light-accent dark:text-dark-accent font-semibold mb-6">
-            The Future of Livestock Identification
-          </p>
-          <p className="text-xl md:text-2xl text-light-secondary dark:text-dark-secondary mb-10 max-w-3xl mx-auto">
-            Revolutionizing Livestock Management with  AI-Powered Biometric muzzle print recognition technology.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#about" className="bg-light-accent dark:bg-dark-accent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-light-accent-hover dark:hover:bg-dark-accent-hover">
-              Learn More
-            </a>
-            <a href="mailto:contact@aviaraai.com" className="bg-transparent text-light-primary dark:text-dark-primary border-2 border-light-border dark:border-dark-border px-8 py-4 rounded-lg font-semibold text-lg hover:bg-light-surface dark:hover:bg-dark-surface">
-              Request Demo
-            </a>
+        {/* Content - Left Aligned */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="max-w-2xl animate-fade-in">
+            {/* <div className="text-7xl mb-6"></div> */}
+
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              GODHAAR
+            </h1>
+
+            <p className="text-2xl md:text-3xl text-blue-300 font-sora mb-6">
+              THE FUTURE OF LIVESTOCK IDENTIFICATION
+            </p>
+
+            <p className="text-xl md:text-2xl font-sora text-gray-200 mb-10">
+              Revolutionizing Livestock Management with AI-Powered Biometric
+              muzzle print recognition technology.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#about"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-sora text-lg hover:bg-blue-700 transition-all inline-block text-center"
+              >
+                Learn More
+              </a>
+              <a
+                href="mailto:contact@aviaraai.com"
+                className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-lg font-sora text-lg hover:bg-white/10 transition-all inline-block text-center"
+              >
+                Request Demo
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-     {/* ABOUT SECTION - TEXT LEFT, IMAGE RIGHT */}
-<section id="about" className="py-20 bg-light-surface dark:bg-dark-surface">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid md:grid-cols-2 gap-12 items-center">
-      {/* TEXT - LEFT */}
-      <div className="order-2 md:order-1">
-        <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary mb-6">
-          What is Godhaar?
-        </h2>
-        <p className="text-lg text-light-secondary dark:text-dark-secondary mb-6 leading-relaxed">
-          Godhaar is an advanced AI-powered cattle management system that uses cutting-edge muzzle recognition technology to identify and track individual cattle.
-        </p>
-        <p className="text-lg text-light-secondary dark:text-dark-secondary mb-6 leading-relaxed">
-          Just like human fingerprints, each cow has a unique muzzle pattern that our system can recognize with 95% accuracy in just 2 seconds.
-        </p>
-        <div className="flex gap-4">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-gradient mb-2">95%</div>
-            <p className="text-sm text-light-muted dark:text-dark-muted">Accuracy</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-gradient mb-2">2s</div>
-            <p className="text-sm text-light-muted dark:text-dark-muted">ID Time</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-gradient mb-2">1000+</div>
-            <p className="text-sm text-light-muted dark:text-dark-muted">Cattle</p>
-          </div>
-        </div>
-      </div>
+      {/* ABOUT SECTION - TEXT LEFT, IMAGE RIGHT */}
+      <section
+        id="about"
+        className="py-20 bg-light-surface dark:bg-dark-surface"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* TEXT - LEFT */}
+            <div className="order-2 md:order-1">
+              <h2 className="text-4xl md:text-5xl font-sora text-light-primary dark:text-dark-primary mb-6">
+                What is Godhaar?
+              </h2>
+              <p className="text-lg text-light-secondary font-sora dark:text-dark-secondary mb-6 leading-relaxed">
+                Godhaar is an advanced AI-powered cattle management system that
+                uses cutting-edge muzzle recognition technology to identify and
+                track individual cattle.
+              </p>
+              <p className="text-lg text-light-secondary font-sora dark:text-dark-secondary mb-6 leading-relaxed">
+                Just like human fingerprints, each cow has a unique muzzle
+                pattern that our system can recognize with 95% accuracy in just
+                2 seconds.
+              </p>
+              <div className="flex gap-4">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-gradient mb-2">
+                    95%
+                  </div>
+                  <p className="text-sm text-light-muted dark:text-dark-muted">
+                    Accuracy
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-gradient mb-2">
+                    2s
+                  </div>
+                  <p className="text-sm text-light-muted dark:text-dark-muted">
+                    ID Time
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-gradient mb-2">
+                    1000+
+                  </div>
+                  <p className="text-sm text-light-muted dark:text-dark-muted">
+                    Cattle
+                  </p>
+                </div>
+              </div>
+            </div>
 
-      {/* IMAGE - RIGHT (WHITE CONTAINER) */}
-      <div className="order-1 md:order-2 flex justify-center">
-        <div className="bg-white dark:bg-white rounded-3xl p-8 shadow-xl w-full max-w-md aspect-square flex items-center justify-center overflow-hidden border border-light-border dark:border-dark-border">
-          <img 
-            src="/Godhaar_logo_small.png" 
-            alt="Godhaar Cattle Recognition" 
-            className="w-full h-full object-cover rounded-2xl"
-          />
+            {/* IMAGE - RIGHT (WHITE CONTAINER) */}
+            <div className="order-1 md:order-2 flex justify-center">
+              <div className="bg-white dark:bg-white rounded-3xl p-8 shadow-xl w-full max-w-md aspect-square flex items-center justify-center overflow-hidden border border-light-border dark:border-dark-border">
+                <img
+                  src="/Godhaar_logo_small.png"
+                  alt="Godhaar Cattle Recognition"
+                  className="w-full h-full object-cover rounded-2xl  bg-white/100"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* PROBLEM SECTION - IMAGE LEFT, TEXT RIGHT */}
-<section className="py-20 bg-light-bg dark:bg-dark-bg">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid md:grid-cols-2 gap-12 items-center">
-      {/* IMAGE - LEFT (SMALLER SIZE) */}
-      <div className="flex justify-center">
-        <div className="bg-light-error/10 dark:bg-dark-error/10 rounded-3xl p-8 flex items-center justify-center w-80 h-80 border-4 border-light-error/20 dark:border-dark-error/20">
-          <div className="text-center">
-            <div className="text-8xl mb-4">❌</div>
-            <h3 className="text-xl font-bold text-light-error dark:text-dark-error">Old Methods</h3>
-          </div>
-        </div>
-      </div>
+      <section className="py-20 bg-light-bg dark:bg-dark-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* IMAGE - LEFT (SMALLER SIZE) */}
+            <div className="flex justify-center">
+              <div
+                className="rounded-3xl overflow-hidden border border-light-border dark:border-dark-border shadow-xl"
+                style={{ width: "450px", height: "450px" }} // ⬅ Change values as needed
+              >
+                <img
+                  src="/problems.png"
+                  alt="Traditional Methods"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              </div>
+            </div>
 
-      {/* TEXT - RIGHT */}
-      <div>
-        <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary mb-6">
-          The Problems with Traditional Methods
-        </h2>
-        <div className="space-y-6">
-          <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0"></div>
+            {/* TEXT - RIGHT */}
             <div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Time-Consuming</h4>
-              <p className="text-light-secondary dark:text-dark-secondary">
-                Manual identification takes minutes per animal, wasting valuable farm time
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0"></div>
-            <div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Lost Records</h4>
-              <p className="text-light-secondary dark:text-dark-secondary">
-                Paper-based tracking leads to incomplete and lost data over time. No health traceability as well.
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0"></div>
-            <div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Human Error</h4>
-              <p className="text-light-secondary dark:text-dark-secondary">
-                Misidentification leads to wrong treatments and breeding mistakes
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0"></div>
-            <div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Costly Mistakes</h4>
-              <p className="text-light-secondary dark:text-dark-secondary">
-                Identification errors result in expensive veterinary emergencies
-              </p>
+              <h2 className="text-4xl md:text-5xl font-sora text-light-primary dark:text-dark-primary mb-6">
+                The Problems with Traditional Methods
+              </h2>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
+                      Time-Consuming
+                    </h4>
+                    <p className="text-light-secondary font-sora dark:text-dark-secondary">
+                      Manual identification takes minutes per animal, wasting
+                      valuable farm time
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
+                      Lost Records
+                    </h4>
+                    <p className="text-light-secondary font-sora dark:text-dark-secondary">
+                      Paper-based tracking leads to incomplete and lost data
+                      over time. No health traceability as well.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
+                      Human Error
+                    </h4>
+                    <p className="text-light-secondary font-sora dark:text-dark-secondary">
+                      Misidentification leads to wrong treatments and breeding
+                      mistakes
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
+                      Costly Mistakes
+                    </h4>
+                    <p className="text-light-secondary font-sora dark:text-dark-secondary">
+                      Identification errors result in expensive veterinary
+                      emergencies
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* SOLUTION SECTION - TEXT LEFT, IMAGE RIGHT */}
-<section id="features" className="py-20 bg-light-surface dark:bg-dark-surface">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid md:grid-cols-2 gap-12 items-center">
-      {/* TEXT - LEFT */}
-      <div>
-        <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary mb-6">
-          Our AI-Powered Solution
-        </h2>
-        <div className="space-y-6">
-          <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0"></div>
+      <section
+        id="features"
+        className="py-20 bg-light-surface dark:bg-dark-surface"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* TEXT - LEFT */}
             <div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Biometric Accuracy</h4>
-              <p className="text-light-secondary dark:text-dark-secondary">
-                AI identifies cattle in 2 seconds with 95% accuracy using unique muzzle patterns
-              </p>
+              <h2 className="text-4xl md:text-5xl font-sora text-light-primary dark:text-dark-primary mb-6">
+                Our AI-Powered Solution
+              </h2>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
+                      Biometric Accuracy
+                    </h4>
+                    <p className="text-light-secondary font-sora dark:text-dark-secondary">
+                      AI identifies cattle in 2 seconds with 95% accuracy using
+                      unique muzzle patterns
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
+                      No More Tags
+                    </h4>
+                    <p className="text-light-secondary font-sora dark:text-dark-secondary">
+                      Contactless, humane, tamper-proof identification without
+                      physical tags or collars
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
+                      Offline Ready
+                    </h4>
+                    <p className="text-light-secondary font-sora dark:text-dark-secondary">
+                      Works in remote areas without internet
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl flex-shrink-0"></div>
+                  <div>
+                    <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">
+                      Farmer Friendly
+                    </h4>
+                    <p className="text-light-secondary font-sora dark:text-dark-secondary">
+                      Simple. Secure. Local language support for easy adoption
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0"></div>
-            <div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">No More Tags</h4>
-              <p className="text-light-secondary dark:text-dark-secondary">
-                Contactless, humane, tamper-proof identification without physical tags or collars
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0"></div>
-            <div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Offline Ready</h4>
-              <p className="text-light-secondary dark:text-dark-secondary">
-                Works in remote areas without internet
-              </p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <div className="text-3xl flex-shrink-0"></div>
-            <div>
-              <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">Farmer Friendly</h4>
-              <p className="text-light-secondary dark:text-dark-secondary">
-                Simple. Secure. Local language support for easy adoption
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* IMAGE - RIGHT (SMALLER SIZE) */}
-      <div className="flex justify-center">
-        <div className="bg-light-success/10 dark:bg-dark-success/10 rounded-3xl p-8 flex items-center justify-center w-80 h-80 border-4 border-light-success/20 dark:border-dark-success/20">
-          <div className="text-center">
-            <div className="text-8xl mb-4">✅</div>
-            <h3 className="text-xl font-bold text-light-success dark:text-dark-success">AI Solution</h3>
+            {/* IMAGE - RIGHT (SMALLER SIZE) */}
+            <div className="flex justify-center">
+              <div
+                className="rounded-3xl overflow-hidden border border-light-border dark:border-dark-border shadow-xl"
+                style={{ width: "450px", height: "450px" }} // ⬅ Change values as needed
+              >
+                <img
+                  src="/our_ai_solution.png"
+                  alt="Solution"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* HOW IT WORKS - IMAGE LEFT, TEXT RIGHT */}
       <section id="how-it-works" className="py-20 bg-light-bg dark:bg-dark-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary mb-4">
+            <h2 className="text-4xl md:text-5xl font-sora text-light-primary dark:text-dark-primary mb-4">
               How It Works
             </h2>
             <p className="text-xl text-light-secondary dark:text-dark-secondary max-w-3xl mx-auto">
-              From capture to certification in seconds. Experience the seamless journey of our Godhaar Process in 5 easy steps
+              From capture to certification in seconds. Experience the seamless
+              journey of our Godhaar Process in 5 easy steps
             </p>
           </div>
 
           <div className="space-y-24">
             {/* STEP 1 - IMAGE LEFT, TEXT RIGHT */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="bg-gradient-brand rounded-3xl p-12 flex items-center justify-center aspect-square">
-                  <div className="text-9xl">📸</div>
-                </div>
+              <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-3xl overflow-hidden aspect-square">
+                <img
+                  src="/capture_muzzle.jpeg"
+                  alt="Godhaar Digital Certification"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <div className="inline-block px-6 py-2 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full mb-4">
-                  <span className="text-light-accent dark:text-dark-accent font-bold">STEP 1</span>
+                  <span className="dark:text-dark-primary font-bold">
+                    STEP 1
+                  </span>
                 </div>
-                <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
+                <h3 className="text-3xl font-sora text-light-primary dark:text-dark-primary mb-4">
                   Capture Muzzle Image
                 </h3>
                 <p className="text-lg text-light-secondary dark:text-dark-secondary leading-relaxed">
-                  Simply take a photo of the cattle's muzzle using your smartphone camera. Our app guides you to capture the perfect angle for best results.
+                  Simply take a photo of the cattle's muzzle using your
+                  smartphone camera. Our app guides you to capture the perfect
+                  angle for best results.
                 </p>
               </div>
             </div>
@@ -238,38 +319,52 @@ export default function GodhaarPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
                 <div className="inline-block px-6 py-2 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full mb-4">
-                  <span className="text-light-accent dark:text-dark-accent font-bold">STEP 2</span>
+                  <span className="dark:text-dark-primary font-bold">
+                    STEP 2
+                  </span>
                 </div>
-                <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
+                <h3 className="text-3xl font-sora text-light-primary dark:text-dark-primary mb-4">
                   AI Processing
                 </h3>
                 <p className="text-lg text-light-secondary dark:text-dark-secondary leading-relaxed">
-                  Our advanced AI analyzes the unique muzzle pattern in milliseconds. The deep learning model processes thousands of data points to create a unique signature.
+                  Our advanced AI analyzes the unique muzzle pattern in
+                  milliseconds. The deep learning model processes thousands of
+                  data points to create a unique signature.
                 </p>
               </div>
               <div className="order-1 md:order-2">
-                <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-3xl p-12 flex items-center justify-center aspect-square">
-                  <div className="text-9xl">🧠</div>
+                <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-3xl overflow-hidden aspect-square">
+                  <img
+                    src="/aipowered.jpeg"
+                    alt="AI Processing"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
 
             {/* STEP 3 - IMAGE LEFT, TEXT RIGHT */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="bg-gradient-to-br from-green-500 to-teal-500 rounded-3xl p-12 flex items-center justify-center aspect-square">
-                  <div className="text-9xl">🎯</div>
-                </div>
+              <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-3xl overflow-hidden aspect-square">
+                <img
+                  src="/print_matching.jpeg"
+                  alt="Godhaar Digital Certification"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <div className="inline-block px-6 py-2 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full mb-4">
-                  <span className="text-light-accent dark:text-dark-accent font-bold">STEP 3</span>
+                  <span className="dark:text-dark-primary font-bold">
+                    STEP 3
+                  </span>
                 </div>
-                <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
+                <h3 className="text-3xl font-sora text-light-primary dark:text-dark-primary mb-4">
                   Pattern Matching
                 </h3>
                 <p className="text-lg text-light-secondary dark:text-dark-secondary leading-relaxed">
-                  The system compares the pattern against our database and identifies the cattle within 2 seconds with 95% accuracy. If it's a new animal, you can register it instantly.
+                  The system compares the pattern against our database and
+                  identifies the cattle within 2 seconds with 95% accuracy. If
+                  it's a new animal, you can register it instantly.
                 </p>
               </div>
             </div>
@@ -278,18 +373,26 @@ export default function GodhaarPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
                 <div className="inline-block px-6 py-2 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full mb-4">
-                  <span className="text-light-accent dark:text-dark-accent font-bold">STEP 4</span>
+                  <span className="dark:text-dark-primary font-bold">
+                    STEP 4
+                  </span>
                 </div>
-                <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
+                <h3 className="text-3xl font-sora text-light-primary dark:text-dark-primary mb-4">
                   Access Full Profile
                 </h3>
                 <p className="text-lg text-light-secondary dark:text-dark-secondary leading-relaxed">
-                  View complete health records, breeding history, milk production data, and vaccination schedules. Update any information with just a few taps.
+                  View complete health records, breeding history, milk
+                  production data, and vaccination schedules. Update any
+                  information with just a few taps.
                 </p>
               </div>
               <div className="order-1 md:order-2">
-                <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-12 flex items-center justify-center aspect-square">
-                  <div className="text-9xl">📊</div>
+                <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-3xl overflow-hidden aspect-square">
+                  <img
+                    src="/view_profile.png"
+                    alt="View Profile"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
@@ -297,23 +400,30 @@ export default function GodhaarPage() {
             {/* STEP 5 - IMAGE LEFT, TEXT RIGHT */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="bg-gradient-to-br from-green-500 to-teal-500 rounded-3xl p-12 flex items-center justify-center aspect-square">
-                  <div className="text-9xl">🎯</div>
+                <div className="bg-gradient-to-br from-purple-500 to-blue-500 rounded-3xl overflow-hidden aspect-square">
+                  <img
+                    src="/godhaar_card.jpeg"
+                    alt="Godhaar Digital Certification"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               <div>
                 <div className="inline-block px-6 py-2 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full mb-4">
-                  <span className="text-light-accent dark:text-dark-accent font-bold">STEP 5</span>
+                  <span className="dark:text-dark-primary font-bold">
+                    STEP 5
+                  </span>
                 </div>
-                <h3 className="text-3xl font-bold text-light-primary dark:text-dark-primary mb-4">
+                <h3 className="text-3xl font-sora text-light-primary dark:text-dark-primary mb-4">
                   Digital Certification
                 </h3>
                 <p className="text-lg text-light-secondary dark:text-dark-secondary leading-relaxed">
-                  Now you can download digital certificates for your cattle.Each certificate includes animal details, owner info, and a unique QR code for quick verification.
+                  Now you can download digital certificates for your cattle.Each
+                  certificate includes animal details, owner info, and a unique
+                  QR code for quick verification.
                 </p>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -321,7 +431,7 @@ export default function GodhaarPage() {
       {/* FEATURES GRID */}
       <section className="py-20 bg-light-surface dark:bg-dark-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary text-center mb-4">
+          <h2 className="text-4xl md:text-5xl font-sora text-light-primary dark:text-dark-primary text-center mb-4">
             Why Choose Godhaar?
           </h2>
           <p className="text-xl text-light-secondary dark:text-dark-secondary text-center mb-12 max-w-3xl mx-auto">
@@ -330,50 +440,98 @@ export default function GodhaarPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-light-bg dark:bg-dark-bg p-8 rounded-2xl border border-light-border dark:border-dark-border">
-              <div className="text-5xl mb-4">📱</div>
-              <h3 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Mobile-First Design</h3>
+              <div className="mb-4">
+                <img
+                  src="/mobile.png" // replace this with your actual image path
+                  alt="Health Icon"
+                  className="w-12 h-12 object-contain" // adjust size as needed
+                />
+              </div>
+              <h3 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-3">
+                Mobile-First Design
+              </h3>
               <p className="text-light-secondary dark:text-dark-secondary">
                 Easy-to-use mobile app for iOS and Android devices
               </p>
             </div>
 
             <div className="bg-light-bg dark:bg-dark-bg p-8 rounded-2xl border border-light-border dark:border-dark-border">
-              <div className="text-5xl mb-4">💉</div>
-              <h3 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Health Records</h3>
+              <div className="mb-4">
+                <img
+                  src="/records.png" // replace this with your actual image path
+                  alt="Health Icon"
+                  className="w-12 h-12 object-contain" // adjust size as needed
+                />
+              </div>
+              <h3 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-3">
+                Health Records
+              </h3>
               <p className="text-light-secondary dark:text-dark-secondary">
                 Track vaccinations, treatments, and medical history
               </p>
             </div>
 
             <div className="bg-light-bg dark:bg-dark-bg p-8 rounded-2xl border border-light-border dark:border-dark-border">
-              <div className="text-5xl mb-4">🔔</div>
-              <h3 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Smart Alerts</h3>
+              <div className="mb-4">
+                <img
+                  src="/bell.png" // replace this with your actual image path
+                  alt="Health Icon"
+                  className="w-12 h-12 object-contain" // adjust size as needed
+                />
+              </div>
+              <h3 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-3">
+                Smart Alerts
+              </h3>
               <p className="text-light-secondary dark:text-dark-secondary">
                 Reminders for vaccinations and breeding schedules
               </p>
             </div>
 
             <div className="bg-light-bg dark:bg-dark-bg p-8 rounded-2xl border border-light-border dark:border-dark-border">
-              <div className="text-5xl mb-4">📈</div>
-              <h3 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Analytics</h3>
+              <div className="mb-4">
+                <img
+                  src="/analysis.png" // replace this with your actual image path
+                  alt="Health Icon"
+                  className="w-12 h-12 object-contain" // adjust size as needed
+                />
+              </div>
+              <h3 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-3">
+                Analytics
+              </h3>
               <p className="text-light-secondary dark:text-dark-secondary">
-                Insights and reports to optimize herd management
+                Insights and Reports to optimize cattle management
               </p>
             </div>
 
             <div className="bg-light-bg dark:bg-dark-bg p-8 rounded-2xl border border-light-border dark:border-dark-border">
-              <div className="text-5xl mb-4">🥛</div>
-              <h3 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Milk Production</h3>
+              <div className="mb-4">
+                <img
+                  src="/milk.png" // replace this with your actual image path
+                  alt="Health Icon"
+                  className="w-12 h-12 object-contain" // adjust size as needed
+                />
+              </div>
+              <h3 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-3">
+                Milk Production
+              </h3>
               <p className="text-light-secondary dark:text-dark-secondary">
                 Track daily milk yield for each animal
               </p>
             </div>
 
             <div className="bg-light-bg dark:bg-dark-bg p-8 rounded-2xl border border-light-border dark:border-dark-border">
-              <div className="text-5xl mb-4">👶</div>
-              <h3 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-3">Breeding History</h3>
+              <div className="mb-4">
+                <img
+                  src="/cow_logo.png" // replace this with your actual image path
+                  alt="Health Icon"
+                  className="w-12 h-12 object-contain" // adjust size as needed
+                />
+              </div>
+              <h3 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-3">
+                Health Records
+              </h3>
               <p className="text-light-secondary dark:text-dark-secondary">
-                Complete breeding records and offspring tracking
+                Track vaccinations, treatments, and medical history
               </p>
             </div>
           </div>
@@ -397,32 +555,44 @@ export default function GodhaarPage() {
 
             {/* TEXT - RIGHT */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary mb-6">
-                Transform Your Farm Operations
+              <h2 className="text-4xl md:text-5xl font-sora text-light-primary dark:text-dark-primary mb-6">
+                Technology
               </h2>
               <div className="space-y-6">
                 <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
-                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2"> Save 50% Time</h4>
+                  <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
+                    {" "}
+                    Deep Neural Networks
+                  </h4>
                   <p className="text-light-secondary dark:text-dark-secondary">
-                    Reduce cattle identification from minutes to seconds
+                    Advanced convolutional neural networks trained on millions of muzzle patterns achieve superhuman pattern recognition accuracy.
                   </p>
                 </div>
                 <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
-                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2"> Lower Costs</h4>
+                  <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
+                    {" "}
+                    Cloud-Native Architecture
+                  </h4>
                   <p className="text-light-secondary dark:text-dark-secondary">
-                    Eliminate costly identification errors and vet emergencies
+                    Scalable cloud infrastructure ensures instant processing and 99.99% uptime for mission-critical livestock operations.
                   </p>
                 </div>
                 <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
-                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2"> Better Decisions</h4>
+                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2">
+                    {" "}
+                    Better Decisions
+                  </h4>
                   <p className="text-light-secondary dark:text-dark-secondary">
                     Data-driven insights for breeding, feeding, and healthcare
                   </p>
                 </div>
                 <div className="bg-light-surface dark:bg-dark-surface p-6 rounded-xl border border-light-border dark:border-dark-border">
-                  <h4 className="text-xl font-bold text-light-primary dark:text-dark-primary mb-2"> Full Traceability</h4>
+                  <h4 className="text-xl font-sora text-light-primary dark:text-dark-primary mb-2">
+                    {" "}
+                    Continuous Learning
+                  </h4>
                   <p className="text-light-secondary dark:text-dark-secondary">
-                    Complete digital records for compliance and quality
+                    Self-improving AI models that get smarter with every identification, adapting to new breeds and environmental conditions.
                   </p>
                 </div>
               </div>
@@ -442,15 +612,21 @@ export default function GodhaarPage() {
             Join 50+ farms already using Godhaar for smarter herd management
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:contact@aviaraai.com" className="bg-white text-light-accent dark:text-dark-accent px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100">
+            <a
+              href="mailto:contact@aviaraai.com"
+              className="bg-white text-light-accent dark:text-dark-accent px-8 py-4 rounded-lg font-sora text-lg hover:bg-gray-100"
+            >
               Request Demo
             </a>
-            <Link href="/" className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10">
+            <Link
+              href="/"
+              className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-lg font-sora text-lg hover:bg-white/10"
+            >
               Back to Home
             </Link>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
