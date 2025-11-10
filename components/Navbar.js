@@ -33,9 +33,11 @@ export default function Navbar() {
   }, [lastScrollY])
 
   const navLinks = [
-    { href: '/#about', label: 'About' },
-    { href: '/#projects', label: 'Projects' },
-    { href: '/#contact', label: 'Contact' },
+    { href: '/#blog', label: 'Blog' },
+    { href: '/#projects', label: 'Products' },
+    { href: '/#careers', label: 'Careers' },
+    { href: '/#about', label: 'Story' },
+    { href: '/#contact', label: 'Contact' }
   ]
 
   return (
@@ -51,10 +53,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 bg-gradient-brand rounded-lg flex items-center justify-center text-white font-bold text-xl">
+            <div className="w-10 h-10 bg-gradient-brand rounded-lg flex items-center justify-center text-white font-sora text-xl">
               A
             </div>
-            <span className="text-2xl font-bold text-dark-primary">
+            <span className="text-2xl font-sora text-dark-primary">
               AviaraAI
             </span>
           </Link>
@@ -70,12 +72,12 @@ export default function Navbar() {
               </Link>
             ))}
             
-            <Link
+            {/* <Link
               href="/#projects"
               className="bg-dark-accent text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-dark-accent-hover"
             >
-              Get Started
-            </Link>
+              Contact Us
+            </Link> */}
           </div>
 
           <div className="md:hidden flex items-center gap-4">
@@ -104,7 +106,7 @@ export default function Navbar() {
               <Link
                 href="/#projects"
                 onClick={() => setMobileMenuOpen(false)}
-                className="bg-dark-accent text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-dark-accent-hover"
+                className="bg-dark-accent text-white px-6 py-3 rounded-lg font-sora text-center hover:bg-dark-accent-hover"
               >
                 Get Started
               </Link>

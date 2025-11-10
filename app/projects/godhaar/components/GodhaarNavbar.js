@@ -33,6 +33,7 @@ export default function GodhaarNavbar() {
   }, [lastScrollY])
 
   const navLinks = [
+    { href: '/#home', label: 'Home' },
     { href: '/projects/godhaar#about', label: 'About' },
     { href: '/projects/godhaar#features', label: 'Features' },
     { href: '/projects/godhaar#how-it-works', label: 'Process' },

@@ -41,11 +41,14 @@ html {
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, var(--accent), #3B82F6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+  background: linear-gradient(135deg, #17c9da); /* Blue → Violet */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+
 
   .bg-gradient-brand {
     background: linear-gradient(135deg, var(--accent), #3B82F6);

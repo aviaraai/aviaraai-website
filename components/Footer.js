@@ -13,7 +13,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xl font-sora mb-4 text-light-primary dark:text-dark-primary">Quick Links</h3>
+            <h3 className="text-xl font-sora mb-4 text-light-primary dark:text-dark-primary">QUICK LINKS</h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -33,10 +33,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#projects"
+                  href="/#blog"
                   className="text-light-secondary dark:text-dark-secondary hover:text-light-accent dark:hover:text-dark-accent transition-colors"
                 >
-                  Projects
+                  Blog
                 </Link>
               </li>
               <li>
@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xl font-sora mb-4 text-light-primary dark:text-dark-primary">Projects</h3>
+            <h3 className="text-xl font-sora mb-4 text-light-primary dark:text-dark-primary">PRODUCT</h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xl font-sora mb-4 text-light-primary dark:text-dark-primary">Connect</h3>
+            <h3 className="text-xl font-sora mb-4 text-light-primary dark:text-dark-primary">FOLLOW US</h3>
             <div className="flex gap-4 mb-4">
               <a
                 href="#"
