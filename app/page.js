@@ -130,7 +130,7 @@ export default function Home() {
 
       <section className="py-20 bg-light-surface dark:bg-dark-surface">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-light-primary dark:text-dark-primary text-center mb-4">
+          <h2 className="text-4xl md:text-5xl font-sora text-light-primary dark:text-dark-primary text-center mb-4">
             Our Approach to AI Innovation
           </h2>
           <p className="text-xl text-light-secondary dark:text-dark-secondary text-center mb-12 max-w-3xl mx-auto">

@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 .dark {
-  --bg-main: #0F1724;
-  --bg-surface: #0B1220;
-  --text-primary: #F8FAFC;
-  --text-secondary: #CBD5E1;
-  --text-muted: #94A3B8;
-  --border: #1E293B;
+  --bg-main: #000000;
+  --bg-surface: #000000;
+  --text-primary: #FFFFFF;
+  --text-secondary: #FFFFFF;
+  --text-muted: #FFFFFF;
+  --border: #FFFFFF;
   --accent: #0F4C75;
   --accent-hover: #1872A4;
-  --success: #22C55E;
-  --warning: #FBBF24;
-  --error: #F87171;
+  --success: #FFFFFF;
+  --warning: #FFFFFF;
+  --error: #FFFFFF; 
 }
 
 ::-webkit-scrollbar {
