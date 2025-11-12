@@ -146,9 +146,9 @@ export default function Home() {
             </div>
 
             <div className="flex items-center justify-between pt-2">
-              <span className="text-gray-500 font-semibold inline-flex items-center gap-2">
+              {/* <span className="text-gray-500 font-semibold inline-flex items-center gap-2">
                 Stay Updated →
-              </span>
+              </span> */}
               <span className="text-sm text-gray-400">R&D · 2025</span>
             </div>
           </div>
@@ -183,9 +183,9 @@ export default function Home() {
             </div>
 
             <div className="flex items-center justify-between pt-2">
-              <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+              {/* <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
                 Get in Touch →
-              </span>
+              </span> */}
               <span className="text-sm text-gray-400">Ideas · Ongoing</span>
             </div>
           </div>
