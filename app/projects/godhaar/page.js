@@ -43,12 +43,12 @@ export default function GodhaarPage() {
               >
                 Learn More
               </a>
-              <a
+              {/* <a
                 href="mailto:contact@aviaraai.com"
                 className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-lg font-sora text-lg hover:bg-white/10 transition-all inline-block text-center"
               >
                 Contact Us
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
