@@ -47,7 +47,7 @@ export default function GodhaarPage() {
                 href="mailto:contact@aviaraai.com"
                 className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-lg font-sora text-lg hover:bg-white/10 transition-all inline-block text-center"
               >
-                Request Demo
+                Contact Us
               </a>
             </div>
           </div>
