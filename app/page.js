@@ -19,7 +19,7 @@ export default function Home() {
               playsInline
               className="absolute top-0 left-0 w-full h-full object-cover"
             >
-              <source src="/main_hero.mp4" type="video/mp4" />
+              <source src="/fixed_main_hero.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
