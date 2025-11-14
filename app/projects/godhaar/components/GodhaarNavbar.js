@@ -91,10 +91,10 @@ export default function GodhaarNavbar() {
           <div className="md:hidden pb-6">
             <div className="flex flex-col gap-4">
               {/* Godhaar Badge Mobile */}
-              <div className="flex items-center gap-2 px-4 py-2 bg-blue-100 rounded-lg">
+              {/* <div className="flex items-center gap-2 px-4 py-2 bg-blue-100 rounded-lg">
                 <span className="text-2xl">🐄</span>
                 <span className="font-bold text-blue-600">Godhaar</span>
-              </div>
+              </div> */}
 
               {navLinks.map((link) => (
                 <Link
