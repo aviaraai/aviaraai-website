@@ -15,22 +15,24 @@ export default function Story() {
   return (
     <main className="font-sora text-[#0F4C75] bg-white">
 
-      <section className="w-full h-screen flex flex-col md:flex-row bg-gray-100">
+      <section className="w-full h-screen flex flex-col md:flex-row bg-[#efefef]">
 
         {/* LEFT SIDE — MISSION TEXT */}
         <div className="w-full md:w-1/2 flex items-center justify-center px-8 py-16">
-          <div className="max-w-md">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-6">
-              Our Mission
-            </h2>
+  <div className="max-w-md">
+    <h2 className="text-3xl md:text-4xl font-extrabold text-black mb-6">
+      Our Mission
+    </h2>
 
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Our mission is to build practical, reliable AI systems that help
-              organizations solve real-world problems using technology that is
-              accurate, scalable, and simple to deploy in real environments.
-            </p>
-          </div>
-        </div>
+    <p className="text-2xl text-gray-700 leading-relaxed tracking-wide">
+      Our mission is to build practical, reliable AI systems that help
+      organizations solve real-world problems using technology that is
+      accurate, scalable, and simple to deploy in real environments.
+    </p>
+  </div>
+</div>
+
+
 
         {/* RIGHT SIDE — GIF */}
         <div
