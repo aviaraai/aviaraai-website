@@ -268,12 +268,12 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:contact@aviaraai.com"
+            <Link
+              href="/contact"
               className="bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-200 transition-colors"
             >
               Get in Touch
-            </a>
+            </Link>
 
             <Link
               href="#projects"
