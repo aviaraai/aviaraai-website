@@ -538,22 +538,22 @@ export default function GodhaarPage() {
                 </div>
 
                 <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">
-                    Better Decisions
+                  <h4 className="text-xl font-sora text-gray-900 mb-2">
+                    Mobile App
                   </h4>
                   <p className="text-gray-600">
-                    Data-driven insights for breeding, feeding, and healthcare.
+                    Farmers can use our app to scan cattle, register them, and
+                    manage everything directly from their phone.
                   </p>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
                   <h4 className="text-xl font-sora text-gray-900 mb-2">
-                    Continuous Learning
+                    Easy-to-Use Dashboard
                   </h4>
                   <p className="text-gray-600">
-                    Self-improving AI models that get smarter with every
-                    identification, adapting to new breeds and environmental
-                    conditions.
+                    Officials get a simple dashboard to check cattle records,
+                    scan history, and all important farm updates in one place.
                   </p>
                 </div>
               </div>
