@@ -35,7 +35,7 @@ export default function Navbar() {
     { href: '/#projects', label: 'Products' },
     { href: '/#careers', label: 'Careers' },
     { href: '/#story', label: 'Story' },
-    { href: '/#contact', label: 'Contact' }
+    { href: '/contact', label: 'Contact' }
   ]
 
   return (
