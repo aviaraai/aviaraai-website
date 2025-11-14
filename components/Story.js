@@ -121,7 +121,7 @@ export default function Story() {
       <section
         className="w-full h-screen relative overflow-hidden"
         style={{
-          backgroundImage: "url('/about_us.gif')",
+          backgroundImage: "url('/team.gif')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
