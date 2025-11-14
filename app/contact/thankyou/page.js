@@ -19,7 +19,7 @@ export default function ThankYouPage() {
 
           <h1 className="text-3xl font-bold text-[#0F4C75] mb-3">Thank you! We received your message.</h1>
 
-          <p className="text-[#0F4C75]/80 mb-6">
+          <p className="text-[#000000] mb-6">
             Our team will contact you shortly. You can continue browsing our products or return to the homepage.
           </p>
 

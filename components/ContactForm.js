@@ -9,32 +9,22 @@ export default function ContactForm() {
           {/* Badge */}
           <span className="inline-flex items-center gap-2 bg-white text-[#0F4C75] px-3 py-1 rounded-full text-sm mb-6">
             <svg className="w-4 h-4" fill="none" stroke="currentColor">
-              <path
-                d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8"
-                strokeWidth="1.5"
-              />
-              <rect
-                x="2"
-                y="3"
-                width="20"
-                height="18"
-                rx="2"
-                strokeWidth="1.5"
-              />
+              <path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8" strokeWidth="1.5" />
+              <rect x="2" y="3" width="20" height="18" rx="2" strokeWidth="1.5" />
             </svg>
             Contact Us
           </span>
 
           {/* Title */}
-          <h1 className="text-4xl lg:text-5xl font-extrabold text-[#0F4C75] leading-tight mb-6">
-            Ready to Transform Your Livestock Management?
+          <h1 className="text-4xl lg:text-5xl font-bold text-[#0F4C75] leading-tight mb-6">
+            Ready to Transform Your Business With AI?
           </h1>
 
           {/* Description */}
-          <p className="text-[#000000] max-w-xl mb-8">
-            Join the agricultural revolution with Godhaar. Contact Ascription
-            Technologies Private Limited to discover how our AI-powered cattle
-            identification system can revolutionize your operations.
+          <p className="text-black max-w-xl mb-8">
+            AviaraAI LLP builds smart, practical AI solutions for real-world
+            problems. Contact us to learn how our technology can help your
+            organisation grow.
           </p>
 
           {/* Contact Info Cards */}
@@ -43,7 +33,6 @@ export default function ContactForm() {
               icon={buildingIcon()}
               title="Company"
               textTop="AviaraAI LLP"
-            //   textBottom="Leading AI Innovation in Agriculture"
             />
 
             <InfoCard
@@ -52,13 +41,6 @@ export default function ContactForm() {
               textTop="info@aviaraai.com"
               textBottom="24/7 Support Available"
             />
-
-            {/* <InfoCard
-              icon={phoneIcon()}
-              title="Phone"
-              textTop="+91 XXX XXX XXXX"
-              textBottom="Expert Consultation"
-            /> */}
           </div>
 
           {/* Buttons */}
@@ -69,20 +51,13 @@ export default function ContactForm() {
             >
               Download Brochure
             </a>
-
-            {/* <a
-              href="#"
-              className="inline-flex items-center justify-center gap-2 border border-[#0F4C75] text-[#0F4C75] px-5 py-3 rounded-md hover:bg-[#0F4C75]/10 transition"
-            >
-              Download Brochure
-            </a> */}
           </div>
         </div>
 
         {/* RIGHT SIDE (Form) */}
         <div>
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-[#0F4C75]/20">
-            <h2 className="text-2xl font-semibold text-[#000000] mb-6">
+            <h2 className="text-2xl font-semibold text-black mb-6">
               Request Information
             </h2>
 
@@ -92,7 +67,11 @@ export default function ContactForm() {
               className="space-y-5"
             >
               {/* Hidden Inputs */}
-              <input type="hidden" name="_next" value="http://localhost:3000/contact/thankyou" />
+              <input
+                type="hidden"
+                name="_next"
+                value="http://localhost:3000/contact/thankyou"
+              />
               <input type="hidden" name="_captcha" value="false" />
               <input
                 type="hidden"
@@ -144,7 +123,7 @@ export default function ContactForm() {
                   name="message"
                   rows="5"
                   placeholder="Tell us how we can help..."
-                  className="w-full rounded-lg border border-[#0F4C75]/30 px-4 py-3 bg-white placeholder-[#0F4C75]/40 focus:outline-none focus:ring-2 focus:ring-[#0F4C75]/40"
+                  className="w-full rounded-lg border text-black border-[#0F4C75]/30 px-4 py-3 bg-white placeholder-[#0F4C75]/40 focus:outline-none focus:ring-2 focus:ring-[#0F4C75]/40"
                 ></textarea>
               </div>
 
@@ -177,7 +156,7 @@ function Input({ label, ...props }) {
       </label>
       <input
         {...props}
-        className="w-full rounded-lg border border-[#0F4C75]/30 px-4 py-3 bg-white placeholder-[#0F4C75]/40 focus:outline-none focus:ring-2 focus:ring-[#0F4C75]/40"
+        className="w-full rounded-lg border text-black border-[#0F4C75]/30 px-4 py-3 bg-white placeholder-[#0F4C75]/40 focus:outline-none focus:ring-2 focus:ring-[#0F4C75]/40"
       />
     </div>
   );
@@ -191,10 +170,15 @@ function InfoCard({ icon, title, textTop, textBottom }) {
       </div>
 
       <div>
-        <div className="text-sm font-semibold text-[#0F4C75] mb-1">{title}</div>
-        <div className="text-[#0F4C75]/90">{textTop}</div>
+        <div className="text-sm font-semibold text-[#0F4C75] mb-1">
+          {title}
+        </div>
+
+        {/* BLACK TEXT — FIXED */}
+        <div className="text-black font-medium">{textTop}</div>
+
         {textBottom && (
-          <div className="text-sm text-[#0F4C75] mt-1">{textBottom}</div>
+          <div className="text-sm text-black mt-1">{textBottom}</div>
         )}
       </div>
     </div>

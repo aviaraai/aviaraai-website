@@ -500,12 +500,15 @@ export default function GodhaarPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* IMAGE / METRIC BOX - LEFT */}
             <div>
-              <div className="bg-blue-100 rounded-3xl p-12 flex items-center justify-center aspect-square">
-                <div className="text-center text-gray-900">
-                  <div className="text-7xl mb-4">📈</div>
-                  <div className="text-5xl font-bold mb-2">50%</div>
-                  <p className="text-xl text-gray-700">Time Saved</p>
-                </div>
+              <div className="rounded-3xl overflow-hidden aspect-square">
+                <video
+                  src="/technology_video.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                ></video>
               </div>
             </div>
 
@@ -538,22 +541,22 @@ export default function GodhaarPage() {
                 </div>
 
                 <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">
-                    Better Decisions
+                  <h4 className="text-xl font-sora text-gray-900 mb-2">
+                    Mobile App
                   </h4>
                   <p className="text-gray-600">
-                    Data-driven insights for breeding, feeding, and healthcare.
+                    Farmers can use our app to scan cattle, register them, and
+                    manage everything directly from their phone.
                   </p>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
                   <h4 className="text-xl font-sora text-gray-900 mb-2">
-                    Continuous Learning
+                    Easy-to-Use Dashboard
                   </h4>
                   <p className="text-gray-600">
-                    Self-improving AI models that get smarter with every
-                    identification, adapting to new breeds and environmental
-                    conditions.
+                    Officials get a simple dashboard to check cattle records,
+                    scan history, and all important farm updates in one place.
                   </p>
                 </div>
               </div>
@@ -602,12 +605,12 @@ export default function GodhaarPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:contact@aviaraai.com"
+            <Link
+              href="/contact"
               className="bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-200 transition-colors"
             >
               Get in Touch
-            </a>
+            </Link>
 
             <Link
               href="#projects"
