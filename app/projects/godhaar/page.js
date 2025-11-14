@@ -499,18 +499,15 @@ export default function GodhaarPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* IMAGE / METRIC BOX - LEFT */}
-            <div>
-              <div className="rounded-3xl overflow-hidden aspect-square">
-                <video
-                  src="/technology_video.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover"
-                ></video>
-              </div>
-            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square relative">
+  <img
+    src="/Brain_2.jpeg"
+    alt="Brain"
+    className="w-full h-full object-cover"
+  />
+</div>
+
+
 
             {/* TEXT - RIGHT */}
             <div>
