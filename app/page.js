@@ -54,148 +54,156 @@ export default function Home() {
             About AviaraAI
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-            AviaraAI is dedicated to building intelligent, scalable, and
-            impactful AI solutions that transform industries. We bridge the gap
-            between research and real-world application, ensuring technology
-            serves meaningful purposes — from agriculture and surveillance to
-            automation and beyond.
+            Aviara AI was founded on a simple belief: the future of safety and
+            intelligence will be built through computer vision and AI. With
+            rapid advances in AI, We build adaptable AI systems that understand
+            the world, learn from data and take real-time action powering
+            smarter, safer, and more efficient solutions across industries.
           </p>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Our mission is simple: harness the power of AI to make life smarter,
-            more efficient, and more humane. We believe in innovation that
-            creates measurable impact and drives a better future for everyone.
-          </p>
+          {/* <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+      With rapid advances in AI, we build systems that can detect anomalies,
+      predict events, and alert the right people instantly — enabling safer,
+      smarter environments everywhere.
+    </p> */}
         </div>
       </section>
 
-<section id="projects" className="py-20 bg-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 className="text-4xl md:text-5xl font-sora text-gray-900 text-center mb-4">
-      Our Innovation Portfolio
-    </h2>
-    <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-      Building AI solutions that make a difference across industries
-    </p>
+      <section id="projects" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-sora text-gray-900 text-center mb-4">
+            Our Innovation Portfolio
+          </h2>
+          <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+            Building AI solutions that make a difference across industries
+          </p>
 
-    {/* Grid: items-stretch makes all cells equal height */}
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-      {/* Godhaar Project */}
-      <Link href="/projects/godhaar" legacyBehavior>
-        <a className="group block bg-white rounded-2xl overflow-hidden border border-gray-200 transform-gpu transition-all duration-300 ease-out
-                      hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.015]">
-          {/* Image / Visual - fallback bg if missing */}
-          <div className="relative h-40 md:h-48 w-full bg-gray-50">
-            <img
-              src="Godhaar_logo_small.png"
-              alt="Godhaar muzzle recognition"
-              className="w-full h-full object-contain object-center bg-white"
-              // loading="lazy"
-            />
-          </div>
+          {/* Grid: items-stretch makes all cells equal height */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+            {/* Godhaar Project */}
+            <Link href="/projects/godhaar" legacyBehavior>
+              <a
+                className="group block bg-white rounded-2xl overflow-hidden border border-gray-200 transform-gpu transition-all duration-300 ease-out
+                      hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.015]"
+              >
+                {/* Image / Visual - fallback bg if missing */}
+                <div className="relative h-40 md:h-48 w-full bg-gray-50">
+                  <img
+                    src="cow_cover.jpeg"
+                    alt="Godhaar muzzle recognition"
+                    className="w-full h-full object-contain object-center bg-white"
+                    // loading="lazy"
+                  />
+                </div>
 
-          {/* Card Content */}
-          <div className="p-6 flex flex-col justify-between min-h-[200px]">
-            <div>
-              <span className="inline-block px-4 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-3">
-                Active
-              </span>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Godhaar
-              </h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                AI-powered cattle management system using muzzle recognition
-                technology for identification and tracking.
-              </p>
-            </div>
+                {/* Card Content */}
+                <div className="p-6 flex flex-col justify-between min-h-[200px]">
+                  <div>
+                    <span className="inline-block px-4 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-3">
+                      Active
+                    </span>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                      Godhaar
+                    </h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed">
+                      AI-powered cattle management system using muzzle
+                      recognition technology for identification and tracking.
+                    </p>
+                  </div>
 
-            <div className="flex items-center justify-between pt-2">
-              <span className="text-black font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:text-blue-600 hover:translate-x-1">
-                Learn More →
-              </span>
-              <span className="text-sm text-gray-400">Case Study · 2025</span>
-            </div>
-          </div>
-        </a>
-      </Link>
+                  <div className="flex items-center justify-between pt-2">
+                    <span className="text-black font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:text-blue-600 hover:translate-x-1">
+                      Learn More →
+                    </span>
+                    <span className="text-sm text-gray-400">
+                      Case Study · 2025
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </Link>
 
-      {/* Smart Surveillance */}
-      <div className="group flex">
-        <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 transform-gpu transition-all duration-300 ease-out w-full
-                        hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.015] flex flex-col">
-          <div className="relative h-40 md:h-48 w-full bg-gray-50">
-            <img
-              src="cc_camera.png"
-              alt="Smart Surveillance"
-              className="w-full h-full object-cover"
-              // loading="lazy"
-            />
-          </div>
+            {/* Smart Surveillance */}
+            <div className="group flex">
+              <div
+                className="bg-white rounded-2xl overflow-hidden border border-gray-200 transform-gpu transition-all duration-300 ease-out w-full
+                        hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.015] flex flex-col"
+              >
+                <div className="relative h-40 md:h-48 w-full bg-gray-50">
+                  <img
+                    src="cc_camera.png"
+                    alt="Smart Surveillance"
+                    className="w-full h-full object-cover"
+                    // loading="lazy"
+                  />
+                </div>
 
-          <div className="p-6 flex flex-col justify-between min-h-[200px]">
-            <div>
-              <span className="inline-block px-4 py-1 bg-gray-100 text-gray-500 rounded-full text-sm font-semibold mb-3">
-                Coming Soon
-              </span>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Smart Surveillance
-              </h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                Next-generation camera system with intelligent monitoring and
-                threat detection capabilities.
-              </p>
-            </div>
+                <div className="p-6 flex flex-col justify-between min-h-[200px]">
+                  <div>
+                    <span className="inline-block px-4 py-1 bg-gray-100 text-gray-500 rounded-full text-sm font-semibold mb-3">
+                      Coming Soon
+                    </span>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                      Smart Surveillance
+                    </h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed">
+                      Next-generation camera system with intelligent monitoring
+                      and threat detection capabilities.
+                    </p>
+                  </div>
 
-            <div className="flex items-center justify-between pt-2">
-              {/* <span className="text-gray-500 font-semibold inline-flex items-center gap-2">
+                  <div className="flex items-center justify-between pt-2">
+                    {/* <span className="text-gray-500 font-semibold inline-flex items-center gap-2">
                 Stay Updated →
               </span> */}
-              <span className="text-sm text-gray-400">R&D · 2025</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Future Projects */}
-      <div className="group flex">
-        <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 transform-gpu transition-all duration-300 ease-out w-full
-                        hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.015] flex flex-col">
-          <div className="relative h-40 md:h-48 w-full bg-gray-50">
-            <img
-              src="future_projects.png"
-              alt="Future Projects"
-              className="w-full h-full object-cover"
-              // loading="lazy"
-            />
-          </div>
-
-          <div className="p-6 flex flex-col justify-between min-h-[200px]">
-            <div>
-              <span className="inline-block px-4 py-1 bg-gray-100 text-gray-500 rounded-full text-sm font-semibold mb-3">
-                In Development
-              </span>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Future Projects
-              </h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                We are constantly innovating and exploring new applications of
-                AI technology.
-              </p>
+                    <span className="text-sm text-gray-400">R&D · 2025</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="flex items-center justify-between pt-2">
-              {/* <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
+            {/* Future Projects */}
+            <div className="group flex">
+              <div
+                className="bg-white rounded-2xl overflow-hidden border border-gray-200 transform-gpu transition-all duration-300 ease-out w-full
+                        hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.015] flex flex-col"
+              >
+                <div className="relative h-40 md:h-48 w-full bg-gray-50">
+                  <img
+                    src="future_projects.png"
+                    alt="Future Projects"
+                    className="w-full h-full object-cover"
+                    // loading="lazy"
+                  />
+                </div>
+
+                <div className="p-6 flex flex-col justify-between min-h-[200px]">
+                  <div>
+                    <span className="inline-block px-4 py-1 bg-gray-100 text-gray-500 rounded-full text-sm font-semibold mb-3">
+                      In Development
+                    </span>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                      Future Projects
+                    </h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed">
+                      We are constantly innovating and exploring new
+                      applications of AI technology.
+                    </p>
+                  </div>
+
+                  <div className="flex items-center justify-between pt-2">
+                    {/* <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
                 Get in Touch →
               </span> */}
-              <span className="text-sm text-gray-400">Ideas · Ongoing</span>
+                    <span className="text-sm text-gray-400">
+                      Ideas · Ongoing
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+      </section>
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -245,35 +253,6 @@ export default function Home() {
               <p className="text-gray-600">
                 Launch and create measurable impact
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
-            Making a Difference
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-12 text-center">
-            <div>
-              <h3 className="text-6xl font-bold bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text mb-3">
-                1000+
-              </h3>
-              <p className="text-xl text-gray-600">Cattle Identified</p>
-            </div>
-            <div>
-              <h3 className="text-6xl font-bold bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text mb-3">
-                95%
-              </h3>
-              <p className="text-xl text-gray-600">Recognition Accuracy</p>
-            </div>
-            <div>
-              <h3 className="text-6xl font-bold bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text mb-3">
-                3
-              </h3>
-              <p className="text-xl text-gray-600">Active Projects</p>
             </div>
           </div>
         </div>

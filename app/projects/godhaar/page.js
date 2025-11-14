@@ -101,7 +101,7 @@ export default function GodhaarPage() {
             <div className="order-1 md:order-2 flex justify-center">
               <div className="bg-white rounded-3xl p-8 shadow-xl w-full max-w-md aspect-square flex items-center justify-center overflow-hidden border border-gray-200">
                 <img
-                  src="/Godhaar_logo_small.png"
+                  src="/indian-cow.jpg"
                   alt="Godhaar Cattle Recognition"
                   className="w-full h-full object-cover rounded-2xl bg-white"
                 />
@@ -557,6 +557,35 @@ export default function GodhaarPage() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
+            Making a Difference
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-12 text-center">
+            <div>
+              <h3 className="text-6xl font-bold bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text mb-3">
+                1000+
+              </h3>
+              <p className="text-xl text-gray-600">Cattle Identified</p>
+            </div>
+            <div>
+              <h3 className="text-6xl font-bold bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text mb-3">
+                95%
+              </h3>
+              <p className="text-xl text-gray-600">Recognition Accuracy</p>
+            </div>
+            <div>
+              <h3 className="text-6xl font-bold bg-gradient-to-r from-blue-500 to-blue-700 text-transparent bg-clip-text mb-3">
+                3
+              </h3>
+              <p className="text-xl text-gray-600">Active Deployments</p>
             </div>
           </div>
         </div>

@@ -103,7 +103,7 @@ export default function Footer() {
                 𝕏
               </a>
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=ceo@aviaraai.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@aviaraai.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Email"
@@ -112,7 +112,7 @@ export default function Footer() {
                 @
               </a>
             </div>
-            <p className="text-gray-600">ceo@aviaraai.com</p>
+            <p className="text-gray-600">info@aviaraai.com</p>
           </div>
         </div>
 
