@@ -53,7 +53,7 @@ export default function GodhaarNavbar() {
           {/* Logo - Links back to Homepage */}
           <Link href="/" className="flex items-center gap-3 group">
             <img
-              src="/Godhaar_logo.jpeg"
+              src="/cow_logo_godhaar.png"
               alt="Godhaar Icon"
               className="h-10 w-10 rounded-lg hover:scale-110 transition-transform"
             />
