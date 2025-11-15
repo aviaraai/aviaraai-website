@@ -31,9 +31,9 @@ export default function Navbar() {
   }, [lastScrollY])
 
   const navLinks = [
-    { href: '/#blog', label: 'Blog' },
+    { href: '/blog', label: 'Blog' },
     { href: '/#projects', label: 'Products' },
-    { href: '/#careers', label: 'Careers' },
+    { href: '/careers', label: 'Careers' },
     { href: '/story', label: 'Story' },
     { href: '/contact', label: 'Contact' }
   ]
