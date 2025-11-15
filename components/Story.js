@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import MeetOurTeam from "./MeetOurTeam";
 import Link from "next/link";
 
 export default function Story() {
@@ -309,6 +310,10 @@ export default function Story() {
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
       </section>
+
+      {/* --------- INSERT MEET OUR TEAM PAGE BELOW THE TIMELINE --------- */}
+      <MeetOurTeam />
+
     </main>
   );
 }

@@ -85,7 +85,7 @@ export default function ContactForm() {
                 label="Full Name *"
                 name="fullName"
                 type="text"
-                placeholder="Enter your full name"
+                // placeholder="Enter your full name"
                 required
               />
 
@@ -94,7 +94,7 @@ export default function ContactForm() {
                 label="Email Address *"
                 name="email"
                 type="email"
-                placeholder="your.email@example.com"
+                // placeholder="your.email@example.com"
                 required
               />
 
@@ -103,7 +103,7 @@ export default function ContactForm() {
                 label="Organization"
                 name="organization"
                 type="text"
-                placeholder="Your organization or farm name"
+                // placeholder="Your organization or farm name"
               />
 
               {/* Phone */}
@@ -111,7 +111,7 @@ export default function ContactForm() {
                 label="Phone Number"
                 name="phone"
                 type="tel"
-                placeholder="+91 XXXXX XXXXX"
+                // placeholder="+91 XXXXX XXXXX"
               />
 
               {/* Message */}
