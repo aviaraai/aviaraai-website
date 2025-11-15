@@ -6,12 +6,12 @@ import Link from "next/link";
 export default function Story() {
   // ---------- TIMELINE DATA ----------
   const timelineItems = [
-    { year: "2013", title: "Launched oyorooms.com" },
-    { year: "2013", title: "Opened first OYO property" },
-    { year: "2014", title: "Receives Series-A funding" },
-    { year: "2015", title: "Expanded to 100+ cities" },
-    { year: "2016", title: "Launched OYO Global" },
-    { year: "2017", title: "Raised Series-B funding" },
+    { year: "2019", title: "Launched AviaraAI" },
+    { year: "2020", title: "Registered at Sillicon Valley, CA" },
+    { year: "2021", title: "Receives Series-A funding" },
+    { year: "2022", title: "Expanded to 100+ cities" },
+    { year: "2023", title: "Launched OYO Global" },
+    { year: "2024", title: "Raised Series-B funding" },
   ];
 
   // ---------- STATE ----------
