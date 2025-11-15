@@ -140,7 +140,7 @@ export default function Story() {
 
       <hr className="border-t border-gray-200 max-w-5xl mx-auto" />
 
-      {/* ---------- TIMELINE ---------- */}
+{/* ---------- TIMELINE (side arrows only on 2xl+, bottom for others) ---------- */}
 <section
   className="w-full h-screen relative overflow-hidden"
   style={{
@@ -192,9 +192,8 @@ export default function Story() {
         })}
       </div>
 
-      {/* NAV CONTROLS BELOW CARDS (always in-flow, never absolute) */}
-      <div className="mt-8 flex items-center justify-center gap-4">
-        {/* Prev */}
+      {/* ---------- BOTTOM CONTROLS for screens < 2xl (in-flow, never absolute) ---------- */}
+      <div className="mt-8 flex 2xl:hidden items-center justify-center gap-4">
         <button
           onClick={handlePrev}
           className={`w-12 h-12 rounded-full bg-white/20 border border-white/30 text-white flex items-center justify-center ${
@@ -207,12 +206,6 @@ export default function Story() {
           </svg>
         </button>
 
-        {/* Page indicator (optional) */}
-        {/* <div className="text-white/60 text-sm select-none">
-          {index + 1} — {Math.min(index + 3, timelineItems.length)} of {timelineItems.length}
-        </div> */}
-
-        {/* Next */}
         <button
           onClick={handleNext}
           className={`w-12 h-12 rounded-full bg-white/20 border border-white/30 text-white flex items-center justify-center ${
@@ -228,9 +221,41 @@ export default function Story() {
     </div>
   </div>
 
+  {/* ---------- SIDE ARROWS for extra-large screens (2xl+) ---------- */}
+  {/* PREV (only when there's a previous page) */}
+  {index > 0 && (
+    <button
+      onClick={handlePrev}
+      className="hidden 2xl:flex absolute left-12 top-1/2 -translate-y-1/2 z-50 
+                 w-12 h-12 rounded-full bg-white/20 border border-white/30 text-white 
+                 hover:bg-white/30 items-center justify-center"
+      aria-label="Previous timeline"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  )}
+
+  {/* NEXT (visible on 2xl+, disabled visually when end reached) */}
+  <button
+    onClick={handleNext}
+    className={`hidden 2xl:flex absolute right-12 top-1/2 -translate-y-1/2 z-50 
+               w-12 h-12 rounded-full bg-white/20 border border-white/30 text-white 
+               hover:bg-white/30 items-center justify-center ${
+                 index + 3 >= timelineItems.length ? "opacity-40 pointer-events-none" : ""
+               }`}
+    aria-label="Next timeline"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
+
   {/* Bottom fade */}
   <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
 </section>
+
 
 
     </main>
