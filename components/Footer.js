@@ -28,10 +28,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/story"
+                  href="/about"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
-                  Story
+                  About
                 </Link>
               </li>
               <li>

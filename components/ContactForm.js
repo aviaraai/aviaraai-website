@@ -1,6 +1,61 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 export default function ContactForm() {
+  const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://127.0.0.1:4000";
+
+  const [form, setForm] = useState({
+    fullName: "",
+    email: "",
+    organization: "",
+    phone: "",
+    message: "",
+    _honey: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    // honeypot protection – silently accept
+    if (form._honey && form._honey.trim() !== "") {
+      window.location.href = "/contact/thankyou";
+      return;
+    }
+
+    try {
+      const res = await fetch(`${API_BASE}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          // If you set API_KEY in backend, add below line:
+          // "x-api-key": process.env.NEXT_PUBLIC_CONTACT_API_KEY
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.ok) {
+        // redirect EXACTLY like your original formsubmit workflow
+        window.location.href = "/contact/thankyou";
+      } else {
+        alert("Failed to send message. Please try again later.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Server error. Try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="max-w-7xl mx-auto px-6 lg:px-8 py-16 font-sora bg-white text-[#0F4C75]">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -15,12 +70,10 @@ export default function ContactForm() {
             Contact Us
           </span>
 
-          {/* Title */}
           <h1 className="text-4xl lg:text-5xl font-bold text-[#0F4C75] leading-tight mb-6">
             Ready to Transform Your Business With AI?
           </h1>
 
-          {/* Description */}
           <p className="text-black max-w-xl mb-8">
             AviaraAI LLP builds smart, practical AI solutions for real-world
             problems. Contact us to learn how our technology can help your
@@ -43,7 +96,6 @@ export default function ContactForm() {
             />
           </div>
 
-          {/* Buttons */}
           <div className="mt-8 flex gap-4">
             <a
               href="#"
@@ -61,60 +113,51 @@ export default function ContactForm() {
               Request Information
             </h2>
 
-            <form
-              action="https://formsubmit.co/asif@aviaraai.com"
-              method="POST"
-              className="space-y-5"
-            >
-              {/* Hidden Inputs */}
+            {/* UPDATED FORM */}
+            <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Hidden Honeypot */}
               <input
-                type="hidden"
-                name="_next"
-                value="http://localhost:3000/contact/thankyou"
+                type="text"
+                name="_honey"
+                value={form._honey}
+                onChange={handleChange}
+                style={{ display: "none" }}
               />
-              <input type="hidden" name="_captcha" value="false" />
-              <input
-                type="hidden"
-                name="_subject"
-                value="New contact form submission"
-              />
-              <input type="text" name="_honey" style={{ display: "none" }} />
 
-              {/* Full Name */}
               <Input
                 label="Full Name *"
                 name="fullName"
                 type="text"
-                placeholder="Enter your full name"
                 required
+                value={form.fullName}
+                onChange={handleChange}
               />
 
-              {/* Email */}
               <Input
                 label="Email Address *"
                 name="email"
                 type="email"
-                placeholder="your.email@example.com"
                 required
+                value={form.email}
+                onChange={handleChange}
               />
 
-              {/* Organization */}
               <Input
                 label="Organization"
                 name="organization"
                 type="text"
-                placeholder="Your organization or farm name"
+                value={form.organization}
+                onChange={handleChange}
               />
 
-              {/* Phone */}
               <Input
                 label="Phone Number"
                 name="phone"
                 type="tel"
-                placeholder="+91 XXXXX XXXXX"
+                value={form.phone}
+                onChange={handleChange}
               />
 
-              {/* Message */}
               <div>
                 <label className="block text-sm font-medium text-[#0F4C75] mb-2">
                   Message
@@ -122,16 +165,21 @@ export default function ContactForm() {
                 <textarea
                   name="message"
                   rows="5"
+                  value={form.message}
+                  onChange={handleChange}
                   placeholder="Tell us how we can help..."
                   className="w-full rounded-lg border text-black border-[#0F4C75]/30 px-4 py-3 bg-white placeholder-[#0F4C75]/40 focus:outline-none focus:ring-2 focus:ring-[#0F4C75]/40"
-                ></textarea>
+                />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[#0F4C75] text-white font-semibold rounded-lg px-6 py-3 shadow hover:bg-[#093753] transition"
+                disabled={loading}
+                className={`w-full bg-[#0F4C75] text-white font-semibold rounded-lg px-6 py-3 shadow hover:bg-[#093753] transition ${
+                  loading ? "opacity-70 cursor-wait" : ""
+                }`}
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </form>
 
@@ -174,7 +222,6 @@ function InfoCard({ icon, title, textTop, textBottom }) {
           {title}
         </div>
 
-        {/* BLACK TEXT — FIXED */}
         <div className="text-black font-medium">{textTop}</div>
 
         {textBottom && (
@@ -201,17 +248,6 @@ function emailIcon() {
     <svg className="w-6 h-6" fill="none" stroke="currentColor">
       <path d="M4 4h16v12H4z" strokeWidth="1.5" />
       <path d="M22 6l-10 7L2 6" strokeWidth="1.5" />
-    </svg>
-  );
-}
-
-function phoneIcon() {
-  return (
-    <svg className="w-6 h-6" fill="none" stroke="currentColor">
-      <path
-        d="M22 16.92V21a1 1 0 0 1-1.1 1A19 19 0 0 1 3 5.1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 .8c.2 1 .5 2 .8 3a1 1 0 0 1-.3 1l-1.5 1.4a16 16 0 0 0 7 7l1.3-1.3a1 1 0 0 1 1-.3 12 12 0 0 0 3 .8 1 1 0 0 1 .8 1z"
-        strokeWidth="1.2"
-      />
     </svg>
   );
 }
