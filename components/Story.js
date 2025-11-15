@@ -140,124 +140,175 @@ export default function Story() {
 
       <hr className="border-t border-gray-200 max-w-5xl mx-auto" />
 
-{/* ---------- TIMELINE (side arrows only on 2xl+, bottom for others) ---------- */}
-<section
-  className="w-full h-screen relative overflow-hidden"
-  style={{
-    backgroundImage: "url('/team.gif')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  }}
->
-  <div className="absolute inset-0 pointer-events-none">
-    <div className="absolute inset-0 bg-black/70 md:bg-gradient-to-r md:from-black/65 md:via-black/40 md:to-transparent" />
-  </div>
+      {/* ---------- TIMELINE (side arrows only on 2xl+, bottom for others) ---------- */}
+      <section
+        className="w-full h-screen relative overflow-hidden"
+        style={{
+          backgroundImage: "url('/team.gif')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute inset-0 bg-black/70 md:bg-gradient-to-r md:from-black/65 md:via-black/40 md:to-transparent" />
+        </div>
 
-  {/* Heading */}
-  <div className="absolute left-8 top-10 md:left-16 md:top-16 z-40">
-    <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight drop-shadow-lg">
-      Our Timeline
-    </h1>
-  </div>
+        {/* Heading */}
+        <div className="absolute left-8 top-10 md:left-16 md:top-16 z-40">
+          <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight drop-shadow-lg">
+            Our Timeline
+          </h1>
+        </div>
 
-  {/* CARDS (centered in the section) */}
-  <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-30 px-6">
-    <div className="max-w-7xl mx-auto">
-      <div className="grid grid-cols-12 gap-6 items-start">
-        {visibleItems.map((item, i) => {
-          const justifyClass =
-            i === 0 ? "justify-start" : i === 1 ? "justify-center" : "justify-end";
+        {/* CARDS (centered in the section) */}
+        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-30 px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-12 gap-6 items-start">
+              {visibleItems.map((item, i) => {
+                const justifyClass =
+                  i === 0
+                    ? "justify-start"
+                    : i === 1
+                    ? "justify-center"
+                    : "justify-end";
 
-          return (
-            <div
-              key={index + i}
-              className={`col-span-12 md:col-span-4 lg:col-span-4 flex ${justifyClass}`}
-            >
-              <div className="relative w-full max-w-md p-6 pt-12 bg-white/5 backdrop-blur-sm rounded-md min-h-[130px]">
-                {/* year */}
-                <div className="absolute left-4 top-4 z-40">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/75 text-white text-xs shadow">
-                    <span className="w-2 h-2 rounded-full bg-white" />
-                    <span>{item.year}</span>
+                return (
+                  <div
+                    key={index + i}
+                    className={`col-span-12 md:col-span-4 lg:col-span-4 flex ${justifyClass}`}
+                  >
+                    <div className="relative w-full max-w-md p-6 pt-12 bg-white/5 backdrop-blur-sm rounded-md min-h-[130px]">
+                      {/* year */}
+                      <div className="absolute left-4 top-4 z-40">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/75 text-white text-xs shadow">
+                          <span className="w-2 h-2 rounded-full bg-white" />
+                          <span>{item.year}</span>
+                        </div>
+                      </div>
+
+                      <h3 className="text-xl md:text-2xl font-semibold text-white leading-tight m-0">
+                        {item.title}
+                      </h3>
+                    </div>
                   </div>
-                </div>
-
-                <h3 className="text-xl md:text-2xl font-semibold text-white leading-tight m-0">
-                  {item.title}
-                </h3>
-              </div>
+                );
+              })}
             </div>
-          );
-        })}
-      </div>
 
-      {/* ---------- BOTTOM CONTROLS for screens < 2xl (in-flow, never absolute) ---------- */}
-      <div className="mt-8 flex 2xl:hidden items-center justify-center gap-4">
-        <button
-          onClick={handlePrev}
-          className={`w-12 h-12 rounded-full bg-white/20 border border-white/30 text-white flex items-center justify-center ${
-            index === 0 ? "opacity-40 pointer-events-none" : "hover:bg-white/30"
-          }`}
-          aria-label="Previous timeline"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+            {/* ---------- BOTTOM CONTROLS for screens < 2xl (in-flow, never absolute) ---------- */}
+            <div className="mt-8 flex 2xl:hidden items-center justify-center gap-4">
+              <button
+                onClick={handlePrev}
+                className={`w-12 h-12 rounded-full bg-white/20 border border-white/30 text-white flex items-center justify-center ${
+                  index === 0
+                    ? "opacity-40 pointer-events-none"
+                    : "hover:bg-white/30"
+                }`}
+                aria-label="Previous timeline"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 rotate-180"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
 
+              <button
+                onClick={handleNext}
+                className={`w-12 h-12 rounded-full bg-white/20 border border-white/30 text-white flex items-center justify-center ${
+                  index + 3 >= timelineItems.length
+                    ? "opacity-40 pointer-events-none"
+                    : "hover:bg-white/30"
+                }`}
+                aria-label="Next timeline"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* ---------- SIDE ARROWS for extra-large screens (2xl+) ---------- */}
+        {/* PREV (only when there's a previous page) */}
+        {index > 0 && (
+          <button
+            onClick={handlePrev}
+            className="hidden 2xl:flex absolute left-12 top-1/2 -translate-y-1/2 z-50 
+                  w-12 h-12 rounded-full bg-white/20 border border-white/30 text-white 
+                  hover:bg-white/30 items-center justify-center"
+            aria-label="Previous timeline"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 rotate-180"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        )}
+
+        {/* NEXT (visible on 2xl+, disabled visually when end reached) */}
         <button
           onClick={handleNext}
-          className={`w-12 h-12 rounded-full bg-white/20 border border-white/30 text-white flex items-center justify-center ${
-            index + 3 >= timelineItems.length ? "opacity-40 pointer-events-none" : "hover:bg-white/30"
-          }`}
+          className={`hidden 2xl:flex absolute right-12 top-1/2 -translate-y-1/2 z-50 
+                w-12 h-12 rounded-full bg-white/20 border border-white/30 text-white 
+                hover:bg-white/30 items-center justify-center ${
+                  index + 3 >= timelineItems.length
+                    ? "opacity-40 pointer-events-none"
+                    : ""
+                }`}
           aria-label="Next timeline"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 5l7 7-7 7"
+            />
           </svg>
         </button>
-      </div>
-    </div>
-  </div>
 
-  {/* ---------- SIDE ARROWS for extra-large screens (2xl+) ---------- */}
-  {/* PREV (only when there's a previous page) */}
-  {index > 0 && (
-    <button
-      onClick={handlePrev}
-      className="hidden 2xl:flex absolute left-12 top-1/2 -translate-y-1/2 z-50 
-                 w-12 h-12 rounded-full bg-white/20 border border-white/30 text-white 
-                 hover:bg-white/30 items-center justify-center"
-      aria-label="Previous timeline"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-      </svg>
-    </button>
-  )}
-
-  {/* NEXT (visible on 2xl+, disabled visually when end reached) */}
-  <button
-    onClick={handleNext}
-    className={`hidden 2xl:flex absolute right-12 top-1/2 -translate-y-1/2 z-50 
-               w-12 h-12 rounded-full bg-white/20 border border-white/30 text-white 
-               hover:bg-white/30 items-center justify-center ${
-                 index + 3 >= timelineItems.length ? "opacity-40 pointer-events-none" : ""
-               }`}
-    aria-label="Next timeline"
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-    </svg>
-  </button>
-
-  {/* Bottom fade */}
-  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
-</section>
-
-
-
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+      </section>
     </main>
   );
 }
