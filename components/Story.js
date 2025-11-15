@@ -3,6 +3,33 @@ import React from "react";
 import Link from "next/link";
 
 export default function Story() {
+  // ---------- timeline data ----------
+  const timelineItems = [
+    { year: "2013", title: "Launched oyorooms.com" },
+    { year: "2013", title: "Opened first OYO property" },
+    { year: "2014", title: "Receives Series-A funding" },
+    { year: "2015", title: "Expanded to 100+ cities" },
+    { year: "2016", title: "Launched OYO Global" },
+    { year: "2017", title: "Raised Series-B funding" },
+    // add more items as needed
+  ];
+
+  // ---------- state for paging ----------
+  const [index, setIndex] = React.useState(0);
+  const visibleItems = timelineItems.slice(index, index + 3);
+
+  const handleNext = () => {
+    if (index + 3 < timelineItems.length) {
+      setIndex((i) => i + 3);
+    }
+  };
+
+  const handlePrev = () => {
+    if (index - 3 >= 0) {
+      setIndex((i) => i - 3);
+    }
+  };
+
   return (
     <main className="font-sora text-[#0F4C75] bg-white">
       <section className="w-full h-screen flex flex-col md:flex-row bg-[#efefef]">
@@ -118,6 +145,7 @@ export default function Story() {
       {/* Divider */}
       <hr className="border-t border-gray-200 max-w-5xl mx-auto" />
 
+      {/* ---------- HERO TIMELINE (dynamic paging) ---------- */}
       <section
         className="w-full h-screen relative overflow-hidden"
         style={{
@@ -131,74 +159,73 @@ export default function Story() {
           <div className="absolute inset-0 bg-black/70 md:bg-gradient-to-r md:from-black/65 md:via-black/40 md:to-transparent" />
         </div>
 
-        <div className="absolute left-8 top-10 md:left-16 md:top-16 z-30">
+        {/* Heading */}
+        <div className="absolute left-8 top-10 md:left-16 md:top-16 z-40">
           <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight drop-shadow-lg">
             Our Timeline
           </h1>
         </div>
 
-        <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 z-30 px-6">
+        {/* TIMELINE CARDS (shows 3 at a time) */}
+        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-30 px-6">
           <div className="max-w-7xl mx-auto grid grid-cols-12 gap-6 items-start">
-            <div className="col-span-12 md:col-span-5 lg:col-span-4">
-              <div className="relative md:pl-6">
-                <div className="absolute md:-top-6 left-0 z-40">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/70 text-white text-sm shadow">
-                    <span className="w-2 h-2 rounded-full bg-white" />
-                    <span className="font-medium">2013</span>
+            {visibleItems.map((item, i) => {
+              // i === 0 -> left, i === 1 -> center, i === 2 -> right
+              const justifyClass =
+                i === 0 ? "justify-start" : i === 1 ? "justify-center" : "justify-end";
+
+              return (
+                <div
+                  key={index + i}
+                  className={`col-span-12 md:col-span-4 lg:col-span-4 flex ${justifyClass}`}
+                >
+                  <div className="relative w-full max-w-md p-6 pt-12 bg-white/5 backdrop-blur-sm rounded-md min-h-[130px]">
+                    {/* YEAR */}
+                    <div className="absolute left-4 top-4 z-40">
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/75 text-white text-xs shadow">
+                        <span className="w-2 h-2 rounded-full bg-white" />
+                        <span>{item.year}</span>
+                      </div>
+                    </div>
+
+                    {/* TITLE */}
+                    <h3 className="text-xl md:text-2xl font-semibold text-white leading-tight m-0">
+                      {item.title}
+                    </h3>
                   </div>
                 </div>
-
-                <div className="mt-4 md:mt-2 p-6 bg-white/5 backdrop-blur-sm rounded-md">
-                  <h3 className="text-xl md:text-2xl font-semibold text-white leading-tight">
-                    Launched oyorooms.com
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-span-12 md:col-span-4 lg:col-span-4 flex items-start justify-center">
-              <div className="relative w-full max-w-md">
-                <div className="absolute -top-6 left-6 z-40">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/70 text-white text-sm shadow">
-                    <span className="w-2 h-2 rounded-full bg-white" />
-                    <span className="font-medium">2013</span>
-                  </div>
-                </div>
-
-                <div className="mt-4 md:mt-2 p-6 bg-white/5 backdrop-blur-sm rounded-md">
-                  <h3 className="text-xl md:text-2xl font-semibold text-white leading-tight">
-                    Launched oyorooms.com
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-span-12 md:col-span-3 lg:col-span-4 flex items-start justify-end">
-              <div className="relative w-full max-w-md md:pr-6">
-                <div className="absolute -top-6 right-0 z-40">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/70 text-white text-sm shadow">
-                    <span className="w-2 h-2 rounded-full bg-white" />
-                    <span className="font-medium">2014</span>
-                  </div>
-                </div>
-
-                <div className="mt-4 md:mt-2 p-6 bg-white/5 backdrop-blur-sm rounded-md text-right">
-                  <h3 className="text-xl md:text-2xl font-semibold text-white leading-tight">
-                    Receives Series-A funding
-                  </h3>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
 
-        <div className="hidden md:block absolute right-6 top-1/2 transform -translate-y-1/2 z-20">
-          <div className="text-white/30 select-none">• 2015</div>
-        </div>
+        {/* LEFT ARROW (only visible when you can go back) */}
+        {index > 0 && (
+          <button
+            onClick={handlePrev}
+            className="absolute left-16 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/20 border border-white/30 text-white hover:bg-white/30 flex items-center justify-center"
+            aria-label="Previous timeline"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 rotate-180"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        )}
 
+        {/* RIGHT ARROW */}
         <button
-          aria-hidden
-          className="absolute right-8 top-1/2 transform -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/20 border border-white/30 text-white hover:bg-white/30 flex items-center justify-center"
+          onClick={handleNext}
+          className={`absolute right-16 top-1/2 -translate-y-1/2 z-30 w-10 h-10 rounded-full bg-white/20 border border-white/30 text-white hover:bg-white/30 flex items-center justify-center ${
+            index + 3 >= timelineItems.length ? "opacity-40 pointer-events-none" : ""
+          }`}
+          aria-label="Next timeline"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -208,14 +235,11 @@ export default function Story() {
             stroke="currentColor"
             strokeWidth={2}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 5l7 7-7 7"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </button>
 
+        {/* Bottom gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
       </section>
     </main>
