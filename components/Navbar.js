@@ -98,13 +98,13 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <Link
+              {/* <Link
                 href="/#projects"
                 onClick={() => setMobileMenuOpen(false)}
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg font-sora text-center hover:bg-blue-700 transition-colors"
               >
                 Get Started
-              </Link>
+              </Link> */}
             </div>
           </div>
         )}
