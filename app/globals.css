@@ -21,12 +21,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-main);
+  background: #ffffff;
+  /* background: var(--bg-main); */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--text-muted);
+  background: rgba(0, 0, 0, 0.75);
   border-radius: 5px;
+  /* background: var(--text-muted); */
 }
 
 ::-webkit-scrollbar-thumb:hover {
