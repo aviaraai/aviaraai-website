@@ -216,7 +216,7 @@ export default function MeetOurTeam() {
           </div>
 
           {/* Mobile Scroll Hint */}
-          <div className="mt-3 text-sm text-white/40 italic px-3 md:hidden">
+          <div className="mt-3 text-sm text-black/40 italic px-3 md:hidden">
             Swipe → to see more
           </div>
         </div>
