@@ -53,7 +53,7 @@ export default function Navbar() {
 <Link href="/" className="flex items-center gap-0 group">
   <div className="rounded-full overflow-hidden w-16 h-16 flex-shrink-0">
     <img
-      src="/logo_fixed.png"
+      src="/logo_think.png"
       alt="AviaraAI Logo"
       className="w-full h-full object-cover"
     />
