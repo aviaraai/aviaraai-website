@@ -63,7 +63,7 @@ export default function Home() {
                     src="cow_cover.jpeg"
                     alt="Godhaar muzzle recognition"
                     className="w-full h-full object-contain object-center bg-white"
-                    // loading="lazy"
+                    loading="lazy"
                   />
                 </div>
 
@@ -105,7 +105,7 @@ export default function Home() {
                     src="cc_camera.png"
                     alt="Smart Surveillance"
                     className="w-full h-full object-cover"
-                    // loading="lazy"
+                    loading="lazy"
                   />
                 </div>
 
@@ -144,7 +144,7 @@ export default function Home() {
                     src="future_projects.png"
                     alt="Future Projects"
                     className="w-full h-full object-cover"
-                    // loading="lazy"
+                    loading="lazy"
                   />
                 </div>
 
