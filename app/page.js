@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import HeroRotator from "../components/HeroRotator";
 
 export default function Home() {
   return (
@@ -9,38 +10,9 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-light-accent/10 dark:bg-dark-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
-        <section className="relative h-screen w-full overflow-hidden">
-          {/* Video Background - Full Screen */}
-          <div className="absolute inset-0 w-full h-full">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute top-0 left-0 w-full h-full object-cover"
-            >
-              <source src="/fixed_main_hero.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/50"></div>
-          </div>
-
-          {/* Text Content */}
-          <div className="relative z-10 h-full flex items-center justify-center">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                AviaraAI{" "}
-                <span className="text-gradient">
-                  Where Vision Meets Intelligence
-                </span>
-                <br />
-              </h1>
-            </div>
-          </div>
-        </section>
-
+        <>
+          <HeroRotator />
+        </>
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce-slow">
           <div className="w-6 h-10 border-2 border-light-muted dark:border-dark-muted rounded-full flex items-start justify-center p-2">
             <div className="w-1 h-2 bg-light-muted dark:bg-dark-muted rounded-full animate-pulse"></div>
