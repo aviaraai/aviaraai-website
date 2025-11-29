@@ -11,7 +11,7 @@ export default function HeroRotator() {
     "Designs That Speak Human",
   ];
 
-  const DISPLAY_MS = 4500;
+  const DISPLAY_MS = 5500;
   const ANIM_MS = 800;
 
   const [index, setIndex] = useState(0);
