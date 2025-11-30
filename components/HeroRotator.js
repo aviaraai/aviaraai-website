@@ -16,6 +16,9 @@ export default function HeroRotator() {
   const ANIM_MS = 1400;
   const CURSOR_BLINK_MS = 700;
 
+  // delay before typing starts (milliseconds)
+  const TYPING_START_DELAY_MS = 400;
+
   const reduce = useReducedMotion();
 
   const [index, setIndex] = useState(0);
@@ -29,11 +32,13 @@ export default function HeroRotator() {
 
   const typingTimerRef = useRef(null);
   const advanceTimerRef = useRef(null);
+  const typingDelayRef = useRef(null); // holds the startup delay timeout
 
   useEffect(() => {
     return () => {
       if (typingTimerRef.current) clearInterval(typingTimerRef.current);
       if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current);
+      if (typingDelayRef.current) clearTimeout(typingDelayRef.current);
     };
   }, []);
 
@@ -51,6 +56,10 @@ export default function HeroRotator() {
       clearTimeout(advanceTimerRef.current);
       advanceTimerRef.current = null;
     }
+    if (typingDelayRef.current) {
+      clearTimeout(typingDelayRef.current);
+      typingDelayRef.current = null;
+    }
   }, [index]);
 
   const splitFirstWord = (str) => {
@@ -63,51 +72,67 @@ export default function HeroRotator() {
   };
 
   const beginTyping = () => {
-    setIsTyping(true);
+    // NOTE: don't set isTyping here — we want the cursor to appear only AFTER the startup delay
+    // clear any existing startup delay just in case
+    if (typingDelayRef.current) {
+      clearTimeout(typingDelayRef.current);
+      typingDelayRef.current = null;
+    }
 
-    if (reduce) {
-      if (index === 0) {
-        // leading space so typing visually starts after "AviaraAI "
-        setTypedSubtitle(" Where Vision Meets Intelligence");
-      } else {
-        // show other slides instantly (no typing)
-        const [, remainder] = splitFirstWord(texts[index] || "");
-        setTypedRemainder(remainder);
+    // Start typing logic after the small startup delay so "AviaraAI" is visible first
+    typingDelayRef.current = setTimeout(() => {
+      // Now typing is effectively starting — show cursor
+      setIsTyping(true);
+
+      // reduced-motion branch
+      if (reduce) {
+        if (index === 0) {
+          // leading space so typing visually starts after "AviaraAI "
+          setTypedSubtitle(" Where Vision Meets Intelligence");
+        } else {
+          // show other slides instantly (no typing)
+          const [, remainder] = splitFirstWord(texts[index] || "");
+          setTypedRemainder(remainder);
+        }
+
+        advanceTimerRef.current = setTimeout(() => {
+          setIsTyping(false);
+          setIndex((i) => (i + 1) % texts.length);
+        }, PAUSE_AFTER_FULL_MS);
+        typingDelayRef.current = null;
+        return;
       }
 
-      advanceTimerRef.current = setTimeout(() => {
-        setIsTyping(false);
-        setIndex((i) => (i + 1) % texts.length);
-      }, PAUSE_AFTER_FULL_MS);
-      return;
-    }
+      // non-reduced motion
+      if (index === 0) {
+        // Aviara slide: keep typing animation
+        const subtitle = " Where Vision Meets Intelligence";
+        let i = 0;
+        setTypedSubtitle("");
+        typingTimerRef.current = setInterval(() => {
+          i++;
+          setTypedSubtitle(subtitle.slice(0, i));
+          if (i >= subtitle.length) {
+            clearInterval(typingTimerRef.current);
+            typingTimerRef.current = null;
+            advanceTimerRef.current = setTimeout(() => {
+              setIsTyping(false);
+              setIndex((s) => (s + 1) % texts.length);
+            }, PAUSE_AFTER_FULL_MS);
+          }
+        }, TYPING_SPEED);
+      } else {
+        // Other slides: immediately set the remainder (no typing), then advance after pause
+        const [, remainder] = splitFirstWord(texts[index] || "");
+        setTypedRemainder(remainder);
+        advanceTimerRef.current = setTimeout(() => {
+          setIsTyping(false);
+          setIndex((s) => (s + 1) % texts.length);
+        }, PAUSE_AFTER_FULL_MS);
+      }
 
-    if (index === 0) {
-      // Aviara slide: keep typing animation
-      const subtitle = " Where Vision Meets Intelligence";
-      let i = 0;
-      setTypedSubtitle("");
-      typingTimerRef.current = setInterval(() => {
-        i++;
-        setTypedSubtitle(subtitle.slice(0, i));
-        if (i >= subtitle.length) {
-          clearInterval(typingTimerRef.current);
-          typingTimerRef.current = null;
-          advanceTimerRef.current = setTimeout(() => {
-            setIsTyping(false);
-            setIndex((s) => (s + 1) % texts.length);
-          }, PAUSE_AFTER_FULL_MS);
-        }
-      }, TYPING_SPEED);
-    } else {
-      // Other slides: immediately set the remainder (no typing), then advance after pause
-      const [, remainder] = splitFirstWord(texts[index] || "");
-      setTypedRemainder(remainder);
-      advanceTimerRef.current = setTimeout(() => {
-        setIsTyping(false);
-        setIndex((s) => (s + 1) % texts.length);
-      }, PAUSE_AFTER_FULL_MS);
-    }
+      typingDelayRef.current = null;
+    }, TYPING_START_DELAY_MS);
   };
 
   const variants = {
