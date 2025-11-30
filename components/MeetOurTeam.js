@@ -6,11 +6,11 @@ export default function MeetOurTeam() {
   const team = [
     {
       id: 1,
-      name: "Peter McKay",
+      name: "Putta Suresh",
       title: "CEO",
-      img: "/team/Peter.png",
+      img: "/team/suresh_sir.jpeg",
       linkedin: "#",
-      bio: "Peter is the CEO of Snyk. In previous roles as CEO, Peter led multiple software companies through hypergrowth, including Watchfire (acquired by IBM), Desktone (acquired by VMWare), and Veeam. When not running Snyk, Peter can be found reading or listening to books, biking, or running.",
+      bio: "Suresh is the CEO of AviaraAI. In previous roles as CEO, Suresh led multiple software companies through hypergrowth, including Ascription. When not running AviaraAI, Suresh can be found reading or listening to books, biking, or running.",
     },
     {
       id: 2,
