@@ -9,7 +9,7 @@ export default function MeetOurTeam() {
       name: "Putta Suresh",
       title: "CEO",
       img: "/team/suresh_sir.jpeg",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/suresh-putta-99934312/",
       bio: "Suresh is the CEO of AviaraAI. In previous roles as CEO, Suresh led multiple software companies through hypergrowth, including Ascription. When not running AviaraAI, Suresh can be found reading or listening to books, biking, or running.",
     },
     {
