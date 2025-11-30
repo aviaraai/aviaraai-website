@@ -12,8 +12,8 @@ export default function HeroRotator() {
   ];
 
   const TYPING_SPEED = 80;
-  const PAUSE_AFTER_FULL_MS = 900;
-  const ANIM_MS = 1000;
+  const PAUSE_AFTER_FULL_MS = 1000;
+  const ANIM_MS = 1400;
   const CURSOR_BLINK_MS = 700;
 
   const reduce = useReducedMotion();
