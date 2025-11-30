@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import HeroRotator from "../components/HeroRotator";
+import WhatWeOffer from "../components/WhatWeOffer";
 
 export default function Home() {
   return (
@@ -39,6 +40,10 @@ export default function Home() {
     </p> */}
         </div>
       </section>
+
+      <>
+        <WhatWeOffer />
+      </>
 
       <section id="projects" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
