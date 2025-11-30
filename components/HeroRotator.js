@@ -11,9 +11,13 @@ export default function HeroRotator() {
     "Designs That Speak Human",
   ];
 
+  // kept DISPLAY_MS from main in case you want an auto-advance duration later
+  const DISPLAY_MS = 5500;
+
+  // preserved the trail branch typing controls (more granular)
   const TYPING_SPEED = 35;
   const PAUSE_AFTER_FULL_MS = 900;
-  const ANIM_MS = 1000;
+  const ANIM_MS = 1000; // kept trail value (matches typing pacing)
   const CURSOR_BLINK_MS = 700;
 
   const reduce = useReducedMotion();
