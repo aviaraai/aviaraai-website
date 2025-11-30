@@ -11,7 +11,7 @@ export default function HeroRotator() {
     "Designs That Speak Human",
   ];
 
-  const TYPING_SPEED = 35;
+  const TYPING_SPEED = 80;
   const PAUSE_AFTER_FULL_MS = 900;
   const ANIM_MS = 1000;
   const CURSOR_BLINK_MS = 700;
@@ -22,7 +22,7 @@ export default function HeroRotator() {
 
   // typed parts
   const [typedSubtitle, setTypedSubtitle] = useState(""); // for Aviara slide
-  const [typedRemainder, setTypedRemainder] = useState(""); // for other slides
+  const [typedRemainder, setTypedRemainder] = useState(""); // for other slides (now instant)
 
   // global typing flag
   const [isTyping, setIsTyping] = useState(false);
@@ -67,11 +67,14 @@ export default function HeroRotator() {
 
     if (reduce) {
       if (index === 0) {
-        setTypedSubtitle("Where Vision Meets Intelligence");
+        // leading space so typing visually starts after "AviaraAI "
+        setTypedSubtitle(" Where Vision Meets Intelligence");
       } else {
+        // show other slides instantly (no typing)
         const [, remainder] = splitFirstWord(texts[index] || "");
         setTypedRemainder(remainder);
       }
+
       advanceTimerRef.current = setTimeout(() => {
         setIsTyping(false);
         setIndex((i) => (i + 1) % texts.length);
@@ -80,7 +83,8 @@ export default function HeroRotator() {
     }
 
     if (index === 0) {
-      const subtitle = "Where Vision Meets Intelligence";
+      // Aviara slide: keep typing animation
+      const subtitle = " Where Vision Meets Intelligence";
       let i = 0;
       setTypedSubtitle("");
       typingTimerRef.current = setInterval(() => {
@@ -96,21 +100,13 @@ export default function HeroRotator() {
         }
       }, TYPING_SPEED);
     } else {
+      // Other slides: immediately set the remainder (no typing), then advance after pause
       const [, remainder] = splitFirstWord(texts[index] || "");
-      let i = 0;
-      setTypedRemainder("");
-      typingTimerRef.current = setInterval(() => {
-        i++;
-        setTypedRemainder(remainder.slice(0, i));
-        if (i >= remainder.length) {
-          clearInterval(typingTimerRef.current);
-          typingTimerRef.current = null;
-          advanceTimerRef.current = setTimeout(() => {
-            setIsTyping(false);
-            setIndex((s) => (s + 1) % texts.length);
-          }, PAUSE_AFTER_FULL_MS);
-        }
-      }, TYPING_SPEED);
+      setTypedRemainder(remainder);
+      advanceTimerRef.current = setTimeout(() => {
+        setIsTyping(false);
+        setIndex((s) => (s + 1) % texts.length);
+      }, PAUSE_AFTER_FULL_MS);
     }
   };
 
@@ -137,17 +133,13 @@ export default function HeroRotator() {
       animation: blinkCursor ${CURSOR_BLINK_MS}ms steps(2, start) infinite;
       vertical-align: baseline;
     }
-    .typed-cursor.faint {
-      opacity: 0.45;
-    }
     @media (prefers-reduced-motion: reduce) {
       .typed-cursor { animation: none; opacity: 1; }
     }
   `;
 
-  // cursor visibility helpers
+  // cursor visibility helpers (only used for Aviara)
   const showCursorForAviara = () => isTyping || typedSubtitle.length > 0;
-  const showCursorForOther = () => isTyping || typedRemainder.length > 0;
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -183,9 +175,9 @@ export default function HeroRotator() {
             className="text-white text-center"
           >
             {index === 0 ? (
-              /* Aviara slide — same as before: AviaraAI static, subtitle typed inline, cursor after subtitle */
+              /* Aviara slide — AviaraAI static, subtitle typed inline, cursor after subtitle */
               <div className="mx-auto">
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                   AviaraAI{" "}
                   <span className="text-gradient">
                     {typedSubtitle}
@@ -207,40 +199,18 @@ export default function HeroRotator() {
                 </span>
               </div>
             ) : (
-              /* Other slides — first word static, cursor initially after it (faint), then typed remainder appears and cursor moves after typed remainder */
+              /* Other slides — first word static, remainder shown instantly, NO cursor */
               (() => {
                 const full = texts[index] || "";
                 const [first, remainder] = splitFirstWord(full);
-                const remainderExists = remainder.length > 0;
 
                 return (
                   <div>
-                    <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold block">
+                    <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold block">
                       <span className="font-extrabold">{first}</span>
-                      {/* If nothing typed yet, show a faint cursor right after first word */}
-                      {!typedRemainder && showCursorForOther() && (
-                        <span
-                          className="typed-cursor faint"
-                          aria-hidden="true"
-                          style={{ opacity: reduce ? 0.4 : 0.45 }}
-                        >
-                          |
-                        </span>
-                      )}
 
-                      {/* typed remainder appears here (it includes leading space) */}
-                      <span>{typedRemainder}</span>
-
-                      {/* once remainder has characters, show the normal cursor after the typed text so it moves */}
-                      {typedRemainder && showCursorForOther() && (
-                        <span
-                          className="typed-cursor"
-                          aria-hidden="true"
-                          style={{ opacity: reduce ? 0.6 : 1 }}
-                        >
-                          |
-                        </span>
-                      )}
+                      {/* remainder is shown immediately (includes leading space) */}
+                      <span>{typedRemainder || remainder}</span>
                     </span>
                   </div>
                 );
@@ -251,4 +221,4 @@ export default function HeroRotator() {
       </div>
     </section>
   );
-} 
+}
