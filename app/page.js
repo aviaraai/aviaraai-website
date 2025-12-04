@@ -21,25 +21,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="py-20 bg-white text-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-sora font-bold mb-6">
-            About AviaraAI
-          </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-            Aviara AI was founded on a simple belief: the future of safety and
-            intelligence will be built through computer vision and AI. With
-            rapid advances in AI, We build adaptable AI systems that understand
-            the world, learn from data and take real-time action powering
-            smarter, safer, and more efficient solutions across industries.
-          </p>
-          {/* <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-      With rapid advances in AI, we build systems that can detect anomalies,
-      predict events, and alert the right people instantly — enabling safer,
-      smarter environments everywhere.
-    </p> */}
-        </div>
-      </section>
+      <section id="about" className="pt-10 pb-4 bg-white text-black">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 className="text-2xl md:text-3xl font-sora font-bold mb-2 tracking-tight">
+      About <span className="text-indigo-600">AviaraAI</span>
+    </h2>
+
+    <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-0">
+      Aviara AI was founded on a simple belief: the future of safety and
+      intelligence will be built through computer vision and AI. With rapid
+      advances in AI, we build adaptable AI systems that understand the world,
+      learn from data and take real-time action powering smarter, safer,
+      and more efficient solutions across industries.
+    </p>
+  </div>
+</section>
+
+
+
+
+
 
       <>
         <WhatWeOffer />
@@ -68,7 +69,7 @@ export default function Home() {
                     src="cow_cover.jpeg"
                     alt="Godhaar muzzle recognition"
                     className="w-full h-full object-contain object-center bg-white"
-                    loading="lazy"
+                    loading="eager"
                   />
                 </div>
 
@@ -110,7 +111,7 @@ export default function Home() {
                     src="cc_camera.png"
                     alt="Smart Surveillance"
                     className="w-full h-full object-cover"
-                    loading="lazy"
+                    loading="eager"
                   />
                 </div>
 
@@ -149,7 +150,7 @@ export default function Home() {
                     src="future_projects.png"
                     alt="Future Projects"
                     className="w-full h-full object-cover"
-                    loading="lazy"
+                    loading="eager"
                   />
                 </div>
 
