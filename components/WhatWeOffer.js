@@ -14,8 +14,8 @@ const cards = [
     path: "/services/ai",
   },
   {
-    id: "blockchain",
-    title: "Blockchain & Web3",
+    id: "fullstackwebsite",
+    title: "Web Development and Hosting",
     description:
       "Full-stack Web3 apps, smart contracts, and enterprise blockchain integration.",
     img: "/blockchain.png",

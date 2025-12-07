@@ -22,20 +22,20 @@ export default function Home() {
       </section>
 
       <section id="about" className="pt-10 pb-4 bg-white text-black">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 className="text-2xl md:text-3xl font-sora font-bold mb-2 tracking-tight">
-      About <span className="text-indigo-600">AviaraAI</span>
-    </h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-sora font-bold mb-2 tracking-tight">
+            About <span className="text-indigo-600">AviaraAI</span>
+          </h2>
 
-    <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-0">
-      Aviara AI was founded on a simple belief: the future of safety and
-      intelligence will be built through computer vision and AI. With rapid
-      advances in AI, we build adaptable AI systems that understand the world,
-      learn from data and take real-time action powering smarter, safer,
-      and more efficient solutions across industries.
-    </p>
-  </div>
-</section>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-0">
+            Aviara AI was founded on a simple belief: the future of safety and
+            intelligence will be built through computer vision and AI. With
+            rapid advances in AI, we build adaptable AI systems that understand
+            the world, learn from data and take real-time action powering
+            smarter, safer, and more efficient solutions across industries.
+          </p>
+        </div>
+      </section>
 
       <section id="whatweoffer">
         <WhatWeOffer />
@@ -134,11 +134,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Future Projects */}
-            <div className="group flex">
+            {/* Other Projects */}
+            <Link href="/products" className="group flex">
               <div
                 className="bg-white rounded-2xl overflow-hidden border border-gray-200 transform-gpu transition-all duration-300 ease-out w-full
-                        hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.015] flex flex-col"
+            hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.015] flex flex-col cursor-pointer"
               >
                 <div className="relative h-40 md:h-48 w-full bg-gray-50">
                   <img
@@ -155,7 +155,7 @@ export default function Home() {
                       In Development
                     </span>
                     <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                      Future Projects
+                      Other Projects
                     </h3>
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       We are constantly innovating and exploring new
@@ -165,15 +165,20 @@ export default function Home() {
 
                   <div className="flex items-center justify-between pt-2">
                     {/* <span className="text-blue-600 font-semibold inline-flex items-center gap-2">
-                Get in Touch →
-              </span> */}
+          Get in Touch →
+        </span> */}
+                    <div className="flex items-center justify-between pt-2">
+                      <span className="text-black font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:text-blue-600 hover:translate-x-1">
+                        Learn More →
+                      </span>
+                    </div>
                     <span className="text-sm text-gray-400">
-                      Ideas · Ongoing
+                      Case Study · 2025
                     </span>
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -234,10 +239,10 @@ export default function Home() {
       <section id="contact" className="py-20 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Ready to Transform Your Industry with AI?
+            Ready to Transform Your Industry with Us?
           </h2>
           <p className="text-xl text-gray-300 mb-10">
-            Let us discuss how our AI solutions can help solve your challenges.
+            Let us discuss how our solutions can help solve your challenges.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -249,7 +254,7 @@ export default function Home() {
             </Link>
 
             <Link
-              href="#projects"
+              href="products"
               className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-black transition-colors"
             >
               View Our Products

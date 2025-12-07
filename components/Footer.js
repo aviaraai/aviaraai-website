@@ -36,10 +36,18 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#blog"
+                  href="/blog"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
                   Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/careers"
+                  className="text-gray-600 hover:text-blue-600 transition-colors"
+                >
+                  Careers
                 </Link>
               </li>
               <li>
@@ -74,10 +82,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#projects"
+                  href="/products"
                   className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
-                  Future Innovations
+                  Other Innovations
                 </Link>
               </li>
             </ul>
