@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Products — AviaraAI",
+  description: "The Innovations and Products developed by AviaraAI",
+};
+
 export default function ProductsPage() {
   const products = [
     {

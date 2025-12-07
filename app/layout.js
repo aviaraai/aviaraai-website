@@ -7,9 +7,15 @@ import ContactForm from '../components/ContactForm'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'AviaraAI - AI Solutions That Transform Real-World Challenges',
+  title: 'AviaraAI',
   description: 'AviaraAI creates practical AI solutions across multiple industries, from cattle management to smart surveillance.',
   keywords: 'AI, Artificial Intelligence, Cattle Management, Godhaar, Computer Vision, Machine Learning, India',
+  icons: {
+    icon: "/logo_think.png",  sizes: "192x192", type: "image/png"
+  },
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
+  ),
 }
 
 export default function RootLayout({ children }) {

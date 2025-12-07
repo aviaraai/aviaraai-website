@@ -50,7 +50,7 @@ export default function DesignPage() {
           </a>
           <a
             href="#case-studies"
-            className="px-5 py-2.5 border text-sm rounded-md"
+            className="px-5 py-2.5 border text-sm text-black rounded-md"
           >
             View design case studies
           </a>

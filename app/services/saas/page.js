@@ -51,7 +51,7 @@ export default function SaasPage() {
           </a>
           <a
             href="#case-studies"
-            className="px-5 py-2.5 border text-sm rounded-md"
+            className="px-5 py-2.5 border text-sm text-black rounded-md"
           >
             Explore SaaS work
           </a>
