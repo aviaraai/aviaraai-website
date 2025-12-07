@@ -1,4 +1,13 @@
-export default function ApplyModal({ isOpen, selectedRole, onClose, onSubmit }) {
+// components/ApplyModal.js
+
+"use client";
+
+export default function ApplyModal({
+  isOpen,
+  selectedRole,
+  onClose,
+  onSubmit,
+}) {
   if (!isOpen) return null;
 
   const handleSubmit = (e) => {
@@ -8,20 +17,28 @@ export default function ApplyModal({ isOpen, selectedRole, onClose, onSubmit }) 
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 backdrop-blur-sm">
       <div className="bg-white rounded-2xl shadow-2xl max-w-xl w-full mx-4 max-h-[90vh] overflow-auto">
+        {/* Header */}
         <div className="flex items-center justify-between border-b px-6 py-4">
-          <h2 className="text-lg font-semibold text-gray-900">
-            Apply for {selectedRole || "a role"}
-          </h2>
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-gray-400">
+              Application
+            </p>
+            <h2 className="text-lg font-semibold text-gray-900">
+              {selectedRole || "Apply"}
+            </h2>
+          </div>
           <button
             onClick={onClose}
-            className="text-sm text-gray-500 hover:text-gray-800"
+            className="text-gray-400 hover:text-gray-600 text-lg leading-none"
+            aria-label="Close"
           >
-            ✕
+            ×
           </button>
         </div>
 
+        {/* Form */}
         <form onSubmit={handleSubmit} className="px-6 py-5 space-y-4">
           {/* Name */}
           <div>
@@ -66,7 +83,7 @@ export default function ApplyModal({ isOpen, selectedRole, onClose, onSubmit }) 
             />
           </div>
 
-          {/* LinkedIn / Portfolio */}
+          {/* Portfolio */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               LinkedIn / Portfolio URL
@@ -106,7 +123,7 @@ export default function ApplyModal({ isOpen, selectedRole, onClose, onSubmit }) 
           </div>
 
           {/* Actions */}
-          <div className="flex justify-end gap-3 pt-2">
+          <div className="flex justify-end gap-3 pt-1 pb-2">
             <button
               type="button"
               onClick={onClose}
