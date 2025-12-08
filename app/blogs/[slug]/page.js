@@ -5,32 +5,38 @@ import { formatDate } from "@/lib/markdown";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 import "@/styles/blog.css";
 
-// Optionally: generate metadata dynamically in future
+// Dynamic metadata for each blog
 export async function generateMetadata({ params }) {
   const { slug } = params;
+
   try {
     const blog = await fetchBlog(slug);
+
+    if (!blog) {
+      return {
+        title: "Blog | AviaraAI",
+        description: "Technical blogs and engineering stories.",
+      };
+    }
+
+    const ogImage =
+      blog.cover_image &&
+      (blog.cover_image.startsWith("http")
+        ? blog.cover_image
+        : `${API_BASE}${blog.cover_image}`);
+
     return {
-      title: `${blog.title} | Your Company`,
+      title: `${blog.title} | AviaraAI`,
       description: blog.summary,
       openGraph: {
         title: blog.title,
         description: blog.summary,
-        images: blog.cover_image
-          ? [
-              {
-                // Make sure OG image is absolute
-                url: blog.cover_image.startsWith("http")
-                  ? blog.cover_image
-                  : `${API_BASE}${blog.cover_image}`,
-              },
-            ]
-          : [],
+        images: ogImage ? [{ url: ogImage }] : [],
       },
     };
   } catch {
     return {
-      title: "Blog | Your Company",
+      title: "Blog | AviaraAI",
       description: "Technical blogs and engineering stories.",
     };
   }
@@ -44,6 +50,10 @@ export default async function BlogPage({ params }) {
     blog = await fetchBlog(slug);
   } catch (e) {
     console.error("❌ BlogPage fetch error:", e);
+    blog = null;
+  }
+
+  if (!blog) {
     return (
       <main className="blog-detail-root">
         <article className="blog-detail-article">
@@ -57,26 +67,29 @@ export default async function BlogPage({ params }) {
     );
   }
 
+  const coverSrc =
+    blog.cover_image &&
+    (blog.cover_image.startsWith("http")
+      ? blog.cover_image
+      : `${API_BASE}${blog.cover_image}`);
+
   return (
     <main className="blog-detail-root">
       <article className="blog-detail-article">
-        {blog.cover_image && (
+        {coverSrc && (
           <div className="blog-detail-cover-wrapper">
             <img
-              src={
-                blog.cover_image.startsWith("http")
-                  ? blog.cover_image
-                  : `${API_BASE}${blog.cover_image}`
-              }
+              src={coverSrc}
               alt={blog.title}
               className="blog-detail-cover"
+              loading="lazy"
             />
           </div>
         )}
 
         <header className="blog-detail-header">
           <p className="blog-detail-meta">
-            {blog.date ? formatDate(blog.date) : null}{" "}
+            {blog.date ? formatDate(blog.date) : null}
             {blog.tags && blog.tags.length > 0 && (
               <>
                 <span className="blog-card-dot">•</span>
@@ -84,7 +97,9 @@ export default async function BlogPage({ params }) {
               </>
             )}
           </p>
+
           <h1 className="blog-detail-title">{blog.title}</h1>
+
           {blog.summary && (
             <p className="blog-detail-summary">{blog.summary}</p>
           )}
