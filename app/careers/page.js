@@ -1,4 +1,4 @@
-import Careers from "../../components/Careers";
+import Careers from "@/components/Careers";
 
 export const metadata = {
   title: "Careers — AviaraAI",

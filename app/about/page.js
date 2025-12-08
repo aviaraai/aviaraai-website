@@ -1,5 +1,5 @@
 // app/story/page.js
-import About from "../../components/About";
+import About from "@/components/About";
 
 export const metadata = {
   title: "Our Story — AviaraAI LLP",

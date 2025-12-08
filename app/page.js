@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import HeroRotator from "../components/HeroRotator";
-import WhatWeOffer from "../components/WhatWeOffer";
+import HeroRotator from "@/components/HeroRotator";
+import WhatWeOffer from "@/components/WhatWeOffer";
 
 export default function Home() {
   return (

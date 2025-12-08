@@ -1,8 +1,8 @@
 // app/blogs/page.js
 
-import { fetchBlogs } from "../../lib/api";
-import BlogsClient from "../../components/BlogsClient";
-import "../../styles/blog.css";
+import { fetchBlogs } from "@/lib/api";
+import BlogsClient from "@/components/BlogsClient";
+import "@/styles/blog.css";
 
 export const metadata = {
   title: "Blogs — AviaraAI",

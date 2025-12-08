@@ -1,9 +1,9 @@
 // app/blogs/[slug]/page.js
 
-import { fetchBlog, API_BASE } from "../../../lib/api";
-import { formatDate } from "../../../lib/markdown";
-import MarkdownRenderer from "../../../components/MarkdownRenderer";
-import "../../../styles/blog.css";
+import { fetchBlog, API_BASE } from "@/lib/api";
+import { formatDate } from "@/lib/markdown";
+import MarkdownRenderer from "@/components/MarkdownRenderer";
+import "@/styles/blog.css";
 
 // Optionally: generate metadata dynamically in future
 export async function generateMetadata({ params }) {
