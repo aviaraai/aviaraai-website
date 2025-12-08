@@ -22,8 +22,9 @@ FROM node:25.2.1-alpine3.23 AS runtime
 
 WORKDIR /app
 
+# App will run on 8443 (no 3000)
 ENV NODE_ENV=production \
-    PORT=3000
+    PORT=8443
 
 # Copy only what's needed for runtime
 COPY package.json ./
@@ -39,10 +40,11 @@ COPY --from=builder /app/public ./public
 # Install curl for HEALTHCHECK
 RUN apk add --no-cache curl
 
-EXPOSE 3000
+# Expose the internal app port
+EXPOSE 8443
 
-# HEALTHCHECK — Verify homepage loads correctly
+# HEALTHCHECK — Verify homepage loads correctly on 8443
 HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
-  CMD curl -fsS http://localhost:3000/ || exit 1
+  CMD curl -fsS http://localhost:8443/ || exit 1
 
 CMD ["npm", "run", "start"]
