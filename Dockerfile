@@ -1,5 +1,4 @@
 # ============ BUILDER ============
-
 FROM node:25.2.1-alpine3.23 AS builder
 
 WORKDIR /app
@@ -19,7 +18,6 @@ RUN npm run build
 
 
 # ============ RUNTIME ============
-
 FROM node:25.2.1-alpine3.23 AS runtime
 
 WORKDIR /app
@@ -38,6 +36,13 @@ RUN npm ci --omit=dev
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 
+# Install curl for HEALTHCHECK
+RUN apk add --no-cache curl
+
 EXPOSE 3000
+
+# HEALTHCHECK — Verify homepage loads correctly
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
+  CMD curl -fsS http://localhost:3000/ || exit 1
 
 CMD ["npm", "run", "start"]
