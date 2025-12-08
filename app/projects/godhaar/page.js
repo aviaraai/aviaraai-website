@@ -595,10 +595,10 @@ export default function GodhaarPage() {
       <section id="contact" className="py-20 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Ready to Transform Your Industry with AI?
+            Ready to Transform Your Industry with Us?
           </h2>
           <p className="text-xl text-gray-300 mb-10">
-            Let us discuss how our AI solutions can help solve your challenges.
+            Let us discuss how our solutions can help solve your challenges.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -610,7 +610,7 @@ export default function GodhaarPage() {
             </Link>
 
             <Link
-              href="#projects"
+              href="/products"
               className="bg-transparent text-white border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-black transition-colors"
             >
               View Our Products

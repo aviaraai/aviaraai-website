@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 
 export default function ContactForm() {
-  const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://127.0.0.1:4000";
+  // API BASE — now using Next.js API route
+  const API_BASE = "";
 
   const [form, setForm] = useState({
     fullName: "",
@@ -10,7 +11,7 @@ export default function ContactForm() {
     organization: "",
     phone: "",
     message: "",
-    _honey: "",
+    _honey: "", // honeypot field
   });
 
   const [loading, setLoading] = useState(false);
@@ -23,19 +24,17 @@ export default function ContactForm() {
     e.preventDefault();
     setLoading(true);
 
-    // honeypot protection – silently accept
+    // Honeypot: if filled → bot → silently redirect
     if (form._honey && form._honey.trim() !== "") {
       window.location.href = "/contact/thankyou";
       return;
     }
 
     try {
-      const res = await fetch(`${API_BASE}/api/contact`, {
+      const res = await fetch(`/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          // If you set API_KEY in backend, add below line:
-          // "x-api-key": process.env.NEXT_PUBLIC_CONTACT_API_KEY
         },
         body: JSON.stringify(form),
       });
@@ -43,10 +42,9 @@ export default function ContactForm() {
       const data = await res.json().catch(() => ({}));
 
       if (res.ok && data.ok) {
-        // redirect EXACTLY like your original formsubmit workflow
         window.location.href = "/contact/thankyou";
       } else {
-        alert("Failed to send message. Please try again later.");
+        alert("Failed to send message. Please try again.");
       }
     } catch (err) {
       console.error(err);
@@ -59,9 +57,9 @@ export default function ContactForm() {
   return (
     <section className="max-w-7xl mx-auto px-6 lg:px-8 py-16 font-sora bg-white text-[#0F4C75]">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        
         {/* LEFT SIDE */}
         <div className="pr-4">
-          {/* Badge */}
           <span className="inline-flex items-center gap-2 bg-white text-[#0F4C75] px-3 py-1 rounded-full text-sm mb-6">
             <svg className="w-4 h-4" fill="none" stroke="currentColor">
               <path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8" strokeWidth="1.5" />
@@ -80,14 +78,8 @@ export default function ContactForm() {
             organisation grow.
           </p>
 
-          {/* Contact Info Cards */}
           <div className="space-y-6">
-            <InfoCard
-              icon={buildingIcon()}
-              title="Company"
-              textTop="AviaraAI LLP"
-            />
-
+            <InfoCard icon={buildingIcon()} title="Company" textTop="AviaraAI LLP" />
             <InfoCard
               icon={emailIcon()}
               title="Email"
@@ -106,16 +98,16 @@ export default function ContactForm() {
           </div>
         </div>
 
-        {/* RIGHT SIDE (Form) */}
+        {/* RIGHT SIDE (FORM) */}
         <div>
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-[#0F4C75]/20">
             <h2 className="text-2xl font-semibold text-black mb-6">
               Request Information
             </h2>
 
-            {/* UPDATED FORM */}
             <form onSubmit={handleSubmit} className="space-y-5">
-              {/* Hidden Honeypot */}
+              
+              {/* HONEYPOT FIELD */}
               <input
                 type="text"
                 name="_honey"
@@ -221,7 +213,6 @@ function InfoCard({ icon, title, textTop, textBottom }) {
         <div className="text-sm font-semibold text-[#0F4C75] mb-1">
           {title}
         </div>
-
         <div className="text-black font-medium">{textTop}</div>
 
         {textBottom && (

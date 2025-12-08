@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  aviaraai-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aviaraai-website
+    image: aviaraai-website:latest
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local     # 🔒 load your credentials at runtime
+    environment:
+      NODE_ENV: "production"
+      # Frontend → Backend over shared Docker network
+      NEXT_PUBLIC_BLOG_API_URL: "http://blog-backend:8000"
+    networks:
+      - aviara-net
+    restart: unless-stopped
+
+networks:
+  aviara-net:
+    external: true

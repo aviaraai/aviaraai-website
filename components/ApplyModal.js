@@ -1,124 +1,144 @@
+// components/ApplyModal.js
+
 "use client";
-import React, { useEffect, useState } from "react";
 
-/**
- * Focused, low-friction apply modal:
- * - Captures name, email (and optional resume)
- * - Submits FormData to /api/apply (you can adapt backend)
- */
-export default function ApplyModal({ open, onClose, job, onSuccess }) {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [resume, setResume] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const brand = "#0F4C75";
+export default function ApplyModal({
+  isOpen,
+  selectedRole,
+  onClose,
+  onSubmit,
+}) {
+  if (!isOpen) return null;
 
-  useEffect(() => {
-    if (!open) {
-      setName("");
-      setEmail("");
-      setResume(null);
-      setLoading(false);
-    }
-  }, [open]);
-
-  if (!open) return null;
-
-  async function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-    try {
-      const fd = new FormData();
-      fd.append("name", name);
-      fd.append("email", email);
-      fd.append("jobId", job?.id ?? "");
-      if (resume) fd.append("resume", resume);
-
-      const res = await fetch("/api/apply", { method: "POST", body: fd });
-      if (!res.ok) throw new Error("submit failed");
-
-      onSuccess && onSuccess();
-      alert("Thanks — your application is received. We’ll be in touch if there’s a match.");
-      onClose();
-    } catch (err) {
-      console.error(err);
-      alert("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
-  }
+    const formData = new FormData(e.target);
+    onSubmit(formData);
+  };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start md:items-center justify-center p-6">
-      <div className="absolute inset-0" style={{ backgroundColor: "rgba(0,0,0,0.45)" }} onClick={onClose} />
-
-      <div className="relative z-10 w-full max-w-md bg-white border border-black rounded-2xl p-6 shadow-lg">
-        <div className="flex items-start justify-between">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 backdrop-blur-sm">
+      <div className="bg-white rounded-2xl shadow-2xl max-w-xl w-full mx-4 max-h-[90vh] overflow-auto">
+        {/* Header */}
+        <div className="flex items-center justify-between border-b px-6 py-4">
           <div>
-            <h3 className="text-xl font-semibold text-black">{job?.title ?? "Apply"}</h3>
-            {job && <p className="text-sm mt-1" style={{ color: "rgba(0,0,0,0.7)" }}>{job.team} • {job.location}</p>}
+            <p className="text-xs uppercase tracking-[0.2em] text-gray-400">
+              Application
+            </p>
+            <h2 className="text-lg font-semibold text-gray-900">
+              {selectedRole || "Apply"}
+            </h2>
           </div>
-
-          <button onClick={onClose} className="text-black text-2xl leading-none" aria-label="Close">×</button>
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-gray-600 text-lg leading-none"
+            aria-label="Close"
+          >
+            ×
+          </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="mt-5 space-y-4">
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="px-6 py-5 space-y-4">
+          {/* Name */}
           <div>
-            <label className="text-sm block text-black">Full name</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Full Name
+            </label>
             <input
+              name="name"
+              type="text"
               required
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="mt-1 w-full rounded-md px-3 py-2"
-              style={{ border: "1px solid #000" }}
-              placeholder="Your full name"
+              placeholder="Your name"
+              className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
             />
           </div>
 
+          {/* Email */}
           <div>
-            <label className="text-sm block text-black">Email</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Email
+            </label>
             <input
-              required
+              name="email"
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="mt-1 w-full rounded-md px-3 py-2"
-              style={{ border: "1px solid #000" }}
-              placeholder="you@domain.com"
+              required
+              placeholder="you@example.com"
+              className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
             />
           </div>
 
+          {/* Role */}
           <div>
-            <label className="text-sm block text-black">Resume (optional)</label>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Role you&apos;re applying for
+            </label>
             <input
-              type="file"
-              accept=".pdf,.doc,.docx"
-              className="mt-2"
-              onChange={(e) => setResume(e.target.files?.[0] ?? null)}
+              name="role"
+              type="text"
+              required
+              defaultValue={selectedRole}
+              placeholder="e.g., Frontend Developer"
+              className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
             />
-            <p className="text-xs mt-1" style={{ color: "rgba(0,0,0,0.6)" }}>
-              PDF or DOC accepted. We only use this for hiring.
-            </p>
           </div>
 
-          <div className="flex items-center justify-between gap-3 pt-2">
-            <button type="button" onClick={onClose} className="px-4 py-2 rounded-full border text-sm" style={{ borderColor: "#000" }}>
+          {/* Portfolio */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              LinkedIn / Portfolio URL
+            </label>
+            <input
+              name="portfolio"
+              type="url"
+              placeholder="https://"
+              className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            />
+          </div>
+
+          {/* Resume */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Resume (PDF)
+            </label>
+            <input
+              name="resume"
+              type="file"
+              accept=".pdf"
+              className="w-full text-sm text-gray-600 file:mr-3 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-indigo-600 file:text-white hover:file:bg-indigo-700 cursor-pointer"
+            />
+          </div>
+
+          {/* Message */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Message / Cover Letter
+            </label>
+            <textarea
+              name="message"
+              rows={4}
+              placeholder="Tell us briefly about yourself and why you want to work with us."
+              className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 resize-none"
+            />
+          </div>
+
+          {/* Actions */}
+          <div className="flex justify-end gap-3 pt-1 pb-2">
+            <button
+              type="button"
+              onClick={onClose}
+              className="px-4 py-2 text-sm rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100"
+            >
               Cancel
             </button>
             <button
               type="submit"
-              disabled={loading}
-              className="px-5 py-2 rounded-full text-white text-sm"
-              style={{ backgroundColor: brand }}
+              className="px-5 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 transition"
             >
-              {loading ? "Sending…" : "Send application"}
+              Submit Application
             </button>
           </div>
         </form>
-
-        <div className="mt-3 text-xs" style={{ color: "rgba(0,0,0,0.6)" }}>
-          Prefer email? <a href="mailto:careers@aviaraai.com" style={{ color: brand }} className="underline">careers@aviaraai.com</a>
-        </div>
       </div>
     </div>
   );
