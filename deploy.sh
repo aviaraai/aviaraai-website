@@ -31,4 +31,4 @@ $DC up -d --build
 
 echo
 echo "Website running!"
-echo "   → http://localhost:3000 (or your-server-ip:3000)"
+echo "   → http://localhost:8443 (or your-server-ip:8443)"

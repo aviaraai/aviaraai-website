@@ -7,14 +7,19 @@ services:
       dockerfile: Dockerfile
     container_name: aviaraai-website
     image: aviaraai-website:latest
+
+    # 👇 Website exposed on 8443 instead of 3000
     ports:
-      - "3000:3000"
+      - "8443:8443"
+
     env_file:
       - .env.local     # 🔒 load your credentials at runtime
+
     environment:
       NODE_ENV: "production"
-      # Frontend → Backend over shared Docker network
-      NEXT_PUBLIC_BLOG_API_URL: "http://blog-backend:8000"
+      # Frontend → Backend over shared Docker network (internal port 8445)
+      NEXT_PUBLIC_BLOG_API_URL: "http://blog-backend:8445"
+
     networks:
       - aviara-net
     restart: unless-stopped
