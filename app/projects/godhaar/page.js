@@ -260,7 +260,7 @@ export default function GodhaarPage() {
           <div className="space-y-24">
             {/* STEP 1 - IMAGE LEFT, TEXT RIGHT */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square">
+              <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square relative">
                 <Image
                   src="/capture_muzzle.jpeg"
                   alt="Capture Muzzle"
@@ -302,7 +302,7 @@ export default function GodhaarPage() {
                 </p>
               </div>
               <div className="order-1 md:order-2">
-                <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square">
+                <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square relative">
                   <Image
                   src="/aipowered.jpeg"
                   alt="AI Processing"
@@ -318,7 +318,7 @@ export default function GodhaarPage() {
 
             {/* STEP 3 - IMAGE LEFT, TEXT RIGHT */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square">
+              <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square relative">
                 <Image
                   src="/print_matching.jpeg"
                   alt="Pattern Matching"
@@ -360,7 +360,7 @@ export default function GodhaarPage() {
                 </p>
               </div>
               <div className="order-1 md:order-2">
-                <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square">
+                <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square relative">
                   <Image
                   src="/view_profile.png"
                   alt="View Profile"
@@ -377,7 +377,7 @@ export default function GodhaarPage() {
             {/* STEP 5 - IMAGE LEFT, TEXT RIGHT */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square">
+                <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square relative">
                   <Image
                   src="/godhaar_card.jpeg"
                   alt="Digital Certification"
@@ -553,16 +553,16 @@ export default function GodhaarPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* IMAGE / METRIC BOX - LEFT */}
             <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square relative">
-  <Image
-                  src="/Brain_2.jpeg"
-                  alt="Brain"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  quality={85}
-                />
-</div>
+              <Image
+                src="/Brain_2.jpeg"
+                alt="Brain"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="w-full h-full object-cover"
+                loading="lazy"
+                quality={85}
+              />
+            </div>
 
 
 
