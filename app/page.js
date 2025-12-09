@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import HeroRotator from "@/components/HeroRotator";
 import WhatWeOffer from "@/components/WhatWeOffer";
 
@@ -60,11 +61,16 @@ export default function Home() {
               >
                 {/* Image / Visual - fallback bg if missing */}
                 <div className="relative h-40 md:h-48 w-full bg-gray-50">
-                  <img
-                    src="cow_cover.jpeg"
+                  <Image
+                    src="/cow_cover.jpeg"
                     alt="Godhaar muzzle recognition"
-                    className="w-full h-full object-contain object-center bg-white"
-                    loading="eager"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-contain object-center bg-white"
+                    loading="lazy"
+                    quality={85}
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA3gD//2Q=="
                   />
                 </div>
 
@@ -102,11 +108,16 @@ export default function Home() {
                         hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.015] flex flex-col"
               >
                 <div className="relative h-40 md:h-48 w-full bg-gray-50">
-                  <img
-                    src="cc_camera.png"
+                  <Image
+                    src="/cc_camera.png"
                     alt="Smart Surveillance"
-                    className="w-full h-full object-cover"
-                    loading="eager"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                    loading="lazy"
+                    quality={85}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//HLfwYiAOOoQvoqBABbWyZJf74GZgAAAABJRU5ErkJggg=="
                   />
                 </div>
 
@@ -141,11 +152,16 @@ export default function Home() {
             hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.015] flex flex-col cursor-pointer"
               >
                 <div className="relative h-40 md:h-48 w-full bg-gray-50">
-                  <img
-                    src="future_projects.png"
+                  <Image
+                    src="/future_projects.png"
                     alt="Future Projects"
-                    className="w-full h-full object-cover"
-                    loading="eager"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                    loading="lazy"
+                    quality={85}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//HLfwYiAOOoQvoqBABbWyZJf74GZgAAAABJRU5ErkJggg=="
                   />
                 </div>
 
