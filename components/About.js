@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import MeetOurTeam from "./MeetOurTeam";
-import Link from "next/link";
 
 export default function Story() {
   // ---------- TIMELINE DATA ----------
@@ -48,15 +48,17 @@ export default function Story() {
           </div>
         </div>
 
-        <div
-          className="w-full md:w-1/2 h-[300px] md:h-full"
-          style={{
-            backgroundImage: "url('/about_us.gif')",
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
-        ></div>
+        <div className="w-full md:w-1/2 h-[300px] md:h-full relative">
+          <Image
+            src="/about_us.gif"
+            alt="About Us Animation"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-contain"
+            loading="lazy"
+            unoptimized
+          />
+        </div>
       </section>
 
       <hr className="border-t border-gray-200 max-w-5xl mx-auto" />
@@ -142,15 +144,16 @@ export default function Story() {
       <hr className="border-t border-gray-200 max-w-5xl mx-auto" />
 
       {/* ---------- TIMELINE (side arrows only on 2xl+, bottom for others) ---------- */}
-      <section
-        className="w-full h-screen relative overflow-hidden"
-        style={{
-          backgroundImage: "url('/team.gif')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <section className="w-full h-screen relative overflow-hidden">
+        <Image
+          src="/team.gif"
+          alt="Our Team"
+          fill
+          sizes="100vw"
+          className="object-cover"
+          loading="lazy"
+          unoptimized
+        />
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0 bg-black/70 md:bg-gradient-to-r md:from-black/65 md:via-black/40 md:to-transparent" />
         </div>

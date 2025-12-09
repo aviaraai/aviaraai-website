@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Products — AviaraAI",
@@ -80,11 +81,14 @@ export default function ProductsPage() {
             {/* Left: Product Image Card */}
             <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transform-gpu hover:-translate-y-1 hover:scale-[1.01] transition-all duration-300 ease-out">
               <div className="relative h-48 md:h-56 w-full bg-gray-50">
-                <img
+                <Image
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-full object-cover"
-                  loading="eager"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  className="object-cover"
+                  loading="lazy"
+                  quality={85}
                 />
               </div>
 
