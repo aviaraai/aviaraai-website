@@ -9,6 +9,10 @@ export const metadata = {
   description: "Insights on AI, education, and product design.",
 };
 
+// Force dynamic rendering - no caching
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default async function BlogsPage() {
   let blogs = [];
   try {
