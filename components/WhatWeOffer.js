@@ -91,7 +91,10 @@ export default function WhatWeOffer() {
               src={card.img}
               alt={card.title}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover"
+              loading="lazy"
+              quality={85}
             />
           </motion.div>
         </div>
