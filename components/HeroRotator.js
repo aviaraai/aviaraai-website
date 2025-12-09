@@ -177,6 +177,7 @@ export default function HeroRotator() {
           muted
           loop
           playsInline
+          preload="auto"
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
           <source src="/fixed_main_hero.mp4" type="video/mp4" />

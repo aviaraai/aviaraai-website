@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -51,11 +52,15 @@ export default function Navbar() {
 
           {/* Logo */}
 <Link href="/" className="flex items-center gap-0 group">
-  <div className="rounded-full overflow-hidden w-16 h-16 flex-shrink-0">
-    <img
+  <div className="rounded-full overflow-hidden w-16 h-16 flex-shrink-0 relative">
+    <Image
       src="/logo_think.png"
       alt="AviaraAI Logo"
-      className="w-full h-full object-cover"
+      width={64}
+      height={64}
+      className="object-cover"
+      priority
+      quality={90}
     />
   </div>
 

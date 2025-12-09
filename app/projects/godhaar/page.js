@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function GodhaarPage() {
   return (
@@ -9,10 +10,14 @@ export default function GodhaarPage() {
       <section className="min-h-screen flex items-center relative overflow-hidden pt-20">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src="/cow_background.jpeg"
             alt="Cattle Farm Background"
-            className="w-full h-full object-cover"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+            quality={85}
           />
           {/* Dark Overlay for better text readability */}
           <div className="absolute inset-0 bg-black/30"></div>
@@ -99,11 +104,15 @@ export default function GodhaarPage() {
 
             {/* IMAGE - RIGHT */}
             <div className="order-1 md:order-2 flex justify-center">
-              <div className="bg-white rounded-3xl p-8 shadow-xl w-full max-w-md aspect-square flex items-center justify-center overflow-hidden border border-gray-200">
-                <img
+              <div className="bg-white rounded-3xl p-8 shadow-xl w-full max-w-md aspect-square flex items-center justify-center overflow-hidden border border-gray-200 relative">
+                <Image
                   src="/indian-cow.jpg"
                   alt="Godhaar Cattle Recognition"
-                  className="w-full h-full object-cover rounded-2xl bg-white"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  className="object-cover rounded-2xl bg-white"
+                  loading="lazy"
+                  quality={85}
                 />
               </div>
             </div>
@@ -252,10 +261,14 @@ export default function GodhaarPage() {
             {/* STEP 1 - IMAGE LEFT, TEXT RIGHT */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square">
-                <img
+                <Image
                   src="/capture_muzzle.jpeg"
                   alt="Capture Muzzle"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  quality={85}
                 />
               </div>
               <div>
@@ -290,11 +303,15 @@ export default function GodhaarPage() {
               </div>
               <div className="order-1 md:order-2">
                 <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square">
-                  <img
-                    src="/aipowered.jpeg"
-                    alt="AI Processing"
-                    className="w-full h-full object-cover"
-                  />
+                  <Image
+                  src="/aipowered.jpeg"
+                  alt="AI Processing"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  quality={85}
+                />
                 </div>
               </div>
             </div>
@@ -302,10 +319,14 @@ export default function GodhaarPage() {
             {/* STEP 3 - IMAGE LEFT, TEXT RIGHT */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square">
-                <img
+                <Image
                   src="/print_matching.jpeg"
                   alt="Pattern Matching"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  quality={85}
                 />
               </div>
               <div>
@@ -340,11 +361,15 @@ export default function GodhaarPage() {
               </div>
               <div className="order-1 md:order-2">
                 <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square">
-                  <img
-                    src="/view_profile.png"
-                    alt="View Profile"
-                    className="w-full h-full object-cover"
-                  />
+                  <Image
+                  src="/view_profile.png"
+                  alt="View Profile"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  quality={85}
+                />
                 </div>
               </div>
             </div>
@@ -353,11 +378,15 @@ export default function GodhaarPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square">
-                  <img
-                    src="/godhaar_card.jpeg"
-                    alt="Digital Certification"
-                    className="w-full h-full object-cover"
-                  />
+                  <Image
+                  src="/godhaar_card.jpeg"
+                  alt="Digital Certification"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  quality={85}
+                />
                 </div>
               </div>
               <div>
@@ -392,10 +421,14 @@ export default function GodhaarPage() {
             {/* Feature 1 */}
             <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4">
-                <img
+                <Image
                   src="/mobile.png"
                   alt="Mobile Icon"
+                  width={48}
+                  height={48}
                   className="w-12 h-12 object-contain"
+                  loading="lazy"
+                  quality={85}
                 />
               </div>
               <h3 className="text-xl font-sora text-gray-900 mb-3">
@@ -409,10 +442,14 @@ export default function GodhaarPage() {
             {/* Feature 2 */}
             <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4">
-                <img
+                <Image
                   src="/records.png"
                   alt="Records Icon"
+                  width={48}
+                  height={48}
                   className="w-12 h-12 object-contain"
+                  loading="lazy"
+                  quality={85}
                 />
               </div>
               <h3 className="text-xl font-sora text-gray-900 mb-3">
@@ -426,10 +463,14 @@ export default function GodhaarPage() {
             {/* Feature 3 */}
             <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4">
-                <img
+                <Image
                   src="/bell.png"
                   alt="Smart Alerts Icon"
+                  width={48}
+                  height={48}
                   className="w-12 h-12 object-contain"
+                  loading="lazy"
+                  quality={85}
                 />
               </div>
               <h3 className="text-xl font-sora text-gray-900 mb-3">
@@ -443,10 +484,14 @@ export default function GodhaarPage() {
             {/* Feature 4 */}
             <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4">
-                <img
+                <Image
                   src="/analysis.png"
                   alt="Analytics Icon"
+                  width={48}
+                  height={48}
                   className="w-12 h-12 object-contain"
+                  loading="lazy"
+                  quality={85}
                 />
               </div>
               <h3 className="text-xl font-sora text-gray-900 mb-3">
@@ -460,10 +505,14 @@ export default function GodhaarPage() {
             {/* Feature 5 */}
             <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4">
-                <img
+                <Image
                   src="/milk.png"
                   alt="Milk Production Icon"
+                  width={48}
+                  height={48}
                   className="w-12 h-12 object-contain"
+                  loading="lazy"
+                  quality={85}
                 />
               </div>
               <h3 className="text-xl font-sora text-gray-900 mb-3">
@@ -477,10 +526,14 @@ export default function GodhaarPage() {
             {/* Feature 6 */}
             <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4">
-                <img
+                <Image
                   src="/cow_logo.png"
                   alt="Breeding History Icon"
+                  width={48}
+                  height={48}
                   className="w-12 h-12 object-contain"
+                  loading="lazy"
+                  quality={85}
                 />
               </div>
               <h3 className="text-xl font-sora text-gray-900 mb-3">
@@ -500,11 +553,15 @@ export default function GodhaarPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* IMAGE / METRIC BOX - LEFT */}
             <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square relative">
-  <img
-    src="/Brain_2.jpeg"
-    alt="Brain"
-    className="w-full h-full object-cover"
-  />
+  <Image
+                  src="/Brain_2.jpeg"
+                  alt="Brain"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  quality={85}
+                />
 </div>
 
 

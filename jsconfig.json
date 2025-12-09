@@ -3,9 +3,20 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types"],
+    "skipLibCheck": true
   },
+  "include": [
+    "**/*.js",
+    "**/*.jsx"
+  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next",
+    "out",
+    ".cache",
+    "dist",
+    "build"
   ]
 }
