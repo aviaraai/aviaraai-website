@@ -50,7 +50,7 @@ export default function Story() {
 
         <div className="w-full md:w-1/2 h-[300px] md:h-full relative">
           <Image
-            src="/about_us.gif"
+            src="/about_com.gif"
             alt="About Us Animation"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -146,7 +146,7 @@ export default function Story() {
       {/* ---------- TIMELINE (side arrows only on 2xl+, bottom for others) ---------- */}
       <section className="w-full h-screen relative overflow-hidden">
         <Image
-          src="/team.gif"
+          src="/team_com.gif"
           alt="Our Team"
           fill
           sizes="100vw"

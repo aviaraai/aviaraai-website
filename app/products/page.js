@@ -20,7 +20,7 @@ export default function ProductsPage() {
       ],
       status: "In Deployment",
       tag: "Flagship Product",
-      image: "/cow_cover.jpeg",
+      image: "/cow_cover.webp",
       path: "/projects/godhaar", // 👈 Added path
     },
     {
