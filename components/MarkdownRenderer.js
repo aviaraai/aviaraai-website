@@ -59,7 +59,7 @@ export default function MarkdownRenderer({ content, slug }) {
                 {...props}
                 src={src}
                 className="blog-image"
-                loading="lazy"
+                loading="eager"
                 alt={props.alt || ""}
               />
             );
