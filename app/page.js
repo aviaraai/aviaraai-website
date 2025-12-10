@@ -62,7 +62,7 @@ export default function Home() {
                 {/* Image / Visual - fallback bg if missing */}
                 <div className="relative h-40 md:h-48 w-full bg-gray-50">
                   <Image
-                    src="/cow_cover.jpeg"
+                    src="/cow_cover.webp"
                     alt="Godhaar muzzle recognition"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -109,7 +109,7 @@ export default function Home() {
               >
                 <div className="relative h-40 md:h-48 w-full bg-gray-50">
                   <Image
-                    src="/cc_camera.png"
+                    src="/cc_camera.webp"
                     alt="Smart Surveillance"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -153,7 +153,7 @@ export default function Home() {
               >
                 <div className="relative h-40 md:h-48 w-full bg-gray-50">
                   <Image
-                    src="/future_projects.png"
+                    src="/future_projects.webp"
                     alt="Future Projects"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

@@ -11,7 +11,7 @@ export default function GodhaarPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/cow_background.jpeg"
+            src="/cow_background.webp"
             alt="Cattle Farm Background"
             fill
             sizes="100vw"
@@ -106,7 +106,7 @@ export default function GodhaarPage() {
             <div className="order-1 md:order-2 flex justify-center">
               <div className="bg-white rounded-3xl p-8 shadow-xl w-full max-w-md aspect-square flex items-center justify-center overflow-hidden border border-gray-200 relative">
                 <Image
-                  src="/indian-cow.jpg"
+                  src="/indian-cow.webp"
                   alt="Godhaar Cattle Recognition"
                   fill
                   sizes="(max-width: 768px) 100vw, 400px"
@@ -262,7 +262,7 @@ export default function GodhaarPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square relative">
                 <Image
-                  src="/capture_muzzle.jpeg"
+                  src="/capture_muzzle.webp"
                   alt="Capture Muzzle"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -304,7 +304,7 @@ export default function GodhaarPage() {
               <div className="order-1 md:order-2">
                 <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square relative">
                   <Image
-                  src="/aipowered.jpeg"
+                  src="/aipowered.webp"
                   alt="AI Processing"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -320,7 +320,7 @@ export default function GodhaarPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square relative">
                 <Image
-                  src="/print_matching.jpeg"
+                  src="/print_matching.webp"
                   alt="Pattern Matching"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -362,7 +362,7 @@ export default function GodhaarPage() {
               <div className="order-1 md:order-2">
                 <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square relative">
                   <Image
-                  src="/view_profile.png"
+                  src="/view_profile.webp"
                   alt="View Profile"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -379,7 +379,7 @@ export default function GodhaarPage() {
               <div>
                 <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square relative">
                   <Image
-                  src="/godhaar_card.jpeg"
+                  src="/godhaar_card.webp"
                   alt="Digital Certification"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -422,7 +422,7 @@ export default function GodhaarPage() {
             <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4">
                 <Image
-                  src="/mobile.png"
+                  src="/mobile.webp"
                   alt="Mobile Icon"
                   width={48}
                   height={48}
@@ -443,7 +443,7 @@ export default function GodhaarPage() {
             <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4">
                 <Image
-                  src="/records.png"
+                  src="/records.webp"
                   alt="Records Icon"
                   width={48}
                   height={48}
@@ -464,7 +464,7 @@ export default function GodhaarPage() {
             <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4">
                 <Image
-                  src="/bell.png"
+                  src="/bell.webp"
                   alt="Smart Alerts Icon"
                   width={48}
                   height={48}
@@ -485,7 +485,7 @@ export default function GodhaarPage() {
             <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4">
                 <Image
-                  src="/analysis.png"
+                  src="/analysis.webp"
                   alt="Analytics Icon"
                   width={48}
                   height={48}
@@ -506,7 +506,7 @@ export default function GodhaarPage() {
             <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4">
                 <Image
-                  src="/milk.png"
+                  src="/milk.webp"
                   alt="Milk Production Icon"
                   width={48}
                   height={48}
@@ -527,7 +527,7 @@ export default function GodhaarPage() {
             <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4">
                 <Image
-                  src="/cow_logo.png"
+                  src="/cow_logo.webp"
                   alt="Breeding History Icon"
                   width={48}
                   height={48}
@@ -554,7 +554,7 @@ export default function GodhaarPage() {
             {/* IMAGE / METRIC BOX - LEFT */}
             <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl overflow-hidden aspect-square relative">
               <Image
-                src="/Brain_2.jpeg"
+                src="/Brain_2.webp"
                 alt="Brain"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

@@ -10,7 +10,7 @@ const cards = [
     title: "AI & ML",
     description:
       "End-to-end AI systems, production pipelines, and intelligent automation.",
-    img: "/aiml.png",
+    img: "/aiml.webp",
     path: "/services/ai",
   },
   {
@@ -18,7 +18,7 @@ const cards = [
     title: "Web Development and Hosting",
     description:
       "Full-stack Web3 apps, smart contracts, and enterprise blockchain integration.",
-    img: "/blockchain.png",
+    img: "/blockchain.webp",
     path: "/services/fullstackwebsite",
   },
   {
@@ -26,7 +26,7 @@ const cards = [
     title: "Product Design",
     description:
       "UX, UI, and complete digital product design with systems thinking.",
-    img: "/product_design.png",
+    img: "/product_design.webp",
     path: "/services/design",
   },
   {
@@ -34,7 +34,7 @@ const cards = [
     title: "Android & iOS",
     description:
       "High-performance native and cross-platform mobile experiences.",
-    img: "/mobile_development.png",
+    img: "/mobile_development.webp",
     path: "/services/mobile",
   },
   {
@@ -42,7 +42,7 @@ const cards = [
     title: "SaaS",
     description:
       "Scalable multi-tenant SaaS infrastructure and end-to-end dashboards.",
-    img: "/SAAS.png",
+    img: "/SAAS.webp",
     path: "/services/saas",
   },
 ];
