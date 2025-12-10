@@ -178,10 +178,9 @@ export default function HeroRotator() {
           loop
           playsInline
           preload="none"
-          poster="/hero_poster.jpg"
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
-          <source src="/fixed_main_hero.mp4" type="video/mp4" />
+          <source src="/hero.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/50" />
       </div>
