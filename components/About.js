@@ -49,14 +49,11 @@ export default function Story() {
         </div>
 
         <div className="w-full md:w-1/2 h-[300px] md:h-full relative">
-          <Image
-            src="/about_us.gif"
+          <img
+            src="/api/media/about_us.gif"
             alt="About Us Animation"
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-contain"
+            className="w-full h-full object-contain"
             loading="eager"
-            unoptimized
           />
         </div>
       </section>
@@ -145,14 +142,11 @@ export default function Story() {
 
       {/* ---------- TIMELINE (side arrows only on 2xl+, bottom for others) ---------- */}
       <section className="w-full h-screen relative overflow-hidden">
-        <Image
-          src="/team_com.gif"
+        <img
+          src="/api/media/team_com.gif"
           alt="Our Team"
-          fill
-          sizes="100vw"
-          className="object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
           loading="eager"
-          unoptimized
         />
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute inset-0 bg-black/70 md:bg-gradient-to-r md:from-black/65 md:via-black/40 md:to-transparent" />
