@@ -9,16 +9,10 @@ const CRITICAL_IMAGES = [
   '/indian-cow.webp',
 ];
 
-// Video to cache in background (doesn't block installation)
-const BACKGROUND_CACHE = [
-  '/api/media/herosection.mp4',
-];
-
-// Install event - pre-cache images, then video in background
+// Install event - pre-cache only images (video caches on first fetch)
 self.addEventListener('install', (event) => {
   console.log('[SW] Installing service worker...');
 
-  // Pre-cache critical images first (fast, blocks installation)
   event.waitUntil(
     caches.open(VIDEO_CACHE).then((cache) => {
       console.log('[SW] Pre-caching critical images');
@@ -27,16 +21,6 @@ self.addEventListener('install', (event) => {
       });
     })
   );
-
-  // Cache video in background (doesn't block installation)
-  caches.open(VIDEO_CACHE).then((cache) => {
-    console.log('[SW] Background caching video...');
-    cache.addAll(BACKGROUND_CACHE).then(() => {
-      console.log('[SW] Video cached successfully!');
-    }).catch(err => {
-      console.warn('[SW] Failed to cache video:', err);
-    });
-  });
 
   self.skipWaiting();
 });
