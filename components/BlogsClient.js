@@ -113,7 +113,16 @@ function BlogCard({ blog }) {
     ? `/blogs/${blog.id}`
     : "#";
 
-  const imageSrc = blog.imageUrl || blog.coverImage || blog.image || null;
+  // Get cover image and convert to proxy URL if it's from backend
+  let imageSrc = blog.imageUrl || blog.coverImage || blog.cover_image || blog.image || null;
+
+  if (imageSrc && imageSrc.includes('/blogs/')) {
+    // Extract path after /blogs/
+    const match = imageSrc.match(/\/blogs\/(.+)/);
+    if (match) {
+      imageSrc = `/api/blog-images/${match[1]}`;
+    }
+  }
   const published = blog.publishedAt || blog.date || "";
   const readTime =
     typeof blog.readTime === "number"

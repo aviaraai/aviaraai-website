@@ -67,11 +67,21 @@ export default async function BlogPage({ params }) {
     );
   }
 
-  const coverSrc =
-    blog.cover_image &&
-    (blog.cover_image.startsWith("http")
-      ? blog.cover_image
-      : `${API_BASE}${blog.cover_image}`);
+  // Convert cover image to use proxy if it's from backend
+  let coverSrc = blog.cover_image;
+  if (coverSrc) {
+    if (coverSrc.startsWith(API_BASE)) {
+      // Extract path after /blogs/
+      const match = coverSrc.match(/\/blogs\/(.+)/);
+      if (match) {
+        coverSrc = `/api/blog-images/${match[1]}`;
+      }
+    } else if (!coverSrc.startsWith("http")) {
+      // Relative path - convert to proxy URL
+      const cleanPath = coverSrc.replace(/^\.\//, "").replace(/^\/+/, "");
+      coverSrc = `/api/blog-images/${slug}/${cleanPath}`;
+    }
+  }
 
   return (
     <main className="blog-detail-root">
