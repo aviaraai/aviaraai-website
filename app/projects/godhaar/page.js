@@ -111,7 +111,7 @@ export default function GodhaarPage() {
                   fill
                   sizes="(max-width: 768px) 100vw, 400px"
                   className="object-cover rounded-2xl bg-white"
-                  loading="lazy"
+                  loading="eager"
                   quality={85}
                 />
               </div>
@@ -267,7 +267,7 @@ export default function GodhaarPage() {
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-full object-cover"
-                  loading="lazy"
+                  loading="eager"
                   quality={85}
                 />
               </div>
@@ -309,7 +309,7 @@ export default function GodhaarPage() {
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-full object-cover"
-                  loading="lazy"
+                  loading="eager"
                   quality={85}
                 />
                 </div>
@@ -325,7 +325,7 @@ export default function GodhaarPage() {
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-full object-cover"
-                  loading="lazy"
+                  loading="eager"
                   quality={85}
                 />
               </div>
@@ -367,7 +367,7 @@ export default function GodhaarPage() {
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-full object-cover"
-                  loading="lazy"
+                  loading="eager"
                   quality={85}
                 />
                 </div>
@@ -384,7 +384,7 @@ export default function GodhaarPage() {
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-full object-cover"
-                  loading="lazy"
+                  loading="eager"
                   quality={85}
                 />
                 </div>
@@ -427,7 +427,7 @@ export default function GodhaarPage() {
                   width={48}
                   height={48}
                   className="w-12 h-12 object-contain"
-                  loading="lazy"
+                  loading="eager"
                   quality={85}
                 />
               </div>
@@ -448,7 +448,7 @@ export default function GodhaarPage() {
                   width={48}
                   height={48}
                   className="w-12 h-12 object-contain"
-                  loading="lazy"
+                  loading="eager"
                   quality={85}
                 />
               </div>
@@ -469,7 +469,7 @@ export default function GodhaarPage() {
                   width={48}
                   height={48}
                   className="w-12 h-12 object-contain"
-                  loading="lazy"
+                  loading="eager"
                   quality={85}
                 />
               </div>
@@ -490,7 +490,7 @@ export default function GodhaarPage() {
                   width={48}
                   height={48}
                   className="w-12 h-12 object-contain"
-                  loading="lazy"
+                  loading="eager"
                   quality={85}
                 />
               </div>
@@ -511,7 +511,7 @@ export default function GodhaarPage() {
                   width={48}
                   height={48}
                   className="w-12 h-12 object-contain"
-                  loading="lazy"
+                  loading="eager"
                   quality={85}
                 />
               </div>
@@ -532,7 +532,7 @@ export default function GodhaarPage() {
                   width={48}
                   height={48}
                   className="w-12 h-12 object-contain"
-                  loading="lazy"
+                  loading="eager"
                   quality={85}
                 />
               </div>
@@ -559,7 +559,7 @@ export default function GodhaarPage() {
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="w-full h-full object-cover"
-                loading="lazy"
+                loading="eager"
                 quality={85}
               />
             </div>
