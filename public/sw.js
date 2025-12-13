@@ -2,22 +2,21 @@
 const CACHE_NAME = 'aviara-media-cache-v1';
 const VIDEO_CACHE = 'aviara-video-cache-v1';
 
-// Files to cache immediately
-const CRITICAL_MEDIA = [
-  '/api/media/herosection.mp4',
+// Only pre-cache lightweight images, NOT the video
+const CRITICAL_IMAGES = [
   '/cow_cover.webp',
   '/cow_background.webp',
   '/indian-cow.webp',
 ];
 
-// Install event - pre-cache critical resources
+// Install event - pre-cache only images (video streams on demand)
 self.addEventListener('install', (event) => {
   console.log('[SW] Installing service worker...');
   event.waitUntil(
     caches.open(VIDEO_CACHE).then((cache) => {
-      console.log('[SW] Caching critical media');
-      // Don't block installation if caching fails
-      return cache.addAll(CRITICAL_MEDIA).catch(err => {
+      console.log('[SW] Pre-caching critical images');
+      // Only cache lightweight images, video will be cached on first fetch
+      return cache.addAll(CRITICAL_IMAGES).catch(err => {
         console.warn('[SW] Failed to cache some resources:', err);
       });
     })
