@@ -57,7 +57,12 @@ export async function GET(request, { params }) {
     const end = parts[1] ? parseInt(parts[1], 10) : fileSize - 1;
     const chunksize = (end - start) + 1;
 
-    const file = fs.createReadStream(filePath, { start, end });
+    // Use smaller buffer for faster initial playback (64KB chunks)
+    const file = fs.createReadStream(filePath, {
+      start,
+      end,
+      highWaterMark: 64 * 1024 // 64KB chunks for faster streaming
+    });
 
     const headers = {
       ...commonHeaders,

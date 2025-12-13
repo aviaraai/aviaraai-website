@@ -2,26 +2,42 @@
 const CACHE_NAME = 'aviara-media-cache-v1';
 const VIDEO_CACHE = 'aviara-video-cache-v1';
 
-// Files to cache immediately
-const CRITICAL_MEDIA = [
-  '/api/media/herosection.mp4',
+// Critical images to pre-cache immediately (fast)
+const CRITICAL_IMAGES = [
   '/cow_cover.webp',
   '/cow_background.webp',
   '/indian-cow.webp',
 ];
 
-// Install event - pre-cache critical resources
+// Video to cache in background (doesn't block installation)
+const BACKGROUND_CACHE = [
+  '/api/media/herosection.mp4',
+];
+
+// Install event - pre-cache images, then video in background
 self.addEventListener('install', (event) => {
   console.log('[SW] Installing service worker...');
+
+  // Pre-cache critical images first (fast, blocks installation)
   event.waitUntil(
     caches.open(VIDEO_CACHE).then((cache) => {
-      console.log('[SW] Caching critical media');
-      // Don't block installation if caching fails
-      return cache.addAll(CRITICAL_MEDIA).catch(err => {
-        console.warn('[SW] Failed to cache some resources:', err);
+      console.log('[SW] Pre-caching critical images');
+      return cache.addAll(CRITICAL_IMAGES).catch(err => {
+        console.warn('[SW] Failed to cache some images:', err);
       });
     })
   );
+
+  // Cache video in background (doesn't block installation)
+  caches.open(VIDEO_CACHE).then((cache) => {
+    console.log('[SW] Background caching video...');
+    cache.addAll(BACKGROUND_CACHE).then(() => {
+      console.log('[SW] Video cached successfully!');
+    }).catch(err => {
+      console.warn('[SW] Failed to cache video:', err);
+    });
+  });
+
   self.skipWaiting();
 });
 
