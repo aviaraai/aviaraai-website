@@ -82,7 +82,7 @@ export default async function BlogPage({ params }) {
               src={coverSrc}
               alt={blog.title}
               className="blog-detail-cover"
-              loading="lazy"
+              loading="eager"
             />
           </div>
         )}

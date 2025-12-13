@@ -151,7 +151,7 @@ export default function Story() {
           fill
           sizes="100vw"
           className="object-cover"
-          loading="lazy"
+          loading="eager"
           unoptimized
         />
         <div className="absolute inset-0 pointer-events-none">

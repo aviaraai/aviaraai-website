@@ -87,7 +87,7 @@ export default function ProductsPage() {
                   fill
                   sizes="(max-width: 768px) 100vw, 40vw"
                   className="object-cover"
-                  loading="lazy"
+                  loading="eager"
                   quality={85}
                 />
               </div>
