@@ -27,6 +27,29 @@ export async function GET(request, { params }) {
     ? 'video/mp4'
     : 'image/gif';
 
+  // Common headers for aggressive caching
+  const commonHeaders = {
+    'Cache-Control': 'public, max-age=31536000, immutable',
+    'Content-Type': contentType,
+    'Accept-Ranges': 'bytes',
+    // Add ETag for better caching
+    'ETag': `"${stat.mtime.getTime()}-${fileSize}"`,
+    // Add Last-Modified
+    'Last-Modified': stat.mtime.toUTCString(),
+  };
+
+  // Check if client has cached version
+  const ifNoneMatch = request.headers.get('if-none-match');
+  const ifModifiedSince = request.headers.get('if-modified-since');
+
+  if (ifNoneMatch === commonHeaders['ETag'] ||
+      (ifModifiedSince && new Date(ifModifiedSince) >= stat.mtime)) {
+    return new NextResponse(null, {
+      status: 304, // Not Modified
+      headers: commonHeaders,
+    });
+  }
+
   // If range request (for video streaming)
   if (range) {
     const parts = range.replace(/bytes=/, '').split('-');
@@ -37,11 +60,9 @@ export async function GET(request, { params }) {
     const file = fs.createReadStream(filePath, { start, end });
 
     const headers = {
+      ...commonHeaders,
       'Content-Range': `bytes ${start}-${end}/${fileSize}`,
-      'Accept-Ranges': 'bytes',
       'Content-Length': chunksize,
-      'Content-Type': contentType,
-      'Cache-Control': 'public, max-age=31536000, immutable',
     };
 
     return new NextResponse(file, {
@@ -55,10 +76,8 @@ export async function GET(request, { params }) {
 
   return new NextResponse(file, {
     headers: {
-      'Content-Type': contentType,
+      ...commonHeaders,
       'Content-Length': fileSize,
-      'Accept-Ranges': 'bytes',
-      'Cache-Control': 'public, max-age=31536000, immutable',
     },
   });
 }
