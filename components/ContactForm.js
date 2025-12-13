@@ -85,17 +85,17 @@ export default function ContactForm() {
           </span>
 
           <h1 className="text-4xl lg:text-5xl font-bold text-[#0F4C75] leading-tight mb-6">
-            Ready to Transform Your Business With AI?
+            Ready to transform your business with AI?
           </h1>
 
           <p className="text-black max-w-xl mb-8">
-            AviaraAI LLP builds smart, practical AI solutions for real-world
+            AviaraAI LLC builds smart, practical AI solutions for real-world
             problems. Contact us to learn how our technology can help your
             organisation grow.
           </p>
 
           <div className="space-y-6">
-            <InfoCard icon={buildingIcon()} title="Company" textTop="AviaraAI LLP" />
+            <InfoCard icon={buildingIcon()} title="Company" textTop="AviaraAI LLC" />
             <InfoCard
               icon={emailIcon()}
               title="Email"

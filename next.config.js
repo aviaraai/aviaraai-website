@@ -12,7 +12,14 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  generateBuildId: async () => null,
+
+  // Optimize package imports to reduce bundle size (works with both Webpack and Turbopack)
+  experimental: {
+    optimizePackageImports: ['framer-motion', 'react-markdown', 'remark-gfm', 'rehype-raw'],
+  },
+
+  // Next.js 16 uses Turbopack by default - empty config to silence warning
+  turbopack: {},
 
   async headers() {
     return [
