@@ -9,12 +9,8 @@ export const metadata = {
   description: "Insights on AI, education, and product design.",
 };
 
-// Static generation with revalidation every 5 minutes (ISR)
-export const revalidate = 300;
-
-// Enable static generation even with dynamic content
-export const dynamic = 'force-static';
-export const dynamicParams = true;
+// Revalidate every 1 minute for fresh content
+export const revalidate = 60;
 
 export default async function BlogsPage() {
   let blogs = [];
