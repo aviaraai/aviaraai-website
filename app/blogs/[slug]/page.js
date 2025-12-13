@@ -5,6 +5,9 @@ import { formatDate } from "@/lib/markdown";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 import "@/styles/blog.css";
 
+// Cache for 5 minutes
+export const revalidate = 300;
+
 // Dynamic metadata for each blog
 export async function generateMetadata({ params }) {
   const { slug } = params;
