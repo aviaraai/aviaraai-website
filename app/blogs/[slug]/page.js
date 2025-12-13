@@ -70,8 +70,8 @@ export default async function BlogPage({ params }) {
   // Convert cover image to use proxy if it's from backend
   let coverSrc = blog.cover_image;
   if (coverSrc) {
-    if (coverSrc.startsWith(API_BASE)) {
-      // Extract path after /blogs/
+    // Check if URL contains /blogs/ pattern (from backend)
+    if (coverSrc.includes('/blogs/')) {
       const match = coverSrc.match(/\/blogs\/(.+)/);
       if (match) {
         coverSrc = `/api/blog-images/${match[1]}`;
@@ -79,7 +79,7 @@ export default async function BlogPage({ params }) {
     } else if (!coverSrc.startsWith("http")) {
       // Relative path - convert to proxy URL
       const cleanPath = coverSrc.replace(/^\.\//, "").replace(/^\/+/, "");
-      coverSrc = `/api/blog-images/${slug}/${cleanPath}`;
+      coverSrc = `/api/blog-images/${cleanPath}`;
     }
   }
 
