@@ -2,6 +2,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ServiceWorkerRegistration from './register-sw'
+import ErrorBoundary from '@/components/ErrorBoundary'
 
 export const metadata = {
   title: 'AviaraAI',
@@ -27,10 +28,12 @@ export default function RootLayout({ children }) {
         <link rel="preload" href="/indian-cow.webp" as="image" type="image/webp" />
       </head>
       <body className="bg-light-bg dark:bg-dark-bg text-light-primary dark:text-dark-primary">
-        <ServiceWorkerRegistration />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <ErrorBoundary>
+          <ServiceWorkerRegistration />
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </ErrorBoundary>
       </body>
     </html>
   )
