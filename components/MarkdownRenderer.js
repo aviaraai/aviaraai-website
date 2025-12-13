@@ -39,15 +39,14 @@ export default function MarkdownRenderer({ content, slug }) {
           img: ({ node, ...props }) => {
             let src = props.src || "";
 
-            // If it's an absolute URL (already from backend), use proxy
-            if (src && src.startsWith(API_BASE)) {
-              // Extract the path after /blogs/
+            // Check if URL contains /blogs/ pattern (from backend)
+            if (src && src.includes('/blogs/')) {
               const match = src.match(/\/blogs\/(.+)/);
               if (match) {
                 src = `/api/blog-images/${match[1]}`;
               }
             }
-            // If it's not an absolute URL, treat it as a blog-local asset
+            // If it's a relative path, treat it as a blog-local asset
             else if (src && !src.startsWith("http")) {
               // remove leading "./" or "/" etc
               src = src.replace(/^\.\//, "").replace(/^\/+/, "");
