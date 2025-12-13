@@ -35,7 +35,7 @@ export default function ProductsPage() {
       ],
       status: "In Development",
       tag: "EdTech Product",
-      image: "/smartshelf_product.png",
+      image: "/cow_cover.webp",
       path: "/products/smartshelf", // 👈 Added path
     },
     {
@@ -50,7 +50,7 @@ export default function ProductsPage() {
       ],
       status: "Coming Soon",
       tag: "AgriTech Product",
-      image: "/farmassist_product.png",
+      image: "/cow_cover.webp",
       path: "/products/farmassist", // 👈 Added path
     },
   ];
