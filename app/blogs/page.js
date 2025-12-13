@@ -9,8 +9,12 @@ export const metadata = {
   description: "Insights on AI, education, and product design.",
 };
 
-// Cache for 5 minutes - faster loading
+// Static generation with revalidation every 5 minutes (ISR)
 export const revalidate = 300;
+
+// Enable static generation even with dynamic content
+export const dynamic = 'force-static';
+export const dynamicParams = true;
 
 export default async function BlogsPage() {
   let blogs = [];
@@ -18,6 +22,7 @@ export default async function BlogsPage() {
     blogs = await fetchBlogs();
   } catch (e) {
     console.error("Error fetching blogs:", e);
+    blogs = []; // Return empty array on error instead of breaking
   }
 
   return (
