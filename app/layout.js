@@ -3,7 +3,6 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ServiceWorkerRegistration from './register-sw'
 import ErrorBoundary from '@/components/ErrorBoundary'
-import LoadingBar from '@/components/LoadingBar'
 
 export const metadata = {
   title: 'AviaraAI',
@@ -30,7 +29,6 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-light-bg dark:bg-dark-bg text-light-primary dark:text-dark-primary">
         <ErrorBoundary>
-          <LoadingBar />
           <ServiceWorkerRegistration />
           <Navbar />
           <main>{children}</main>
