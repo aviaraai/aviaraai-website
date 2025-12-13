@@ -95,7 +95,7 @@ export default function Footer() {
             <h3 className="text-xl font-sora mb-4 text-gray-900">FOLLOW US</h3>
             <div className="flex gap-4 mb-4">
               <a
-                href="https://www.linkedin.com/in/shaik-asif-umeed/"
+                href="https://www.linkedin.com/company/aviaraai-llc/"
                 target="_blank"
                 aria-label="LinkedIn"
                 className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-gray-800 hover:bg-blue-600 hover:text-white transition-all transform hover:-translate-y-1"
@@ -103,7 +103,7 @@ export default function Footer() {
                 in
               </a>
               <a
-                href="https://www.linkedin.com/in/shaik-asif-umeed/"
+                href="https://x.com/AviaraAI"
                 target="_blank"
                 aria-label="X (Twitter)"
                 className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-gray-800 hover:bg-blue-600 hover:text-white transition-all transform hover:-translate-y-1"

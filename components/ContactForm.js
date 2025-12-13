@@ -1,10 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function ContactForm() {
-  // API BASE — now using Next.js API route
-  const API_BASE = "";
-
   const [form, setForm] = useState({
     fullName: "",
     email: "",
@@ -15,14 +12,23 @@ export default function ContactForm() {
   });
 
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [formLoadTime, setFormLoadTime] = useState(null);
+
+  // Record when the form loads (for bot detection)
+  useEffect(() => {
+    setFormLoadTime(Date.now());
+  }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    setErrorMessage(""); // Clear error on input change
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setErrorMessage("");
 
     // Honeypot: if filled → bot → silently redirect
     if (form._honey && form._honey.trim() !== "") {
@@ -36,7 +42,10 @@ export default function ContactForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          _submitTime: formLoadTime, // Send form load time for bot detection
+        }),
       });
 
       const data = await res.json().catch(() => ({}));
@@ -44,11 +53,18 @@ export default function ContactForm() {
       if (res.ok && data.ok) {
         window.location.href = "/contact/thankyou";
       } else {
-        alert("Failed to send message. Please try again.");
+        // Show specific error message from server
+        const errorMsg = data.error || "Failed to send message. Please try again.";
+        setErrorMessage(errorMsg);
+
+        // Show rate limit message if 429
+        if (res.status === 429) {
+          setErrorMessage("Too many submissions. Please try again in an hour.");
+        }
       }
     } catch (err) {
       console.error(err);
-      alert("Server error. Try again later.");
+      setErrorMessage("Server error. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -163,6 +179,13 @@ export default function ContactForm() {
                   className="w-full rounded-lg border text-black border-[#0F4C75]/30 px-4 py-3 bg-white placeholder-[#0F4C75]/40 focus:outline-none focus:ring-2 focus:ring-[#0F4C75]/40"
                 />
               </div>
+
+              {/* Error Message Display */}
+              {errorMessage && (
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700 text-sm">
+                  <strong>Error:</strong> {errorMessage}
+                </div>
+              )}
 
               <button
                 type="submit"
