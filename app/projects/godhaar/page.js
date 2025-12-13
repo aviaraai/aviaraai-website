@@ -669,7 +669,7 @@ export default function GodhaarPage() {
       <section id="contact" className="py-20 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Ready to Transform Your Industry with Us?
+            Ready to transform your industry with us?
           </h2>
           <p className="text-xl text-gray-300 mb-10">
             Let us discuss how our solutions can help solve your challenges.
