@@ -115,7 +115,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-gray-800 hover:bg-pink-500 hover:text-white transition-all transform hover:-translate-y-1"
+                className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-gray-800 hover:bg-blue-600 hover:text-white transition-all transform hover:-translate-y-1"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
