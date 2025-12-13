@@ -177,10 +177,10 @@ export default function HeroRotator() {
           muted
           loop
           playsInline
-          preload="none"
+          preload="auto"
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
-          <source src="/herosection.mp4" type="video/mp4" />
+          <source src="/api/media/herosection.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/50" />
       </div>
