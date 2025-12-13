@@ -2,14 +2,30 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function GodhaarPage() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  // Preload the background image
+  useEffect(() => {
+    const img = new window.Image();
+    img.src = '/cow_background.webp';
+    img.onload = () => setImageLoaded(true);
+  }, []);
+
   return (
     <div>
       {/* HERO SECTION */}
       <section className="min-h-screen flex items-center relative overflow-hidden pt-20">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
+        {/* Background Image with fallback color */}
+        <div
+          className="absolute inset-0 z-0 transition-opacity duration-500"
+          style={{
+            backgroundColor: '#1a3a1a',
+            opacity: imageLoaded ? 1 : 0.8
+          }}
+        >
           <Image
             src="/cow_background.webp"
             alt="Cattle Farm Background"
@@ -17,7 +33,8 @@ export default function GodhaarPage() {
             sizes="100vw"
             className="object-cover"
             priority
-            quality={85}
+            quality={75}
+            onLoad={() => setImageLoaded(true)}
           />
           {/* Dark Overlay for better text readability */}
           <div className="absolute inset-0 bg-black/30"></div>
