@@ -50,7 +50,7 @@ export default function Story() {
 
         <div className="w-full md:w-1/2 h-[300px] md:h-full relative">
           <Image
-            src="/about_com.gif"
+            src="/about_us.gif"
             alt="About Us Animation"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
