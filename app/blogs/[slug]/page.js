@@ -56,6 +56,14 @@ export default async function BlogPage({ params }) {
     blog = null;
   }
 
+  // Debug logging
+  console.log("🔍 Blog data received:", {
+    hasBlog: !!blog,
+    hasContent: !!(blog && blog.content),
+    contentLength: blog?.content?.length || 0,
+    blogKeys: blog ? Object.keys(blog) : [],
+  });
+
   if (!blog) {
     return (
       <main className="blog-detail-root">
@@ -64,6 +72,20 @@ export default async function BlogPage({ params }) {
           <p className="blog-detail-summary">
             We couldn&apos;t load this article. It may have been removed or the
             link is incorrect.
+          </p>
+        </article>
+      </main>
+    );
+  }
+
+  if (!blog.content) {
+    return (
+      <main className="blog-detail-root">
+        <article className="blog-detail-article">
+          <h1 className="blog-detail-title">{blog.title || "Blog"}</h1>
+          <p className="blog-detail-summary" style={{ color: "red" }}>
+            ⚠️ Blog data loaded but content field is missing.
+            Available fields: {Object.keys(blog).join(", ")}
           </p>
         </article>
       </main>
