@@ -111,13 +111,27 @@ export default function Footer() {
                 𝕏
               </a>
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@aviaraai.com"
+                href="https://www.instagram.com/aviaraai"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Email"
-                className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-gray-800 hover:bg-blue-600 hover:text-white transition-all transform hover:-translate-y-1"
+                aria-label="Instagram"
+                className="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center text-gray-800 hover:bg-pink-500 hover:text-white transition-all transform hover:-translate-y-1"
               >
-                @
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" />
+                </svg>
               </a>
             </div>
             <p className="text-gray-600">info@aviaraai.com</p>
