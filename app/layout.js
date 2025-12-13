@@ -23,6 +23,8 @@ export default function RootLayout({ children }) {
         <link rel="preload" href="/api/media/herosection.mp4" as="video" type="video/mp4" />
         {/* Preload critical hero images */}
         <link rel="preload" href="/cow_cover.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/cow_background.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/indian-cow.webp" as="image" type="image/webp" />
       </head>
       <body className="bg-light-bg dark:bg-dark-bg text-light-primary dark:text-dark-primary">
         <ServiceWorkerRegistration />

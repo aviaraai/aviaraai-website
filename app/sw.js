@@ -6,6 +6,8 @@ const VIDEO_CACHE = 'aviara-video-cache-v1';
 const CRITICAL_MEDIA = [
   '/api/media/herosection.mp4',
   '/cow_cover.webp',
+  '/cow_background.webp',
+  '/indian-cow.webp',
 ];
 
 // Install event - pre-cache critical resources
