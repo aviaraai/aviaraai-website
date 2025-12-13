@@ -29,3 +29,7 @@ pnpm-debug.log*
 # docker-compose.yml
 # docker-compose.*.yml
 # deploy.sh
+SECURITY.md
+PRODUCTION.md
+README.md
+
