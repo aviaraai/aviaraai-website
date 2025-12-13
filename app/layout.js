@@ -17,6 +17,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
+      <head>
+        {/* Preload critical hero video for faster loading */}
+        <link rel="preload" href="/api/media/herosection.mp4" as="video" type="video/mp4" />
+        {/* Preload critical hero images */}
+        <link rel="preload" href="/cow_cover.webp" as="image" type="image/webp" />
+      </head>
       <body className="bg-light-bg dark:bg-dark-bg text-light-primary dark:text-dark-primary">
         <Navbar />
         <main>{children}</main>

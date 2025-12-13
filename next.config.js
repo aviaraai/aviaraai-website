@@ -29,7 +29,7 @@ const nextConfig = {
         ],
       },
       {
-        source: '/:all*(mp4|gif|webm)',
+        source: '/:all*(mp4|gif|webm|webp|jpg|jpeg|png)',
         headers: [
           {
             key: 'Cache-Control',

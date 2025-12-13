@@ -166,6 +166,16 @@ export default function HeroRotator() {
   // cursor visibility helpers (only used for Aviara)
   const showCursorForAviara = () => isTyping || typedSubtitle.length > 0;
 
+  const videoRef = useRef(null);
+
+  // Preload video on component mount
+  useEffect(() => {
+    if (videoRef.current) {
+      // Force browser to start loading video immediately
+      videoRef.current.load();
+    }
+  }, []);
+
   return (
     <section className="relative h-screen w-full overflow-hidden">
       <style>{cursorStyle}</style>
@@ -173,12 +183,14 @@ export default function HeroRotator() {
       {/* Background Video */}
       <div className="absolute inset-0">
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
           className="absolute top-0 left-0 w-full h-full object-cover"
+          style={{ backgroundColor: '#000' }}
         >
           <source src="/api/media/herosection.mp4" type="video/mp4" />
         </video>
